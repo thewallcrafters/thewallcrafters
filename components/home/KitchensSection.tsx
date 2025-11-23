@@ -10,12 +10,12 @@ export default function KitchensSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const kitchens = [
-    { image: 'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Island Kitchen · Premium Line', href: '/kitchens' },
-    { image: 'https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Parallel Kitchen · Modern', href: '/kitchens' },
-    { image: 'https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'L-Shape · Minimal', href: '/kitchens' },
-    { image: 'https://images.pexels.com/photos/2029670/pexels-photo-2029670.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'U-Shape · Contemporary', href: '/kitchens' },
-    { image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Open Kitchen · Luxury', href: '/kitchens' },
-    { image: 'https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Modular · Smart Storage', href: '/kitchens' },
+    { image: 'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Island Kitchen · Premium Line', href: '/kitchens/premium-island-kitchen' },
+    { image: 'https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Parallel Kitchen · Modern', href: '/kitchens/warm-l-shaped-kitchen' },
+    { image: 'https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'L-Shape · Minimal', href: '/kitchens/parallel-kitchen-tall-units' },
+    { image: 'https://images.pexels.com/photos/2029670/pexels-photo-2029670.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'U-Shape · Contemporary', href: '/kitchens/compact-urban-kitchen' },
+    { image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Open Kitchen · Luxury', href: '/kitchens/modern-u-shape-kitchen' },
+    { image: 'https://images.pexels.com/photos/2089696/pexels-photo-2089696.jpeg?auto=compress&cs=tinysrgb&w=800', label: 'Modular · Smart Storage', href: '/kitchens/minimalist-white-kitchen' },
   ];
 
   return (
