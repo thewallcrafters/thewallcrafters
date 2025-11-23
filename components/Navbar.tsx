@@ -77,9 +77,11 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center gap-6">
-              <button className="hidden md:block border border-twc-warm/30 px-6 py-2.5 text-[11px] tracking-widest-plus hover:border-twc-red hover:text-twc-red hover:bg-twc-red/5 transition-all duration-300">
-                BOOK A VISIT
-              </button>
+              <Link href="/#contact">
+                <button className="hidden md:block border border-twc-red bg-twc-red text-twc-charcoal px-6 py-2.5 text-[11px] tracking-widest-plus hover:bg-twc-red/90 hover:shadow-lg hover:shadow-twc-red/20 transition-all duration-300">
+                  BOOK A VISIT
+                </button>
+              </Link>
 
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
