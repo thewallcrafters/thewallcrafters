@@ -93,6 +93,178 @@ const kitchens: Record<string, any> = {
       'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1200',
     ],
   },
+  'parallel-kitchen-tall-units': {
+    name: 'Parallel Kitchen with Tall Units',
+    location: 'Urban Apartment',
+    category: 'Kitchen',
+    scope: 'Modular Kitchen · Parallel Layout',
+    type: 'Kitchen · Gallery Configuration',
+    image: 'https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    sections: [
+      {
+        title: 'Design Brief',
+        content: 'A gallery-style parallel kitchen maximizing storage with floor-to-ceiling units and sleek handleless fronts, perfect for urban living where every inch counts.',
+      },
+      {
+        title: 'Key Features',
+        content: [
+          'Parallel layout with facing work zones',
+          'Floor-to-ceiling tall units for maximum storage',
+          'Handleless fronts with push-to-open mechanisms',
+          'Integrated appliances seamlessly incorporated',
+          'Pull-out pantry systems and organizers',
+        ],
+      },
+      {
+        title: 'Materials & Finishes',
+        content: [
+          'High-gloss laminate cabinetry',
+          'Solid surface countertops',
+          'Chrome accents and fixtures',
+          'Glass cabinet inserts for display',
+        ],
+      },
+      {
+        title: 'Result',
+        content: 'A sleek, modern kitchen that maximizes vertical space and provides exceptional storage capacity while maintaining clean lines and contemporary aesthetics.',
+      },
+    ],
+    galleryImages: [
+      'https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2089696/pexels-photo-2089696.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    ],
+  },
+  'compact-urban-kitchen': {
+    name: 'Compact Urban Kitchen',
+    location: 'City Apartment',
+    category: 'Kitchen',
+    scope: 'Modular Kitchen · Compact Layout',
+    type: 'Kitchen · Space-Efficient Design',
+    image: 'https://images.pexels.com/photos/2029670/pexels-photo-2029670.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    sections: [
+      {
+        title: 'Design Brief',
+        content: 'Smart space planning for smaller footprints with modular units, pull-out organizers, and vertical storage solutions that prove big functionality can come in compact packages.',
+      },
+      {
+        title: 'Key Features',
+        content: [
+          'Optimized L-shaped layout for compact spaces',
+          'Multi-functional modular units',
+          'Pull-out and fold-down storage solutions',
+          'Vertical storage maximization',
+          'Integrated appliances scaled for space',
+        ],
+      },
+      {
+        title: 'Materials & Finishes',
+        content: [
+          'Light-colored laminate to enhance space perception',
+          'Compact engineered stone countertops',
+          'Space-saving fixtures and hardware',
+          'Reflective backsplash materials',
+        ],
+      },
+      {
+        title: 'Result',
+        content: 'A highly functional kitchen that proves small spaces can be incredibly efficient, offering all essential features without compromise on style or usability.',
+      },
+    ],
+    galleryImages: [
+      'https://images.pexels.com/photos/2029670/pexels-photo-2029670.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2089696/pexels-photo-2089696.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    ],
+  },
+  'modern-u-shape-kitchen': {
+    name: 'Modern U-Shape Kitchen',
+    location: 'Family Home',
+    category: 'Kitchen',
+    scope: 'Modular Kitchen · U-Shaped Layout',
+    type: 'Kitchen · Three-Wall Configuration',
+    image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    sections: [
+      {
+        title: 'Design Brief',
+        content: 'A three-wall U-shaped configuration offering extensive counter space, ample storage, and an efficient work triangle that makes cooking a pleasure for busy families.',
+      },
+      {
+        title: 'Key Features',
+        content: [
+          'U-shaped layout with optimal work triangle',
+          'Extensive counter space on three walls',
+          'Corner solutions for easy access',
+          'Multiple work zones for simultaneous use',
+          'Premium integrated appliances',
+        ],
+      },
+      {
+        title: 'Materials & Finishes',
+        content: [
+          'Premium laminate with wood-grain texture',
+          'Granite countertops',
+          'Stainless steel appliances and sinks',
+          'Designer tile backsplash',
+        ],
+      },
+      {
+        title: 'Result',
+        content: 'A spacious, functional kitchen that accommodates multiple cooks, provides abundant storage, and creates an efficient workspace perfect for family living.',
+      },
+    ],
+    galleryImages: [
+      'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2029670/pexels-photo-2029670.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    ],
+  },
+  'minimalist-white-kitchen': {
+    name: 'Minimalist White Kitchen',
+    location: 'Modern Home',
+    category: 'Kitchen',
+    scope: 'Modular Kitchen · Minimalist Design',
+    type: 'Kitchen · Contemporary Aesthetic',
+    image: 'https://images.pexels.com/photos/2089696/pexels-photo-2089696.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    sections: [
+      {
+        title: 'Design Brief',
+        content: 'Clean lines, handleless cabinets, integrated appliances, and a focus on negative space and simplicity create a serene, uncluttered environment that embodies modern minimalism.',
+      },
+      {
+        title: 'Key Features',
+        content: [
+          'Pure white handleless cabinetry',
+          'Fully integrated concealed appliances',
+          'Touch-to-open mechanisms throughout',
+          'Minimalist hardware and fixtures',
+          'Clean, uninterrupted surfaces',
+        ],
+      },
+      {
+        title: 'Materials & Finishes',
+        content: [
+          'High-quality white matte laminate',
+          'White solid surface countertops',
+          'Concealed LED lighting',
+          'Minimalist chrome fixtures',
+        ],
+      },
+      {
+        title: 'Result',
+        content: 'A pure, minimalist kitchen that celebrates simplicity and functionality, creating a calm, organized space that feels both modern and timeless.',
+      },
+    ],
+    galleryImages: [
+      'https://images.pexels.com/photos/2089696/pexels-photo-2089696.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    ],
+  },
 };
 
 export default async function KitchenDetailPage({
@@ -181,5 +353,9 @@ export function generateStaticParams() {
   return [
     { slug: 'premium-island-kitchen' },
     { slug: 'warm-l-shaped-kitchen' },
+    { slug: 'parallel-kitchen-tall-units' },
+    { slug: 'compact-urban-kitchen' },
+    { slug: 'modern-u-shape-kitchen' },
+    { slug: 'minimalist-white-kitchen' },
   ];
 }

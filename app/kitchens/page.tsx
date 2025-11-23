@@ -19,6 +19,8 @@ export default function KitchensPage() {
       image: 'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1200',
       layout: 'Island',
       finish: 'Premium',
+      slug: 'premium-island-kitchen',
+      href: '/kitchens/premium-island-kitchen',
     },
     {
       title: 'Warm L-Shaped Kitchen',
@@ -26,6 +28,8 @@ export default function KitchensPage() {
       image: 'https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=1200',
       layout: 'L-shaped',
       finish: 'Matte',
+      slug: 'warm-l-shaped-kitchen',
+      href: '/kitchens/warm-l-shaped-kitchen',
     },
     {
       title: 'Parallel Kitchen with Tall Units',
@@ -33,6 +37,8 @@ export default function KitchensPage() {
       image: 'https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=1200',
       layout: 'Parallel',
       finish: 'Gloss',
+      slug: 'parallel-kitchen-tall-units',
+      href: '/kitchens/parallel-kitchen-tall-units',
     },
     {
       title: 'Compact Urban Kitchen',
@@ -40,6 +46,8 @@ export default function KitchensPage() {
       image: 'https://images.pexels.com/photos/2029670/pexels-photo-2029670.jpeg?auto=compress&cs=tinysrgb&w=1200',
       layout: 'L-shaped',
       finish: 'Budget',
+      slug: 'compact-urban-kitchen',
+      href: '/kitchens/compact-urban-kitchen',
     },
     {
       title: 'Modern U-Shape Kitchen',
@@ -47,6 +55,8 @@ export default function KitchensPage() {
       image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1200',
       layout: 'U-shaped',
       finish: 'Premium',
+      slug: 'modern-u-shape-kitchen',
+      href: '/kitchens/modern-u-shape-kitchen',
     },
     {
       title: 'Minimalist White Kitchen',
@@ -54,6 +64,8 @@ export default function KitchensPage() {
       image: 'https://images.pexels.com/photos/2089696/pexels-photo-2089696.jpeg?auto=compress&cs=tinysrgb&w=1200',
       layout: 'Parallel',
       finish: 'Matte',
+      slug: 'minimalist-white-kitchen',
+      href: '/kitchens/minimalist-white-kitchen',
     },
   ];
 
