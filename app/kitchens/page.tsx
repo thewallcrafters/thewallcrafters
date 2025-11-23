@@ -141,6 +141,33 @@ export default function KitchensPage() {
           <CategoryGrid items={filteredKitchens} columns={3} />
         </div>
       </section>
+
+      {/* CTA Section */}
+      <section className="section-padding bg-twc-charcoal">
+        <div className="container-wide text-center space-y-6">
+          <p className="text-sm tracking-[0.4em] uppercase text-twc-grey">Plan your kitchen</p>
+          <h2 className="font-serif-display text-[clamp(2.2rem,3.5vw,3.8rem)] leading-tight max-w-4xl mx-auto">
+            Ready to design a kitchen around the way you cook and live?
+          </h2>
+          <p className="text-lg text-twc-warm/75 max-w-3xl mx-auto">
+            Share your layout, material preferences, and storage goals. Our team will translate them into detailed drawings, specs, and factory-built precision.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center pt-4">
+            <a
+              href="mailto:main@thewallcrafters.com"
+              className="border border-twc-warm px-8 py-4 text-sm tracking-wider uppercase hover:bg-twc-warm hover:text-twc-charcoal transition-colors duration-300"
+            >
+              Email the studio
+            </a>
+            <a
+              href="/services"
+              className="px-8 py-4 text-sm tracking-wider uppercase text-twc-warm/80 hover:text-twc-red transition-colors duration-300"
+            >
+              Explore services
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
