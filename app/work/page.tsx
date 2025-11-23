@@ -56,7 +56,7 @@ export default function WorkListingPage() {
       <section className="section-padding pt-32">
         <div className="container-wide">
           <motion.div
-            className="max-w-4xl space-y-8 mb-20"
+            className="max-w-4xl space-y-8 mb-12"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
@@ -79,7 +79,7 @@ export default function WorkListingPage() {
 
           {/* Filter row */}
           <motion.div
-            className="flex gap-6 mb-8 border-b border-twc-warm/10 pb-6"
+            className="flex gap-6 mb-4 border-b border-twc-warm/10 pb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -95,7 +95,7 @@ export default function WorkListingPage() {
                 {filter}
                 {activeFilter === filter && (
                   <motion.div
-                    className="absolute -bottom-6 left-1/2 w-1.5 h-1.5 bg-twc-red rounded-full"
+                    className="absolute -bottom-4 left-1/2 w-1.5 h-1.5 bg-twc-red rounded-full"
                     layoutId="activeFilter"
                     style={{ x: '-50%' }}
                   />
@@ -107,9 +107,9 @@ export default function WorkListingPage() {
       </section>
 
       {/* Projects grid */}
-      <section className="pb-24" ref={ref}>
+      <section className="pb-16" ref={ref}>
         <div className="container-wide">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
             {filteredProjects.map((project, index) => (
               <Link
                 key={index}

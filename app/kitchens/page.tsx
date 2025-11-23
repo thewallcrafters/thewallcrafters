@@ -87,10 +87,10 @@ export default function KitchensPage() {
       </div>
 
       {/* Filters */}
-      <section className="section-padding border-b border-twc-warm/10">
-        <div className="container-wide space-y-8">
+      <section className="py-8 border-b border-twc-warm/10">
+        <div className="container-wide space-y-6">
           {/* Layout filter */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p className="text-xs tracking-widest-plus text-twc-grey uppercase">Layout</p>
             <div className="flex flex-wrap gap-4">
               {layoutFilters.map((filter) => (
@@ -112,7 +112,7 @@ export default function KitchensPage() {
           </div>
 
           {/* Finish filter */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p className="text-xs tracking-widest-plus text-twc-grey uppercase">Finish</p>
             <div className="flex flex-wrap gap-4">
               {finishFilters.map((filter) => (
@@ -136,7 +136,7 @@ export default function KitchensPage() {
       </section>
 
       {/* Kitchen grid */}
-      <section className="section-padding relative noise-texture">
+      <section className="py-12 relative noise-texture">
         <div className="container-wide">
           <CategoryGrid items={filteredKitchens} columns={3} />
         </div>
