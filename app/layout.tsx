@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
-import CustomCursor from '@/components/CustomCursor';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -18,10 +17,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-twc-red focus:text-twc-warm focus:px-4 focus:py-2 focus:text-sm"
+        >
+          Skip to main content
+        </a>
         <SmoothScrollProvider>
-          <CustomCursor />
           <Navbar />
-          {children}
+          <main id="main-content">
+            {children}
+          </main>
           <Footer />
         </SmoothScrollProvider>
       </body>

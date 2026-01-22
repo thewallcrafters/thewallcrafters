@@ -24,7 +24,7 @@ export default {
         'wide-editorial': '0.08em',
       },
       fontSize: {
-        'hero': ['clamp(3rem, 8vw, 7rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'hero': ['clamp(1.8rem, 4.3vw, 4.25rem)', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
         'display': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1.15' }],
       },
       spacing: {

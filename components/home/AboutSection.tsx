@@ -3,21 +3,21 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
+const values = [
+  'Quality Craftsmanship',
+  'Innovation & Creativity',
+  'Customer-Centric',
+  'Integrity & Accountability',
+  'Collaboration',
+  'Continuous Improvement',
+];
+
 export default function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const values = [
-    'Quality Craftsmanship',
-    'Innovation & Creativity',
-    'Customer-Centric',
-    'Integrity & Accountability',
-    'Collaboration',
-    'Continuous Improvement',
-  ];
-
   return (
-    <section className="bg-twc-warm section-padding" id="about" ref={ref}>
+    <section className="bg-twc-charcoal section-padding" id="about" ref={ref}>
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           <motion.div
@@ -26,11 +26,11 @@ export default function AboutSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-2 h-2 bg-twc-red rounded-full"></div>
-            <h2 className="font-serif-display text-display text-twc-charcoal">
+            <div className="w-2 h-2 bg-twc-red rounded-full" aria-hidden="true"></div>
+            <h2 className="font-serif-display text-display text-twc-warm">
               Built with collaborators,<br />driven by craft.
             </h2>
-            <div className="space-y-6 text-twc-charcoal/70 text-lg leading-relaxed font-light">
+            <div className="space-y-6 text-twc-warm/70 text-lg leading-relaxed font-light">
               <p>
                 The Wall Crafters Interior Fitouts (TWC Fitouts) is a cabinetry and interior manufacturing studio specializing in modular kitchens, wardrobes, and bespoke furniture for residences and workspaces.
               </p>
@@ -49,7 +49,7 @@ export default function AboutSection() {
             </div>
             <a
               href="/about"
-              className="inline-flex items-center gap-2 text-sm tracking-wider text-twc-charcoal/70 hover:text-twc-red transition-colors duration-300 group"
+              className="inline-flex items-center gap-2 text-sm tracking-wider text-twc-warm/70 hover:text-twc-red transition-colors duration-300 group"
             >
               <span>Learn more about the studio</span>
               <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -57,28 +57,22 @@ export default function AboutSection() {
           </motion.div>
 
           <motion.div
-            className="space-y-8 lg:pl-12 lg:border-l border-twc-charcoal/10"
+            className="space-y-8 lg:pl-12 lg:border-l border-twc-warm/10"
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-2xl tracking-wide text-twc-charcoal">Our Values</h3>
-            <div className="space-y-6">
-              {values.map((value, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-4 group"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                >
-                  <div className="w-1.5 h-1.5 bg-twc-red rounded-full mt-2.5 opacity-40 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <p className="text-lg text-twc-charcoal/80 group-hover:text-twc-charcoal transition-colors duration-300">
+            <h3 className="text-2xl tracking-wide text-twc-warm">Our Values</h3>
+            <ul className="space-y-6" role="list">
+              {values.map((value) => (
+                <li key={value} className="flex items-start gap-4 group list-none">
+                  <div className="w-1.5 h-1.5 bg-twc-red rounded-full mt-2.5 opacity-40 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
+                  <p className="text-lg text-twc-warm/80 group-hover:text-twc-warm transition-colors duration-300">
                     {value}
                   </p>
-                </motion.div>
+                </li>
               ))}
-            </div>
+            </ul>
           </motion.div>
         </div>
       </div>

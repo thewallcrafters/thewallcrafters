@@ -4,6 +4,16 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
+const navItems = [
+  { label: 'HOME', href: '/' },
+  { label: 'WORK', href: '/work' },
+  { label: 'KITCHENS', href: '/kitchens' },
+  { label: 'INTERIORS', href: '/interiors' },
+  { label: 'SERVICES', href: '/services' },
+  { label: 'ABOUT', href: '/about' },
+  { label: 'CONTACT', href: '/#contact' },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
@@ -13,19 +23,30 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 100);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { label: 'HOME', href: '/' },
-    { label: 'WORK', href: '/work' },
-    { label: 'KITCHENS', href: '/kitchens' },
-    { label: 'INTERIORS', href: '/interiors' },
-    { label: 'SERVICES', href: '/services' },
-    { label: 'ABOUT', href: '/about' },
-    { label: 'CONTACT', href: '/#contact' },
-  ];
+  // Handle escape key to close mobile menu
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [menuOpen]);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
 
   return (
     <>
@@ -41,11 +62,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-baseline gap-0 group">
               <span className="text-2xl font-bold tracking-tight">twc</span>
-              <motion.span
-                className="w-1.5 h-1.5 bg-twc-red rounded-full ml-0.5"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              ></motion.span>
+              <span className="w-1.5 h-1.5 bg-twc-red rounded-full ml-0.5" />
             </Link>
 
             <div className="hidden lg:flex items-center gap-10">
@@ -78,7 +95,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-6">
               <Link href="/#contact">
-                <button className="hidden md:block border border-twc-red bg-twc-red text-twc-charcoal px-6 py-2.5 text-[11px] tracking-widest-plus hover:bg-twc-red/90 hover:shadow-lg hover:shadow-twc-red/20 transition-all duration-300">
+                <button className="hidden md:block border border-twc-red bg-twc-red text-twc-charcoal px-6 py-2.5 text-[11px] tracking-widest-plus hover:bg-twc-red/90 transition-colors duration-300">
                   BOOK A VISIT
                 </button>
               </Link>
@@ -86,6 +103,9 @@ export default function Navbar() {
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+                aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
               >
                 <motion.span
                   className="w-6 h-0.5 bg-twc-warm"
@@ -111,13 +131,17 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
             className="fixed inset-0 z-40 bg-twc-charcoal flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <nav className="space-y-8">
+            <nav className="space-y-8" aria-label="Main navigation">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.label}

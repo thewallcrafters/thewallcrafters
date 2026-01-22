@@ -34,7 +34,7 @@ export default function ImageGallery({ images, layout = 'grid' }: ImageGalleryPr
                 src={image}
                 alt={`Gallery image ${index + 1}`}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.6 }}
               />
             </motion.div>
@@ -60,7 +60,7 @@ export default function ImageGallery({ images, layout = 'grid' }: ImageGalleryPr
             src={image}
             alt={`Gallery image ${index + 1}`}
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.6 }}
           />
         </motion.div>

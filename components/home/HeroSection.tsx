@@ -1,9 +1,33 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { useState, useEffect } from 'react';
+
+const taglines = [
+  'Premium Cabinetry & Interior Fit-out Firm — driven by Precision, Logical Design & Craftsmanship.',
+  'Expertise in Modular Kitchens, Bespoke Kitchen Models, and Complete Interior Renovations.',
+  'Manufacture & Install all types of Cabinets — Kitchen, Wardrobes, Vanities, Storage & Custom-built Solutions.',
+  'Equipped with top-end CNC and advanced Manufacturing Machinery — flawless finishes and consistent quality.',
+];
+
+const subtitles = [
+  'One accountable team — from design support to manufacturing to installation.',
+  'Designed for Indian cooking habits, heavy usage, and easy maintenance.',
+  'In-house manufacturing means no middlemen and transparent pricing.',
+  'Factory-controlled finishing for consistent quality, every time.',
+];
 
 export default function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % taglines.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative h-screen w-full overflow-hidden" id="home">
       <div className="absolute inset-0 bg-gradient-to-r from-twc-charcoal via-twc-charcoal/80 to-transparent z-10 noise-texture"></div>
@@ -28,37 +52,60 @@ export default function HeroSection() {
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 bg-twc-red rounded-full"></div>
             <p className="text-[10px] tracking-widest-plus text-twc-grey uppercase">
-              The WallCrafters — TWC Fit-Outs
+              The Wall Crafters — In-house cabinetry & fit-outs
             </p>
           </div>
 
-          <h1 className="font-serif-display text-hero text-twc-warm text-balance">
-            Spaces crafted<br />
-            with precision<br />
-            and purpose.
-          </h1>
+      {/* Rotating main headlines */}
+          <div className="min-h-[220px] md:min-h-[180px] lg:min-h-[160px] overflow-visible relative">
+            <AnimatePresence mode="wait">
+              <motion.h1
+                key={currentIndex}
+                className="font-serif-display text-hero text-twc-warm text-balance"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5 }}
+              >
+                {taglines[currentIndex]}
+              </motion.h1>
+            </AnimatePresence>
+          </div>
 
-          <p className="text-lg md:text-xl leading-relaxed text-twc-warm/80 max-w-2xl font-light">
-            The WallCrafters is a full-service architecture and execution firm transforming homes and
-            workspaces with meticulous craftsmanship, bespoke carpentry and integrated project delivery.
+          {/* Rotating subtitles */}
+          <div className="min-h-[60px] md:min-h-[32px] overflow-visible relative">
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={currentIndex}
+                className="text-lg md:text-xl leading-relaxed text-twc-warm/80 font-light"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -15 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                {subtitles[currentIndex]}
+              </motion.p>
+            </AnimatePresence>
+          </div>
+
+          <p className="text-sm tracking-wider text-twc-grey max-w-2xl">
+            Clear scope. Clean finish. And yes—your timeline matters.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <motion.button
-              className="border border-twc-warm px-8 py-4 text-sm tracking-wider hover:bg-twc-warm hover:text-twc-charcoal transition-all duration-500"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <a
+              href="mailto:main@thewallcrafters.com?subject=Cabinetry%20Estimate%20Request"
+              className="border border-twc-warm px-8 py-4 text-sm tracking-wider hover:bg-twc-warm hover:text-twc-charcoal transition-all duration-500 hover:scale-[1.02] active:scale-[0.98]"
             >
-              View Our Work
-            </motion.button>
-            <motion.button
+              Get Cabinetry Estimate
+            </a>
+            <a
+              href="tel:9952217602"
               className="text-sm tracking-wider px-8 py-4 text-twc-warm/70 hover:text-twc-warm relative group"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
             >
-              Book a Consultation
-              <span className="absolute bottom-2 left-8 right-8 h-px bg-twc-warm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-            </motion.button>
+              Talk to Our Designer
+              <span className="absolute bottom-2 left-8 right-8 h-px bg-twc-warm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            </a>
           </div>
         </motion.div>
       </div>
@@ -72,7 +119,7 @@ export default function HeroSection() {
         <p className="text-[10px] tracking-widest text-twc-grey uppercase">Scroll</p>
         <motion.div
           animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <ChevronDown size={20} className="text-twc-red" />
         </motion.div>

@@ -43,7 +43,7 @@ export default function CategoryGrid({ items, columns = 3 }: CategoryGridProps) 
               src={item.image}
               alt={item.title}
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.6 }}
             />
             {/* Red dot indicator on hover */}
