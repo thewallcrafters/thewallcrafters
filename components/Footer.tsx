@@ -66,14 +66,14 @@ export default function Footer() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-3 bg-twc-red text-twc-warm px-8 py-4 text-sm tracking-wider font-medium hover:bg-twc-red/90 transition-colors duration-300 group"
               >
                 <span>Get Your Estimate</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-3 border border-twc-warm/30 text-twc-warm px-8 py-4 text-sm tracking-wider hover:bg-twc-warm hover:text-twc-charcoal transition-all duration-300 group"
               >
                 <span>Connect with Our Designer</span>

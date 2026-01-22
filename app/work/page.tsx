@@ -1,202 +1,134 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function WorkListingPage() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [activeFilter, setActiveFilter] = useState('All');
-
   const projects = [
+    // Row 1
     {
-      title: 'JP Residence',
-      location: 'Madurai',
-      tag: 'Residential · Interior Fit-Out',
-      category: 'Residential',
-      slug: 'jp-residence',
-      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Island Kitchen',
+      category: 'Kitchen',
+      slug: 'island-kitchen',
+      image: '/images/kitchens/island/island kitchen 1.jpg',
     },
     {
-      title: 'Meiyyappan Residence',
-      location: 'Coimbatore',
-      tag: 'Residential · Interior Fit-Out',
-      category: 'Residential',
-      slug: 'meiyyappan-residence',
-      image: 'https://images.pexels.com/photos/1909791/pexels-photo-1909791.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Walk-in Wardrobe',
+      category: 'Wardrobe',
+      slug: 'walk-in-wardrobe',
+      image: '/images/wardrobes/WARDROBE 1.jpg',
+    },
+    // Row 2
+    {
+      title: 'Executive Office',
+      category: 'Commercial',
+      slug: 'executive-office',
+      image: '/images/office/executive desk 2.jpg',
     },
     {
-      title: 'Villa16',
-      location: 'Valar Nagar, Madurai',
-      tag: 'Residential · Interior Fit-Out',
-      category: 'Residential',
-      slug: 'villa16',
-      image: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'L-Shaped Kitchen',
+      category: 'Kitchen',
+      slug: 'l-shaped-kitchen',
+      image: '/images/kitchens/l-shaped/L kitchen 1.jpg',
+    },
+    // Row 3
+    {
+      title: 'Entertainment Unit',
+      category: 'Living Room',
+      slug: 'entertainment-unit',
+      image: '/images/tv-units/Tv unit 2.jpg',
     },
     {
-      title: 'Vaishali Residence',
-      location: 'Thiruparankundram, Madurai',
-      tag: 'Residential · Interior Fit-Out',
-      category: 'Residential',
-      slug: 'vaishali-residence',
-      image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Pooja Room',
+      category: 'Living Room',
+      slug: 'pooja-room',
+      image: '/images/pooja-room/Pooja room 1.jpg',
+    },
+    // Row 4
+    {
+      title: 'U-Shaped Kitchen',
+      category: 'Kitchen',
+      slug: 'u-shaped-kitchen',
+      image: '/images/kitchens/u-shaped/U kitchen 1.jpg',
+    },
+    {
+      title: 'Hinged Wardrobe',
+      category: 'Wardrobe',
+      slug: 'hinged-wardrobe',
+      image: '/images/wardrobes/WARDROBE 5.jpg',
+    },
+    // Row 5
+    {
+      title: 'Parallel Kitchen',
+      category: 'Kitchen',
+      slug: 'parallel-kitchen',
+      image: '/images/kitchens/parallel/parallel kitchen 1.jpg',
+    },
+    {
+      title: 'Office Workstation',
+      category: 'Commercial',
+      slug: 'office-workstation',
+      image: '/images/office/workstation 1.jpg',
     },
   ];
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
-
-  const filters = ['All', 'Residential', 'Commercial'];
-
   return (
-    <div className="min-h-screen bg-twc-charcoal relative noise-texture">
-      {/* Hero section */}
-      <section className="section-padding pt-32">
-        <div className="container-wide">
-          <motion.div
-            className="max-w-4xl space-y-8 mb-12"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-twc-red rounded-full"></div>
-              <p className="text-[10px] tracking-widest-plus text-twc-grey uppercase">
-                Selected Projects
+    <div className="min-h-screen bg-twc-warm">
+      {/* Dark header band for navbar visibility */}
+      <div className="bg-twc-charcoal">
+        {/* Hero section */}
+        <section className="pt-32 pb-16 md:pb-20">
+          <div className="container-wide">
+            <motion.div
+              className="max-w-3xl space-y-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            >
+              <h1 className="font-serif-display text-5xl md:text-6xl lg:text-7xl text-twc-warm tracking-tight">
+                Work
+              </h1>
+              <p className="text-lg md:text-xl leading-relaxed text-twc-warm/60 font-light max-w-xl">
+                A selection of kitchens, wardrobes, and interiors crafted in our factory.
               </p>
-            </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
 
-            <h1 className="font-serif-display text-display text-twc-warm">
-              Work
-            </h1>
-
-            <p className="text-lg md:text-xl leading-relaxed text-twc-warm/80 font-light max-w-2xl">
-              A curated selection of residential and commercial projects that showcase our approach to integrated architecture, interiors and execution.
-            </p>
-          </motion.div>
-
-          {/* Filter row */}
-          <motion.div
-            className="flex gap-6 mb-4 border-b border-twc-warm/10 pb-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`text-sm tracking-wider relative group ${
-                  activeFilter === filter ? 'text-twc-warm' : 'text-twc-grey'
-                } hover:text-twc-warm transition-colors duration-300`}
-              >
-                {filter}
-                {activeFilter === filter && (
-                  <motion.div
-                    className="absolute -bottom-4 left-1/2 w-1.5 h-1.5 bg-twc-red rounded-full"
-                    layoutId="activeFilter"
-                    style={{ x: '-50%' }}
-                  />
-                )}
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Projects grid */}
-      <section className="pb-16" ref={ref}>
-        <div className="container-wide">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-            {filteredProjects.map((project, index) => (
+      {/* Projects Grid - 2 Column Masonry */}
+      <section className="py-16 md:py-24 bg-twc-warm">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
+          <div className="columns-1 md:columns-2 gap-8 lg:gap-12">
+            {projects.map((project, index) => (
               <Link
-                key={index}
+                key={project.slug}
                 href={`/work/${project.slug}`}
-                className="group block"
-                data-cursor-label="View Project"
+                className="group block mb-12 md:mb-16 break-inside-avoid"
               >
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                <motion.article
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
                 >
-                  {/* Project image */}
-                  <div className="relative aspect-[4/3] overflow-hidden mb-6">
-                    <motion.img
+                  <div className="relative aspect-[4/5] overflow-hidden bg-twc-charcoal/5">
+                    <Image
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.6 }}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      priority={index < 2}
                     />
-                    {/* Overlay on hover */}
-                    <div className="absolute inset-0 bg-twc-charcoal/0 group-hover:bg-twc-charcoal/20 transition-colors duration-500" />
                   </div>
-
-                  {/* Project info */}
-                  <motion.div
-                    className="space-y-4"
-                    initial={{ y: 0 }}
-                    whileHover={{ y: -5 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-twc-red rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <p className="text-[10px] tracking-widest-plus text-twc-grey uppercase">
-                        {project.tag}
-                      </p>
-                    </div>
-
-                    <h2 className="font-serif-display text-3xl md:text-4xl tracking-tight group-hover:text-twc-red transition-colors duration-300">
-                      {project.title}
-                    </h2>
-
-                    <p className="text-sm tracking-wider text-twc-grey">
-                      {project.location}
-                    </p>
-
-                    {/* View project link - appears on hover */}
-                    <motion.div
-                      className="flex items-center gap-2 text-sm tracking-wider text-twc-warm/0 group-hover:text-twc-warm transition-colors duration-300"
-                      initial={{ x: -10, opacity: 0 }}
-                      whileHover={{ x: 0, opacity: 1 }}
-                    >
-                      <span>View project</span>
-                      <span>→</span>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
+                  <h2 className="font-serif-display text-xl md:text-2xl text-twc-charcoal mt-5 group-hover:text-twc-red transition-colors duration-300 uppercase tracking-wide">
+                    {project.title}
+                  </h2>
+                </motion.article>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-twc-charcoal">
-        <div className="container-wide text-center space-y-6">
-          <p className="text-sm tracking-[0.4em] uppercase text-twc-grey">Plan with us</p>
-          <h2 className="font-serif-display text-[clamp(2.2rem,3.5vw,3.8rem)] leading-tight max-w-4xl mx-auto">
-            Have a space in mind? Let's map the scope together.
-          </h2>
-          <p className="text-lg text-twc-warm/75 max-w-3xl mx-auto">
-            From first sketches to site coordination, we partner with homeowners, architects, and brands to deliver turnkey interiors and bespoke builds.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center pt-4">
-            <a
-              href="mailto:main@thewallcrafters.com"
-              className="border border-twc-warm px-8 py-4 text-sm tracking-wider uppercase hover:bg-twc-warm hover:text-twc-charcoal transition-colors duration-300"
-            >
-              Email the studio
-            </a>
-            <a
-              href="/services"
-              className="px-8 py-4 text-sm tracking-wider uppercase text-twc-warm/80 hover:text-twc-red transition-colors duration-300"
-            >
-              Explore services
-            </a>
           </div>
         </div>
       </section>

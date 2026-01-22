@@ -67,7 +67,7 @@ export default function CapabilitySection() {
 
               <div className="pt-2">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 text-sm tracking-wider text-twc-warm/70 hover:text-twc-red transition-colors duration-300 group"
                 >
                   <span>Talk to our designer</span>

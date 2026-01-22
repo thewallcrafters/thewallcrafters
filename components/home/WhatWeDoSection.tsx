@@ -99,7 +99,7 @@ export default function WhatWeDoSection() {
               </div>
 
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-block mt-2 px-8 py-4 border border-twc-charcoal text-twc-charcoal text-sm tracking-wider font-medium hover:bg-twc-charcoal hover:text-twc-warm transition-all duration-300"
               >
                 Start a conversation

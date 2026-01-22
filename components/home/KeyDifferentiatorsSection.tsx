@@ -46,7 +46,7 @@ export default function KeyDifferentiatorsSection() {
                 Many customers don't have a designer or architect. Our in-house design team works directly with you — understanding your needs, your space, and your lifestyle.
               </p>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-3 text-sm tracking-wider text-twc-warm/70 hover:text-twc-red transition-colors duration-300 group pt-2"
               >
                 <span>Talk to our designer</span>

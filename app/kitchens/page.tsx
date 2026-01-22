@@ -1,170 +1,261 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import CategoryHero from '@/components/categories/CategoryHero';
-import CategoryGrid from '@/components/categories/CategoryGrid';
+import Image from 'next/image';
+
+const kitchenLayouts = [
+  {
+    title: 'Island Kitchen',
+    subtitle: "The entertainer's choice",
+    description: 'A central island creates the perfect stage for cooking, conversation, and gathering. Ideal for open-plan living with space to spare.',
+    images: [
+      '/images/kitchens/island/island kitchen 1.jpg',
+      '/images/kitchens/island/island kitchen 2.jpg',
+      '/images/kitchens/island/island kitchen 3.jpg',
+    ],
+    features: ['Central workspace', 'Social cooking', 'Open-plan friendly'],
+    slug: 'island',
+  },
+  {
+    title: 'L-Shaped Kitchen',
+    subtitle: 'The versatile classic',
+    description: 'Corner efficiency meets flexible design. The L-shape adapts to any space while maintaining an ergonomic work triangle.',
+    images: [
+      '/images/kitchens/l-shaped/L kitchen 1.jpg',
+      '/images/kitchens/l-shaped/L kitchen 2.jpg',
+      '/images/kitchens/l-shaped/L kitchen 3.jpg',
+    ],
+    features: ['Efficient corners', 'Work triangle', 'Flexible layout'],
+    slug: 'l-shaped',
+  },
+  {
+    title: 'U-Shaped Kitchen',
+    subtitle: 'Maximum storage & counter',
+    description: 'Three walls of cabinetry deliver unmatched storage and prep space. Perfect for serious home cooks who need room to work.',
+    images: [
+      '/images/kitchens/u-shaped/U kitchen 1.jpg',
+      '/images/kitchens/u-shaped/U kitchen 2.jpg',
+      '/images/kitchens/u-shaped/U kitchen 3.jpg',
+    ],
+    features: ['Maximum storage', 'Ample counter', 'Enclosed feel'],
+    slug: 'u-shaped',
+  },
+  {
+    title: 'Parallel Kitchen',
+    subtitle: 'The galley-style efficiency',
+    description: "Two facing runs create a streamlined workflow. Compact yet capable — everything within arm's reach.",
+    images: [
+      '/images/kitchens/parallel/parallel kitchen 1.jpg',
+      '/images/kitchens/parallel/parallel kitchen 2.jpg',
+      '/images/kitchens/parallel/parallel kitchen 3.jpg',
+    ],
+    features: ['Space efficient', 'Linear workflow', 'Easy access'],
+    slug: 'parallel',
+  },
+  {
+    title: 'Straight Kitchen',
+    subtitle: 'Simple & compact',
+    description: 'A single-wall solution that delivers functionality without footprint. Ideal for apartments and studio spaces.',
+    images: [
+      '/images/kitchens/straight/straight kitchen 1.jpg',
+      '/images/kitchens/straight/straight kitchen 2.jpg',
+      '/images/kitchens/straight/straight kitchen 3.jpeg',
+    ],
+    features: ['Minimal footprint', 'Budget friendly', 'Easy to plan'],
+    slug: 'straight',
+  },
+];
 
 export default function KitchensPage() {
-  const [layoutFilter, setLayoutFilter] = useState('All');
-  const [finishFilter, setFinishFilter] = useState('All');
-
-  const layoutFilters = ['All', 'L-shaped', 'U-shaped', 'Parallel', 'Island'];
-  const finishFilters = ['All', 'Premium', 'Budget', 'Matte', 'Gloss'];
-
-  const kitchens = [
-    {
-      title: 'Premium Island Kitchen',
-      description: 'A spacious island configuration with integrated appliances, statement lighting and waterfall stone countertops.',
-      image: 'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      layout: 'Island',
-      finish: 'Premium',
-      slug: 'premium-island-kitchen',
-      href: '/kitchens/premium-island-kitchen',
-    },
-    {
-      title: 'Warm L-Shaped Kitchen',
-      description: 'Efficient corner layout with wood-finish cabinetry, under-cabinet lighting and soft-close mechanisms.',
-      image: 'https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      layout: 'L-shaped',
-      finish: 'Matte',
-      slug: 'warm-l-shaped-kitchen',
-      href: '/kitchens/warm-l-shaped-kitchen',
-    },
-    {
-      title: 'Parallel Kitchen with Tall Units',
-      description: 'Gallery-style layout maximizing storage with floor-to-ceiling units and sleek handleless fronts.',
-      image: 'https://images.pexels.com/photos/1599791/pexels-photo-1599791.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      layout: 'Parallel',
-      finish: 'Gloss',
-      slug: 'parallel-kitchen-tall-units',
-      href: '/kitchens/parallel-kitchen-tall-units',
-    },
-    {
-      title: 'Compact Urban Kitchen',
-      description: 'Smart space planning for smaller footprints with modular units, pull-out organizers and vertical storage.',
-      image: 'https://images.pexels.com/photos/2029670/pexels-photo-2029670.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      layout: 'L-shaped',
-      finish: 'Budget',
-      slug: 'compact-urban-kitchen',
-      href: '/kitchens/compact-urban-kitchen',
-    },
-    {
-      title: 'Modern U-Shape Kitchen',
-      description: 'Three-wall configuration offering extensive counter space, ample storage and efficient work triangle.',
-      image: 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      layout: 'U-shaped',
-      finish: 'Premium',
-      slug: 'modern-u-shape-kitchen',
-      href: '/kitchens/modern-u-shape-kitchen',
-    },
-    {
-      title: 'Minimalist White Kitchen',
-      description: 'Clean lines, handleless cabinets, integrated appliances and a focus on negative space and simplicity.',
-      image: 'https://images.pexels.com/photos/2089696/pexels-photo-2089696.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      layout: 'Parallel',
-      finish: 'Matte',
-      slug: 'minimalist-white-kitchen',
-      href: '/kitchens/minimalist-white-kitchen',
-    },
-  ];
-
-  const filteredKitchens = kitchens.filter(kitchen => {
-    const matchesLayout = layoutFilter === 'All' || kitchen.layout === layoutFilter;
-    const matchesFinish = finishFilter === 'All' || kitchen.finish === finishFilter;
-    return matchesLayout && matchesFinish;
-  });
-
   return (
-    <div className="min-h-screen bg-twc-charcoal">
-      {/* Hero */}
-      <div className="pt-24">
-        <CategoryHero
-          title="Kitchens by TWC"
-          description="Modular, made-to-measure kitchens engineered for real life — from compact apartments to expansive villas."
-          image="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=1920"
-        />
-      </div>
-
-      {/* Filters */}
-      <section className="py-8 border-b border-twc-warm/10">
-        <div className="container-wide space-y-6">
-          {/* Layout filter */}
-          <div className="space-y-3">
-            <p className="text-xs tracking-widest-plus text-twc-grey uppercase">Layout</p>
-            <div className="flex flex-wrap gap-4">
-              {layoutFilters.map((filter) => (
-                <motion.button
-                  key={filter}
-                  onClick={() => setLayoutFilter(filter)}
-                  className={`px-6 py-2.5 text-sm tracking-wider border transition-all duration-300 ${
-                    layoutFilter === filter
-                      ? 'border-twc-red text-twc-red bg-twc-red/5'
-                      : 'border-twc-warm/20 text-twc-grey hover:border-twc-warm hover:text-twc-warm'
-                  }`}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  {filter}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-
-          {/* Finish filter */}
-          <div className="space-y-3">
-            <p className="text-xs tracking-widest-plus text-twc-grey uppercase">Finish</p>
-            <div className="flex flex-wrap gap-4">
-              {finishFilters.map((filter) => (
-                <motion.button
-                  key={filter}
-                  onClick={() => setFinishFilter(filter)}
-                  className={`px-6 py-2.5 text-sm tracking-wider border transition-all duration-300 ${
-                    finishFilter === filter
-                      ? 'border-twc-red text-twc-red bg-twc-red/5'
-                      : 'border-twc-warm/20 text-twc-grey hover:border-twc-warm hover:text-twc-warm'
-                  }`}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  {filter}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Kitchen grid */}
-      <section className="py-12 relative noise-texture">
+    <div className="min-h-screen bg-twc-warm">
+      {/* Hero Section */}
+      <section className="bg-twc-charcoal pt-32 pb-20 md:pb-28">
         <div className="container-wide">
-          <CategoryGrid items={filteredKitchens} columns={3} />
+          <motion.div
+            className="max-w-4xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-px bg-twc-red" />
+              <p className="text-[10px] tracking-widest-plus text-twc-warm/50 uppercase">Kitchens</p>
+            </div>
+            
+            <h1 className="font-serif-display text-5xl md:text-6xl lg:text-7xl text-twc-warm leading-[1.1] mb-8">
+              Kitchens built for<br />
+              <span className="text-twc-warm/50">how you cook.</span>
+            </h1>
+            
+            <p className="text-xl text-twc-warm/70 font-light leading-relaxed max-w-2xl">
+              Factory-crafted modular kitchens designed around Indian cooking habits — heat, oil, moisture, and daily wear all planned from day one.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-twc-charcoal">
-        <div className="container-wide text-center space-y-6">
-          <p className="text-sm tracking-[0.4em] uppercase text-twc-grey">Plan your kitchen</p>
-          <h2 className="font-serif-display text-[clamp(2.2rem,3.5vw,3.8rem)] leading-tight max-w-4xl mx-auto">
-            Ready to design a kitchen around the way you cook and live?
-          </h2>
-          <p className="text-lg text-twc-warm/75 max-w-3xl mx-auto">
-            Share your layout, material preferences, and storage goals. Our team will translate them into detailed drawings, specs, and factory-built precision.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center pt-4">
-            <a
-              href="mailto:main@thewallcrafters.com"
-              className="border border-twc-warm px-8 py-4 text-sm tracking-wider uppercase hover:bg-twc-warm hover:text-twc-charcoal transition-colors duration-300"
+      {/* Featured Layout - Large Image */}
+      <section className="relative">
+        <div className="aspect-[21/9] relative overflow-hidden">
+          <Image
+            src="/images/kitchens/island/island kitchen 2.jpg"
+            alt="Premium kitchen craftsmanship"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-twc-charcoal/60 via-transparent to-transparent" />
+        </div>
+      </section>
+
+      {/* Intro Text */}
+      <section className="py-20 md:py-28 bg-twc-warm">
+        <div className="container-wide">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.p
+              className="text-2xl md:text-3xl text-twc-charcoal font-light leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
             >
-              Email the studio
-            </a>
-            <a
-              href="/services"
-              className="px-8 py-4 text-sm tracking-wider uppercase text-twc-warm/80 hover:text-twc-red transition-colors duration-300"
+              Every kitchen we build is designed around your space, your workflow, and your daily rituals. 
+              <span className="text-twc-charcoal/50"> Choose from five proven layouts, each engineered for different lifestyles and footprints.</span>
+            </motion.p>
+          </div>
+        </div>
+      </section>
+
+      {/* Kitchen Layouts */}
+      <section className="py-16 md:py-24 bg-twc-warm">
+        <div className="container-wide space-y-24 md:space-y-32">
+          {kitchenLayouts.map((kitchen, index) => (
+            <motion.article
+              key={kitchen.slug}
+              className="group"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Explore services
-            </a>
+              {/* Header */}
+              <div className="grid lg:grid-cols-12 gap-8 mb-10">
+                <div className="lg:col-span-4">
+                  <p className="text-[10px] tracking-widest text-twc-charcoal/40 uppercase mb-3">
+                    {kitchen.subtitle}
+                  </p>
+                  <h2 className="font-serif-display text-4xl md:text-5xl text-twc-charcoal">
+                    {kitchen.title}
+                  </h2>
+                </div>
+                <div className="lg:col-span-6 lg:col-start-6">
+                  <p className="text-twc-charcoal/60 font-light leading-relaxed text-lg mb-6">
+                    {kitchen.description}
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    {kitchen.features.map((feature) => (
+                      <span
+                        key={feature}
+                        className="px-4 py-2 text-xs tracking-wide text-twc-charcoal/60 border border-twc-charcoal/10"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Image Gallery - 3 images */}
+              <div className="grid grid-cols-12 gap-4 md:gap-6">
+                {/* Large image */}
+                <div className="col-span-12 md:col-span-8">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-twc-charcoal/5">
+                    <Image
+                      src={kitchen.images[0]}
+                      alt={`${kitchen.title} - Main view`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 66vw"
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                </div>
+                {/* Two stacked images */}
+                <div className="col-span-12 md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-6">
+                  <div className="relative aspect-[4/3] md:aspect-[4/3] overflow-hidden bg-twc-charcoal/5">
+                    <Image
+                      src={kitchen.images[1]}
+                      alt={`${kitchen.title} - Detail view`}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                  <div className="relative aspect-[4/3] md:aspect-[4/3] overflow-hidden bg-twc-charcoal/5">
+                    <Image
+                      src={kitchen.images[2]}
+                      alt={`${kitchen.title} - Additional view`}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                  </div>
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 md:py-28 bg-twc-charcoal">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-[10px] tracking-widest-plus text-twc-warm/40 uppercase mb-6">Our Process</p>
+              <h2 className="font-serif-display text-4xl md:text-5xl text-twc-warm leading-tight mb-8">
+                From brief to installed<br />
+                <span className="text-twc-warm/50">in 45 days.</span>
+              </h2>
+              <div className="space-y-6 text-twc-warm/60 font-light leading-relaxed">
+                <p>
+                  We start with your kitchen dimensions and cooking habits. Our design team translates these into 3D layouts you can walk through before a single panel is cut.
+                </p>
+                <p>
+                  Once approved, manufacturing begins in our factory — CNC precision, controlled finishing, quality checks at every stage. Then our installation crew brings it all together on site.
+                </p>
+              </div>
+              <div className="flex gap-4 pt-8">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-twc-red text-twc-charcoal text-sm tracking-wider uppercase hover:bg-twc-red/90 transition-colors duration-300"
+                >
+                  Get your estimate
+                </a>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="relative aspect-square overflow-hidden"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Image
+                src="/images/kitchens/l-shaped/L kitchen 2.jpg"
+                alt="Kitchen manufacturing process"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </motion.div>
           </div>
         </div>
       </section>

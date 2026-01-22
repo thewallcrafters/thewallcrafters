@@ -199,7 +199,7 @@ export default function ProcessSection() {
               <p className="text-twc-warm text-xl md:text-2xl font-serif-display">Let's discuss your project.</p>
             </div>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-3 border border-twc-warm/30 hover:bg-twc-warm hover:text-twc-charcoal px-8 py-4 text-sm tracking-wider transition-all duration-300 group"
             >
               <span>Start a conversation</span>
