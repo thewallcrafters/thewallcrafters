@@ -30,7 +30,7 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-2 h-2 bg-twc-red rounded-full"></div>
-            <h2 className="font-serif-display text-display text-twc-charcoal">
+            <h2 className="font-serif-display text-section-title text-twc-charcoal">
               Let's talk about<br />your space.
             </h2>
             <p className="text-twc-charcoal/60 text-lg leading-relaxed font-light max-w-lg">

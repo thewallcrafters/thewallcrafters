@@ -72,17 +72,16 @@ export default function ProcessSection() {
       {/* Section Header */}
       <div className="container-wide pt-16 pb-10 md:pt-20 md:pb-12">
         <motion.div
-          className="text-center max-w-3xl mx-auto"
+          className="max-w-3xl mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-px bg-twc-red" />
             <p className="text-[10px] tracking-widest-plus text-twc-charcoal/50 uppercase">How We Work</p>
-            <div className="w-12 h-px bg-twc-red" />
           </div>
-          <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-twc-charcoal mb-6">
+          <h2 className="font-serif-display text-section-title tracking-tight text-twc-charcoal mb-6">
             From brief to handover
           </h2>
           <p className="text-twc-charcoal/60 text-lg font-light">
@@ -186,7 +185,7 @@ export default function ProcessSection() {
       </div>
 
       {/* CTA */}
-      <div className="bg-twc-charcoal">
+      <div className="bg-twc-warm">
         <div className="container-wide py-12 md:py-16">
           <motion.div
             className="flex flex-col md:flex-row items-center justify-between gap-6"
@@ -195,12 +194,12 @@ export default function ProcessSection() {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <div>
-              <p className="text-twc-warm/60 text-sm tracking-wider mb-1">Ready to begin?</p>
-              <p className="text-twc-warm text-xl md:text-2xl font-serif-display">Let's discuss your project.</p>
+              <p className="text-twc-charcoal/60 text-sm tracking-wider mb-1">Ready to begin?</p>
+              <p className="text-twc-charcoal text-xl md:text-2xl font-serif-display">Let&apos;s discuss your project.</p>
             </div>
             <a
               href="/contact"
-              className="inline-flex items-center gap-3 border border-twc-warm/30 hover:bg-twc-warm hover:text-twc-charcoal px-8 py-4 text-sm tracking-wider transition-all duration-300 group"
+              className="inline-flex items-center gap-3 border border-twc-charcoal/30 text-twc-charcoal hover:bg-twc-charcoal hover:text-twc-warm px-8 py-4 text-sm tracking-wider transition-all duration-300 group"
             >
               <span>Start a conversation</span>
               <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>

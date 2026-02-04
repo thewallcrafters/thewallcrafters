@@ -4,14 +4,6 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 
-// Stats
-const stats = [
-  { value: '15+', label: 'Years Experience' },
-  { value: '500+', label: 'Projects Completed' },
-  { value: '50K', label: 'Sq.Ft Factory' },
-  { value: '8', label: 'Cities Served' },
-];
-
 // Core Values
 const values = [
   {
@@ -51,15 +43,6 @@ const capabilities = [
     ),
     title: 'Factory Fabrication',
     description: 'Precision manufacturing in our 50,000 sq.ft facility with quality control at every stage.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    title: 'MEP & Civil',
-    description: 'In-house electrical, plumbing, HVAC coordination, and structural modifications.',
   },
   {
     icon: (
@@ -117,23 +100,13 @@ export default function AboutPage() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] mb-8">
                 Crafting Spaces
                 <br />
-                <span className="italic font-extralight">Since 2010</span>
+                <span className="italic font-extralight">That Inspire</span>
               </h1>
-              <p className="text-lg text-white/70 font-light leading-relaxed mb-10">
+              <p className="text-lg text-white/70 font-light leading-relaxed">
                 The Wall Crafters is a design-build firm specializing in modular kitchens, 
                 wardrobes, and complete interior fit-outs. Factory precision meets on-site 
                 excellence — every piece engineered to last.
               </p>
-
-              {/* Stats Row */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/10">
-                {stats.map((stat) => (
-                  <div key={stat.label}>
-                    <span className="text-2xl md:text-3xl font-light text-white">{stat.value}</span>
-                    <p className="text-[10px] uppercase tracking-wider text-white/50 mt-1">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
             </motion.div>
           </div>
         </div>
@@ -351,7 +324,7 @@ export default function AboutPage() {
             </motion.div>
 
             {/* Right - Capabilities Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {capabilities.map((cap, index) => (
                 <motion.div
                   key={cap.title}

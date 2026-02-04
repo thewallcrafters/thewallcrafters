@@ -7,15 +7,11 @@ import { useState, useEffect } from 'react';
 const taglines = [
   'Premium Cabinetry & Interior Fit-out Firm — driven by Precision, Logical Design & Craftsmanship.',
   'Expertise in Modular Kitchens, Bespoke Kitchen Models, and Complete Interior Renovations.',
-  'Manufacture & Install all types of Cabinets — Kitchen, Wardrobes, Vanities, Storage & Custom-built Solutions.',
-  'Equipped with top-end CNC and advanced Manufacturing Machinery — flawless finishes and consistent quality.',
 ];
 
 const subtitles = [
   'One accountable team — from design support to manufacturing to installation.',
   'Designed for Indian cooking habits, heavy usage, and easy maintenance.',
-  'In-house manufacturing means no middlemen and transparent pricing.',
-  'Factory-controlled finishing for consistent quality, every time.',
 ];
 
 export default function HeroSection() {
@@ -49,13 +45,6 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
         >
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-twc-red rounded-full"></div>
-            <p className="text-[10px] tracking-widest-plus text-twc-grey uppercase">
-              The Wall Crafters — In-house cabinetry & fit-outs
-            </p>
-          </div>
-
       {/* Rotating main headlines */}
           <div className="min-h-[220px] md:min-h-[180px] lg:min-h-[160px] overflow-visible relative">
             <AnimatePresence mode="wait">

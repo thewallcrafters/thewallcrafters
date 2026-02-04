@@ -26,8 +26,11 @@ export default function AboutSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-2 h-2 bg-twc-red rounded-full" aria-hidden="true"></div>
-            <h2 className="font-serif-display text-display text-twc-warm">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-px bg-twc-red" aria-hidden="true"></div>
+              <p className="text-[10px] tracking-widest-plus text-twc-warm/50 uppercase">About Us</p>
+            </div>
+            <h2 className="font-serif-display text-section-title text-twc-warm">
               Built with collaborators,<br />driven by craft.
             </h2>
             <div className="space-y-6 text-twc-warm/70 text-lg leading-relaxed font-light">

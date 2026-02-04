@@ -5,42 +5,82 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 
-// Core Services with images
-const coreServices = [
+// Residential Services
+const residentialServices = [
   {
     id: '01',
-    title: 'Modular Kitchens',
-    subtitle: 'Factory-Precision Craftsmanship',
-    description: 'Complete kitchen systems engineered in our factory — from layout planning to installation. Every cabinet, drawer, and fitting designed for decades of daily use.',
-    image: '/images/kitchens/island/island kitchen 1.jpg',
-    features: ['Island, L-Shaped, U-Shaped, Parallel layouts', 'Soft-close mechanisms & premium hardware', 'Integrated appliances & smart storage'],
-    href: '/kitchens',
+    title: 'Home Interior Design',
+    subtitle: 'Complete Living Spaces',
+    description: 'End-to-end interior design for homes — from concept to execution. We create cohesive spaces that reflect your lifestyle, preferences, and functional needs.',
+    image: '/images/bedroom/bed 1.jpg',
+    features: ['Full home interior planning & design', '3D visualization & material selection', 'Color schemes & lighting design'],
+    href: '/interiors',
   },
   {
     id: '02',
-    title: 'Wardrobes & Storage',
-    subtitle: 'Space Maximized',
-    description: 'Floor-to-ceiling wardrobes, walk-ins, and modular storage systems. Optimized interiors with pull-outs, organizers, and finishes that complement your space.',
-    image: '/images/wardrobes/WARDROBE 4.jpg',
-    features: ['Sliding & hinged door systems', 'Custom internal configurations', 'Premium laminate & veneer finishes'],
+    title: 'Renovations & Remodeling',
+    subtitle: 'Transform Your Space',
+    description: 'Breathe new life into existing spaces. Whether it\'s a kitchen upgrade, bathroom renovation, or complete home makeover — we handle structural changes with minimal disruption.',
+    image: '/images/kitchens/u-shaped/U kitchen 1.jpg',
+    features: ['Kitchen & bathroom renovations', 'Structural modifications', 'Flooring, walls & ceiling upgrades'],
     href: '/interiors',
   },
   {
     id: '03',
-    title: 'Office Fit-Outs',
-    subtitle: 'Workspaces That Perform',
-    description: 'Complete commercial interiors — executive suites, open workstations, conference rooms, and reception areas. Built for productivity and professional presence.',
-    image: '/images/office/executive desk 4.jpg',
-    features: ['Executive desks & workstations', 'Conference tables with power integration', 'Modular office storage systems'],
+    title: 'Custom Furniture',
+    subtitle: 'Made for Your Space',
+    description: 'Bespoke furniture designed and crafted in our factory. From modular kitchens to wardrobes, TV units to puja rooms — built to exact specifications and site dimensions.',
+    image: '/images/wardrobes/WARDROBE 4.jpg',
+    features: ['Modular kitchens & wardrobes', 'TV units, beds & storage systems', 'Puja rooms with traditional detailing'],
     href: '/interiors',
   },
   {
     id: '04',
-    title: 'Bespoke Furniture',
-    subtitle: 'Made for Your Space',
-    description: 'Custom furniture pieces designed and built in-house. TV units, puja rooms, dining sets, bed frames — crafted to exact specifications.',
-    image: '/images/tv-units/Tv unit 3.jpg',
-    features: ['TV & media units with concealed wiring', 'Puja rooms with traditional detailing', 'Custom dining & bedroom furniture'],
+    title: 'Space Planning',
+    subtitle: 'Optimize Every Square Foot',
+    description: 'Strategic layout planning that maximizes functionality without compromising aesthetics. We analyze traffic flow, storage needs, and lifestyle patterns to create efficient spaces.',
+    image: '/images/storage/bookshelf 2.jpg',
+    features: ['Floor plan optimization', 'Storage & organization solutions', 'Furniture placement & flow'],
+    href: '/interiors',
+  },
+];
+
+// Commercial Services
+const commercialServices = [
+  {
+    id: '01',
+    title: 'Office Interior Design',
+    subtitle: 'Workspaces That Perform',
+    description: 'Complete office interiors designed for productivity, collaboration, and brand identity. From executive suites to open workstations — spaces that inspire your team.',
+    image: '/images/office/executive desk 4.jpg',
+    features: ['Executive cabins & workstations', 'Conference rooms & meeting spaces', 'Reception areas & lobbies'],
+    href: '/interiors',
+  },
+  {
+    id: '02',
+    title: 'Retail Space Design',
+    subtitle: 'Spaces That Sell',
+    description: 'Retail environments that enhance customer experience and showcase your products. Display systems, counters, and layouts optimized for customer flow and engagement.',
+    image: '/images/office/display 1.jpg',
+    features: ['Showcase counters & display systems', 'Lab & utility cabinets for non-medical use', 'Branding integration & signage'],
+    href: '/interiors',
+  },
+  {
+    id: '03',
+    title: 'Hospitality Design',
+    subtitle: 'Memorable Experiences',
+    description: 'Interiors for restaurants, hotels, and hospitality venues. We create atmospheres that leave lasting impressions — from intimate cafes to large banquet spaces.',
+    image: '/images/dining/Bar table 1.jpg',
+    features: ['Restaurant & cafe interiors', 'Hotel rooms & lobby design', 'Bar counters & vanity units'],
+    href: '/interiors',
+  },
+  {
+    id: '04',
+    title: 'Corporate Branding',
+    subtitle: 'Identity Through Interiors',
+    description: 'Translate your brand values into physical spaces. We integrate brand colors, materials, and messaging into interior design for a cohesive corporate identity.',
+    image: '/images/office/workstation 2.jpg',
+    features: ['Brand-aligned color & material palettes', 'Logo integration & feature walls', 'Consistent design language across locations'],
     href: '/interiors',
   },
 ];
@@ -50,38 +90,29 @@ const additionalServices = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+    ),
+    title: 'Consultation Services',
+    description: 'Expert guidance on design direction, material selection, and budget planning. Get professional advice before committing to a full project.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      </svg>
+    ),
+    title: 'Project Management',
+    description: 'Single-point accountability from design to handover. We coordinate all vendors, timelines, and deliverables so you don\'t have to.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
     title: 'Architecture & Design',
-    description: 'From site analysis to 3D visualization and construction documentation.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    title: 'Civil & MEP',
-    description: 'Structural work, electrical, plumbing, and HVAC coordination.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: 'Project Management',
-    description: 'Single-point accountability from design to handover.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-      </svg>
-    ),
-    title: 'Custom Solutions',
-    description: 'Unique requirements? We design and build to your specifications.',
+    description: 'From site analysis to 3D visualization and construction documentation. Complete architectural services for new builds and renovations.',
   },
 ];
 
@@ -114,7 +145,7 @@ const processSteps = [
 ];
 
 // Service Card Component
-function ServiceCard({ service, index }: { service: typeof coreServices[0]; index: number }) {
+function ServiceCard({ service, index }: { service: typeof residentialServices[0]; index: number }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const isEven = index % 2 === 0;
@@ -220,32 +251,16 @@ export default function ServicesPage() {
               <br />
               <span className="italic font-extralight">Deliver.</span>
             </h1>
-            <p className="text-lg text-white/70 font-light leading-relaxed mb-10 max-w-xl">
+            <p className="text-lg text-white/70 font-light leading-relaxed max-w-xl">
               From modular kitchens to complete office fit-outs, we handle every phase 
               in-house — design, fabrication, and installation. One team, one responsibility, 
               one standard of quality.
             </p>
-
-            {/* Quick Stats */}
-            <div className="flex flex-wrap gap-8 pt-8 border-t border-white/10">
-              <div>
-                <span className="text-3xl font-light text-white">15+</span>
-                <p className="text-xs uppercase tracking-wider text-white/50 mt-1">Years Experience</p>
-              </div>
-              <div>
-                <span className="text-3xl font-light text-white">500+</span>
-                <p className="text-xs uppercase tracking-wider text-white/50 mt-1">Projects Delivered</p>
-              </div>
-              <div>
-                <span className="text-3xl font-light text-white">50K</span>
-                <p className="text-xs uppercase tracking-wider text-white/50 mt-1">Sq.Ft Factory</p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Core Services Section */}
+      {/* Residential Services Section */}
       <section className="py-16 md:py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           {/* Section Header */}
@@ -254,19 +269,57 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="mb-20"
           >
             <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-4 block">
-              What We Do
+              01 — Residential Services
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight max-w-3xl mx-auto">
-              Integrated Solutions for Every Space
-            </h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
+                Homes That Reflect You
+              </h2>
+              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
+                Complete residential interior solutions — from initial design concepts to final installation. We create spaces that are functional, beautiful, and uniquely yours.
+              </p>
+            </div>
           </motion.div>
 
-          {/* Services List */}
+          {/* Residential Services List */}
           <div className="space-y-24 lg:space-y-32">
-            {coreServices.map((service, index) => (
+            {residentialServices.map((service, index) => (
+              <ServiceCard key={service.id} service={service} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Commercial Services Section */}
+      <section className="py-16 md:py-24 lg:py-32 bg-twc-warm">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-20"
+          >
+            <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-4 block">
+              02 — Commercial Services
+            </span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
+                Spaces That Mean Business
+              </h2>
+              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
+                Professional environments designed for productivity, brand presence, and customer experience. From corporate offices to retail showrooms.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Commercial Services List */}
+          <div className="space-y-24 lg:space-y-32">
+            {commercialServices.map((service, index) => (
               <ServiceCard key={service.id} service={service} index={index} />
             ))}
           </div>
@@ -274,24 +327,24 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Services Grid */}
-      <section className="py-16 md:py-24 bg-twc-warm">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="mb-16"
           >
             <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-4 block">
-              Also Available
+              03 — Additional Services
             </span>
             <h2 className="text-3xl md:text-4xl font-light text-twc-charcoal">
-              Supporting Services
+              Supporting Your Project
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {additionalServices.map((service, index) => (
               <motion.div
                 key={service.title}

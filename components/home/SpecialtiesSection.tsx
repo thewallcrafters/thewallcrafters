@@ -25,7 +25,7 @@ export default function SpecialtiesSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif-display text-display">Beyond kitchens.</h2>
+          <h2 className="font-serif-display text-section-title">Beyond kitchens.</h2>
           <p className="text-twc-grey text-lg md:text-xl font-light leading-relaxed">
             From conference rooms to puja spaces, storage systems and media walls — TWC Fit-Outs delivers crafted environments end to end.
           </p>

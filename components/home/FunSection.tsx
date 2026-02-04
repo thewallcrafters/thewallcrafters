@@ -57,14 +57,17 @@ export default function FunSection() {
       <div className="container-wide py-16 md:py-20">
         {/* Header */}
         <motion.div
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="max-w-2xl mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-[10px] tracking-widest-plus text-twc-charcoal/50 uppercase mb-4">Honest Confessions</p>
-          <h2 className="font-serif-display text-3xl md:text-4xl leading-[1.2] tracking-tight text-twc-charcoal">
-            A few things we probably<br />shouldn't admit publicly.
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-px bg-twc-red" />
+            <p className="text-[10px] tracking-widest-plus text-twc-charcoal/50 uppercase">Honest Confessions</p>
+          </div>
+          <h2 className="font-serif-display text-section-title tracking-tight text-twc-charcoal text-left lg:whitespace-nowrap">
+            A few things we probably shouldn't admit publicly.
           </h2>
         </motion.div>
 

@@ -6,12 +6,11 @@ import Link from 'next/link';
 
 const navItems = [
   { label: 'HOME', href: '/' },
-  { label: 'WORK', href: '/work' },
-  { label: 'KITCHENS', href: '/kitchens' },
   { label: 'INTERIORS', href: '/interiors' },
   { label: 'SERVICES', href: '/services' },
+  { label: 'PRODUCTS', href: '/products' },
   { label: 'ABOUT', href: '/about' },
-  { label: 'CONTACT', href: '/contact' },
+  { label: 'CONTACTS', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -60,9 +59,9 @@ export default function Navbar() {
       >
         <div className="container-wide py-6">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-baseline gap-0 group">
-              <span className="text-2xl font-bold tracking-tight">twc</span>
-              <span className="w-1.5 h-1.5 bg-twc-red rounded-full ml-0.5" />
+            <Link href="/" className="flex items-baseline gap-0 group relative z-10" aria-label="TWC Fit-Outs Home">
+              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight transition-transform duration-300 group-hover:scale-105">twc</span>
+              <span className="w-2 sm:w-2.5 md:w-3 h-2 sm:h-2.5 md:h-3 bg-twc-red rounded-full ml-0.5 sm:ml-1 logo-dot transition-transform duration-300 group-hover:scale-110" />
             </Link>
 
             <div className="hidden lg:flex items-center gap-10">

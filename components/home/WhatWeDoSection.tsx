@@ -28,13 +28,13 @@ export default function WhatWeDoSection() {
           animate={isInView ? 'visible' : 'hidden'}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-2 h-2 bg-twc-red rounded-full"></div>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-px bg-twc-red"></div>
             <p className="text-[10px] tracking-widest-plus text-twc-charcoal/70 uppercase">What we do</p>
           </div>
           
           <div className="max-w-4xl">
-            <h2 className="font-serif-display text-display leading-tight tracking-tight text-twc-charcoal mb-4">
+            <h2 className="font-serif-display text-section-title tracking-tight text-twc-charcoal mb-4">
               In-house manufacturing.<br />Factory-finished quality.
             </h2>
             <p className="text-twc-charcoal text-lg md:text-xl font-light leading-relaxed max-w-2xl">

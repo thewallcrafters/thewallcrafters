@@ -8,6 +8,12 @@ import { motion, useInView } from 'framer-motion';
 // Residential Categories
 const residentialCategories = [
   {
+    title: 'Kitchens',
+    description: 'Modular kitchens built for Indian cooking — L-shaped, U-shaped, parallel, and island layouts.',
+    image: '/images/kitchens/l-shaped/L kitchen 1.jpg',
+    href: '/kitchens',
+  },
+  {
     title: 'Wardrobes',
     description: 'Walk-in, sliding, or hinged — wardrobes engineered for space and style.',
     image: '/images/wardrobes/WARDROBE 2.jpg',
@@ -69,6 +75,28 @@ const commercialCategories = [
     title: 'Display Units',
     description: 'Trophy displays, showcases, and exhibition furniture.',
     image: '/images/office/display 1.jpg',
+    href: '/interiors/conference-tables',
+  },
+];
+
+// Retail & Showrooms Categories
+const retailCategories = [
+  {
+    title: 'Showcase Counters',
+    description: 'Glass-fronted display counters for retail, jewellery, and showroom spaces.',
+    image: '/images/office/display 2.jpg',
+    href: '/interiors/conference-tables',
+  },
+  {
+    title: 'Lab & Utility Cabinets',
+    description: 'Durable storage solutions for non-medical labs, workshops, and utility areas.',
+    image: '/images/office/modular storage 4.jpg',
+    href: '/interiors/conference-tables',
+  },
+  {
+    title: 'Hospitality Vanity',
+    description: 'Custom vanity units for hotels, restaurants, and hospitality spaces.',
+    image: '/images/office/storage 2.jpg',
     href: '/interiors/conference-tables',
   },
 ];
@@ -205,7 +233,7 @@ export default function InteriorsPage() {
                   <p className="text-xs uppercase tracking-wider text-white/50 mt-1">Spaces Delivered</p>
                 </div>
                 <div>
-                  <span className="text-3xl font-light text-white">10</span>
+                  <span className="text-3xl font-light text-white">14</span>
                   <p className="text-xs uppercase tracking-wider text-white/50 mt-1">Categories</p>
                 </div>
               </div>
@@ -213,8 +241,8 @@ export default function InteriorsPage() {
           </div>
 
           {/* Right - Image Collage */}
-          <div className="relative order-1 lg:order-2 min-h-[50vh] lg:min-h-screen">
-            <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-2 p-2 lg:p-4">
+          <div className="relative order-1 lg:order-2 min-h-[50vh] lg:min-h-screen pt-20 lg:pt-24">
+            <div className="absolute inset-0 top-20 lg:top-24 grid grid-cols-2 grid-rows-2 gap-2 p-2 lg:p-4">
               <FeaturedImage 
                 src="/images/wardrobes/WARDROBE 3.jpg" 
                 alt="Wardrobe Design"
@@ -253,14 +281,51 @@ export default function InteriorsPage() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
                 Home Interiors
               </h2>
-              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right">
-                Complete solutions for every room — wardrobes, bedrooms, entertainment units, 
-                sacred spaces, and storage systems designed for the way you live.
+              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
+                Complete solutions for every room — kitchens, wardrobes, bedrooms, entertainment units, sacred spaces, and storage systems.
               </p>
             </div>
           </motion.div>
 
-          {/* Residential Grid - Asymmetric */}
+          {/* Featured Hero - Kitchen */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+            variants={fadeInUp}
+            className="mb-6"
+          >
+            <Link href={residentialCategories[0].href} className="group block">
+              <div className="relative overflow-hidden bg-twc-charcoal aspect-[21/9]">
+                <Image
+                  src={residentialCategories[0].image}
+                  alt={residentialCategories[0].title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="100vw"
+                />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-3">
+                    {residentialCategories[0].title}
+                  </h3>
+                  <p className="text-white/70 text-base md:text-lg font-light max-w-2xl mb-4">
+                    {residentialCategories[0].description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white group-hover:text-twc-red transition-colors">
+                    Explore
+                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+
+          {/* Remaining 6 items in 3x2 Grid */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -268,12 +333,12 @@ export default function InteriorsPage() {
             variants={staggerContainer}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           >
-            {residentialCategories.map((category, index) => (
+            {residentialCategories.slice(1).map((category, index) => (
               <CategoryCard 
                 key={category.title} 
                 category={category} 
                 index={index}
-                size={index === 0 || index === 3 ? 'large' : 'normal'}
+                size="normal"
               />
             ))}
           </motion.div>
@@ -343,6 +408,51 @@ export default function InteriorsPage() {
                 category={category} 
                 index={index}
                 size="large"
+              />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Retail & Showrooms Section */}
+      <section className="py-16 md:py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          {/* Section Header */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-4 block">
+              03 — Retail & Showrooms
+            </span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
+                Retail & Hospitality
+              </h2>
+              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right">
+                Showcase counters, utility cabinets, and vanity units designed for 
+                retail spaces, showrooms, and hospitality environments.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Retail Grid - 3 columns */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+            variants={staggerContainer}
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"
+          >
+            {retailCategories.map((category, index) => (
+              <CategoryCard 
+                key={category.title} 
+                category={category} 
+                index={index}
+                size="normal"
               />
             ))}
           </motion.div>

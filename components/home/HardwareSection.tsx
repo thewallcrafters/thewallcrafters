@@ -75,7 +75,7 @@ export default function HardwareSection() {
                 <p className="text-[10px] tracking-widest-plus text-twc-warm/50 uppercase">Hardware & Detailing</p>
               </div>
               
-              <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-twc-warm mb-8">
+              <h2 className="font-serif-display text-section-title tracking-tight text-twc-warm mb-8">
                 The details<br />
                 <span className="text-twc-warm/50">others overlook.</span>
               </h2>

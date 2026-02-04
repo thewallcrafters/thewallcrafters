@@ -21,7 +21,7 @@ export default function KeyDifferentiatorsSection() {
             <div className="w-12 h-px bg-twc-red" />
             <p className="text-[10px] tracking-widest-plus text-twc-grey uppercase">Key Differentiators</p>
           </div>
-          <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+          <h2 className="font-serif-display text-section-title tracking-tight">
             The difference is in<br />
             <span className="text-twc-grey">how we work.</span>
           </h2>

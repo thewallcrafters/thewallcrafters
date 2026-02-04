@@ -25,13 +25,17 @@ export default function ProjectsSection() {
     <section className="bg-twc-dark section-padding relative noise-texture" id="work">
       <div className="container-wide">
         <motion.div
-          className="mb-20 text-center"
+          className="mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-serif-display text-display">Signature projects.</h2>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-px bg-twc-red" />
+            <p className="text-[10px] tracking-widest-plus text-twc-grey/50 uppercase">Projects</p>
+          </div>
+          <h2 className="font-serif-display text-section-title">Signature projects.</h2>
         </motion.div>
 
         <div className="space-y-32 lg:space-y-40">

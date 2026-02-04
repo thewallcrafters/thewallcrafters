@@ -25,7 +25,8 @@ export default {
       },
       fontSize: {
         'hero': ['clamp(1.8rem, 4.3vw, 4.25rem)', { lineHeight: '1.08', letterSpacing: '-0.02em' }],
-        'display': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '1.15' }],
+        'display': ['clamp(3rem, 7vw, 6rem)', { lineHeight: '1.1' }],
+        'section-title': ['clamp(2.5rem, 5.5vw, 4.5rem)', { lineHeight: '1.1' }],
       },
       spacing: {
         '120': '30rem',

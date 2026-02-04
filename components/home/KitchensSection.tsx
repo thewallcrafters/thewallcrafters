@@ -27,7 +27,7 @@ export default function KitchensSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif-display text-display text-twc-charcoal">
+          <h2 className="font-serif-display text-section-title text-twc-charcoal">
             Kitchens that work beautifully.
           </h2>
           <p className="text-twc-charcoal/60 text-lg md:text-xl font-light max-w-3xl mx-auto">

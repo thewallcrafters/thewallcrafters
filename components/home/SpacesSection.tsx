@@ -32,7 +32,11 @@ export default function SpacesSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <h2 className="font-serif-display text-display leading-tight tracking-tight">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-px bg-twc-red" />
+              <p className="text-[10px] tracking-widest-plus text-twc-warm/50 uppercase">Spaces</p>
+            </div>
+            <h2 className="font-serif-display text-section-title tracking-tight">
               Spaces we craft.
             </h2>
             <p className="text-twc-grey text-xl font-light leading-relaxed">

@@ -54,30 +54,9 @@ const officeInfo = {
   mapUrl: 'https://maps.google.com/?q=Chennai',
 };
 
-// FAQ Items
-const faqs = [
-  {
-    question: 'What areas do you serve?',
-    answer: 'We operate across 8 major cities in India including Chennai, Bangalore, Hyderabad, Mumbai, Delhi NCR, Pune, Kolkata, and Ahmedabad.',
-  },
-  {
-    question: 'What is the typical project timeline?',
-    answer: 'Most projects are completed within 6-8 weeks from design approval. This includes fabrication at our factory and on-site installation.',
-  },
-  {
-    question: 'Do you offer site visits for quotations?',
-    answer: 'Yes, we provide complimentary site visits for project assessment. Our team will measure the space and discuss your requirements in detail.',
-  },
-  {
-    question: 'What payment terms do you offer?',
-    answer: 'We typically work with a 50% advance on order confirmation, 40% before dispatch, and 10% on completion. Custom terms can be discussed for larger projects.',
-  },
-];
-
 export default function ContactPage() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -360,68 +339,6 @@ export default function ContactPage() {
                 </a>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-4 block">
-              FAQ
-            </span>
-            <h2 className="text-3xl md:text-4xl font-light text-twc-charcoal">
-              Common Questions
-            </h2>
-          </motion.div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="border border-twc-charcoal/10"
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left hover:bg-twc-warm/30 transition-colors duration-300"
-                >
-                  <span className="text-base font-light text-twc-charcoal pr-4">{faq.question}</span>
-                  <svg
-                    className={`w-5 h-5 text-twc-red flex-shrink-0 transition-transform duration-300 ${
-                      openFaq === index ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {openFaq === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="px-6 pb-6"
-                  >
-                    <p className="text-sm text-twc-charcoal/60 font-light leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

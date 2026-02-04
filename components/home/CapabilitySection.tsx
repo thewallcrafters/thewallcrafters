@@ -29,13 +29,17 @@ export default function CapabilitySection() {
     <section className="bg-twc-dark section-padding relative noise-texture" id="capability" ref={ref}>
       <div className="container-wide">
         <motion.div
-          className="mb-20 text-center space-y-6"
+          className="mb-20 space-y-6"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif-display text-display">Built to deliver.</h2>
-          <p className="text-twc-grey text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-px bg-twc-red" />
+            <p className="text-[10px] tracking-widest-plus text-twc-grey/50 uppercase">Capability</p>
+          </div>
+          <h2 className="font-serif-display text-section-title">Built to deliver.</h2>
+          <p className="text-twc-grey text-lg md:text-xl font-light leading-relaxed max-w-3xl">
             Quality is a system—materials, hardware, process, and people. We build it in at every step.
           </p>
         </motion.div>

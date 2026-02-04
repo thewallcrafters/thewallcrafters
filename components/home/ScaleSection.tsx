@@ -40,24 +40,6 @@ const projectTypes = [
   },
 ];
 
-const capabilities = [
-  {
-    stat: '10,000+',
-    unit: 'sq.ft',
-    label: 'Manufacturing facility',
-  },
-  {
-    stat: '15+',
-    unit: 'machines',
-    label: 'CNC & precision equipment',
-  },
-  {
-    stat: '40+',
-    unit: 'craftsmen',
-    label: 'Skilled installation team',
-  },
-];
-
 export default function ScaleSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -67,17 +49,16 @@ export default function ScaleSection() {
       <div className="container-wide py-16 md:py-20 lg:py-24">
         {/* Header */}
         <motion.div
-          className="text-center max-w-3xl mx-auto mb-16 md:mb-20"
+          className="max-w-3xl mb-16 md:mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-px bg-twc-red" />
             <p className="text-[10px] tracking-widest-plus text-twc-charcoal/50 uppercase">Scale & Capacity</p>
-            <div className="w-12 h-px bg-twc-red" />
           </div>
-          <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-twc-charcoal mb-6">
+          <h2 className="font-serif-display text-section-title tracking-tight text-twc-charcoal mb-6">
             Built to deliver at any scale
           </h2>
           <p className="text-twc-charcoal/60 text-lg font-light">
@@ -112,32 +93,6 @@ export default function ScaleSection() {
             </motion.li>
           ))}
         </ul>
-
-        {/* Capabilities Bar */}
-        <motion.div
-          className="bg-twc-charcoal p-8 md:p-12"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <dl className="grid md:grid-cols-3 gap-8 md:gap-12">
-            {capabilities.map((cap, index) => (
-              <motion.div
-                key={cap.label}
-                className="text-center md:text-left"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-              >
-                <dt className="flex items-baseline justify-center md:justify-start gap-1 mb-2">
-                  <span className="text-4xl md:text-5xl font-serif-display text-twc-warm">{cap.stat}</span>
-                  <span className="text-twc-warm/50 text-sm">{cap.unit}</span>
-                </dt>
-                <dd className="text-twc-warm/60 text-sm font-light">{cap.label}</dd>
-              </motion.div>
-            ))}
-          </dl>
-        </motion.div>
       </div>
     </section>
   );

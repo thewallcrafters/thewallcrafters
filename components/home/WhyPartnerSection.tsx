@@ -51,7 +51,7 @@ export default function WhyPartnerSection() {
                 <p className="text-[10px] tracking-widest-plus text-twc-warm/50 uppercase">Why Us</p>
               </div>
               
-              <h2 className="font-serif-display text-4xl md:text-5xl leading-[1.1] tracking-tight text-twc-warm mb-6">
+              <h2 className="font-serif-display text-section-title tracking-tight text-twc-warm mb-6">
                 Why partner with<br />
                 <span className="text-twc-red">The Wall Crafters</span>
               </h2>

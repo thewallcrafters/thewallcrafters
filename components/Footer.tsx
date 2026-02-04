@@ -46,7 +46,7 @@ export default function Footer() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <footer className="bg-twc-charcoal relative" ref={ref}>
+    <footer id="site-footer" className="bg-twc-charcoal relative" ref={ref}>
       {/* Final CTA Section */}
       <div className="border-b border-twc-warm/10">
         <div className="container-wide py-20 md:py-28">
@@ -90,8 +90,8 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-4">
             <div className="flex items-baseline gap-0 mb-4">
-              <span className="text-3xl font-bold tracking-tight text-twc-warm">twc</span>
-              <span className="w-2 h-2 bg-twc-red rounded-full ml-1" />
+              <span className="text-4xl sm:text-5xl font-bold tracking-tight text-twc-warm">twc</span>
+              <span className="w-2.5 sm:w-3 h-2.5 sm:h-3 bg-twc-red rounded-full ml-1 logo-dot" />
             </div>
             <p className="text-[10px] tracking-widest-plus text-twc-warm/40 uppercase mb-6">
               FIT-OUTS
