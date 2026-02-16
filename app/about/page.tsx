@@ -234,23 +234,43 @@ export default function AboutPage() {
               </p>
               <div className="space-y-6 text-base text-twc-charcoal/70 font-light leading-relaxed">
                 <p>
-                  The studio is led by founder Anikate Singhal, a BBA in Entrepreneurship alumnus 
-                  of IILM and SBS Swiss Business School, Zurich, whose background in venture 
-                  creation keeps our processes entrepreneurial yet disciplined.
+                  I'm the tenth generation of a Madurai business family with roots in the grain 
+                  trade. I grew up seeing my family build trust through quality and keeping their 
+                  promises. These principles shape my approach to business today.
                 </p>
                 <p>
-                  His approach combines strategic thinking with hands-on oversight — ensuring 
-                  every project balances design integrity with operational clarity from inception 
-                  to handover.
+                  After completing my BBA in Entrepreneurship from Swiss Business School in 2020, 
+                  I worked in our family business for three years. However, I became interested in 
+                  a different path: the craft of interior execution. I was fascinated by the 
+                  precision needed for a perfectly fitted wardrobe, the logic behind a functional 
+                  kitchen, and the discipline required to bring a design to life exactly as envisioned.
+                </p>
+                <p>
+                  In 2023, I took on a 5,000 sq. ft. residential project with one goal: flawless 
+                  execution in six months. We achieved that goal. This success gave me the clarity 
+                  and confidence to start TWC Fitouts.
+                </p>
+                <p>
+                  What motivates me is simple. I believe interior work deserves the same seriousness 
+                  as any craft. It's not about following trends; it's about understanding what people 
+                  need, designing practical solutions, and building them with precision.
+                </p>
+              </div>
+
+              {/* Philosophy */}
+              <div className="mt-10 pt-8 border-t border-twc-charcoal/10">
+                <p className="text-xs uppercase tracking-widest text-twc-charcoal/50 mb-4">Our Values</p>
+                <p className="text-sm text-twc-charcoal/70 italic leading-relaxed">
+                  "We are a young company built on old values: exceptional quality, accountability, 
+                  and keeping our word."
                 </p>
               </div>
 
               {/* Education */}
-              <div className="mt-10 pt-8 border-t border-twc-charcoal/10">
+              <div className="mt-8 pt-8 border-t border-twc-charcoal/10">
                 <p className="text-xs uppercase tracking-widest text-twc-charcoal/50 mb-4">Education</p>
                 <div className="space-y-3">
-                  <p className="text-sm text-twc-charcoal/70">BBA in Entrepreneurship — IILM</p>
-                  <p className="text-sm text-twc-charcoal/70">SBS Swiss Business School, Zurich</p>
+                  <p className="text-sm text-twc-charcoal/70">BBA in Entrepreneurship — Swiss Business School, 2020</p>
                 </div>
               </div>
             </motion.div>

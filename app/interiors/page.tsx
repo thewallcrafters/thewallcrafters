@@ -84,20 +84,20 @@ const retailCategories = [
   {
     title: 'Showcase Counters',
     description: 'Glass-fronted display counters for retail, jewellery, and showroom spaces.',
-    image: '/images/office/display 2.jpg',
-    href: '/interiors/conference-tables',
+    image: '/images/showcase-counters/1.jpg',
+    href: '/interiors/showcase-counters',
   },
   {
     title: 'Lab & Utility Cabinets',
     description: 'Durable storage solutions for non-medical labs, workshops, and utility areas.',
-    image: '/images/office/modular storage 4.jpg',
-    href: '/interiors/conference-tables',
+    image: '/images/lab-utility-cabinets/1.jpg',
+    href: '/interiors/lab-utility-cabinets',
   },
   {
-    title: 'Hospitality Vanity',
+    title: 'Hospitality',
     description: 'Custom vanity units for hotels, restaurants, and hospitality spaces.',
-    image: '/images/office/storage 2.jpg',
-    href: '/interiors/conference-tables',
+    image: '/images/hospitality/1.jpg',
+    href: '/interiors/hospitality',
   },
 ];
 
