@@ -70,16 +70,16 @@ export default function WhatWeDoSection() {
           {/* Key Points - Right */}
           <div className="lg:col-span-4 lg:col-start-9">
             <div className="lg:sticky lg:top-32 space-y-5">
-              <div className="bg-twc-charcoal rounded-xl p-5 md:p-6">
+              <div className="bg-[#2C2824] rounded-xl p-5 md:p-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-full bg-twc-warm/10 flex items-center justify-center">
-                    <svg className="w-4 h-4 text-twc-warm" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="w-8 h-8 rounded-full bg-[#F5F3EE]/10 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-[#F5F3EE]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-medium text-twc-warm">Factory finish</h3>
+                  <h3 className="text-lg font-medium text-[#F5F3EE]">Factory finish</h3>
                 </div>
-                <p className="text-twc-warm/60 font-light text-sm leading-relaxed">
+                <p className="text-[#F5F3EE]/60 font-light text-sm leading-relaxed">
                   Controlled shop-floor finishing for consistent colour, texture, and detailing — every piece.
                 </p>
               </div>

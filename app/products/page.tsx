@@ -170,7 +170,7 @@ function InterestModal({
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden relative w-full max-w-md">
               <div className="bg-[#2C2824] p-6 text-center">
                 <h3 className="text-xl font-bold text-white">I&apos;m Interested</h3>
-                <p className="text-twc-warm/80 text-sm mt-1">{productName}</p>
+                <p className="text-[#F5F3EE]/80 text-sm mt-1">{productName}</p>
               </div>
               
               {isSubmitted ? (
@@ -273,10 +273,10 @@ function HeroSection() {
         }} />
         {/* Radial glow behind product */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-twc-red/10 rounded-full blur-[150px]" />
-        <div className="absolute right-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-twc-warm/5 rounded-full blur-[100px]" />
+        <div className="absolute right-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#F5F3EE]/5 rounded-full blur-[100px]" />
         {/* Corner accents */}
-        <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-twc-warm/20" />
-        <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-twc-warm/20" />
+        <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-[#F5F3EE]/20" />
+        <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-[#F5F3EE]/20" />
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
@@ -298,14 +298,14 @@ function HeroSection() {
             {/* Main headline with elegant styling */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               <span className="block">Vegas Style</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-twc-warm via-white to-twc-warm">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F5F3EE] via-white to-[#F5F3EE]">
                 Casino Experience
               </span>
               <span className="block">At Home</span>
             </h1>
             
             {/* Elegant subtitle */}
-            <p className="mt-6 text-twc-warm/70 text-lg max-w-md leading-relaxed">
+            <p className="mt-6 text-[#F5F3EE]/70 text-lg max-w-md leading-relaxed">
               Handcrafted poker tables that bring the sophistication of world-class casinos to your home.
             </p>
             
@@ -325,7 +325,7 @@ function HeroSection() {
               <motion.button
                 whileHover={{ scale: 1.02, backgroundColor: 'rgba(244, 241, 234, 0.1)' }}
                 whileTap={{ scale: 0.98 }}
-                className="border border-twc-warm/30 text-twc-warm px-8 py-4 rounded-full font-semibold inline-flex items-center gap-3 transition-all backdrop-blur-sm"
+                className="border border-[#F5F3EE]/30 text-[#F5F3EE] px-8 py-4 rounded-full font-semibold inline-flex items-center gap-3 transition-all backdrop-blur-sm"
               >
                 View Details
               </motion.button>
@@ -341,10 +341,10 @@ function HeroSection() {
                   transition={{ delay: 0.5 + index * 0.1 }}
                   className="flex items-center gap-3 group"
                 >
-                  <div className="w-10 h-10 rounded-full border border-twc-warm/20 flex items-center justify-center group-hover:border-twc-red/50 transition-colors">
+                  <div className="w-10 h-10 rounded-full border border-[#F5F3EE]/20 flex items-center justify-center group-hover:border-twc-red/50 transition-colors">
                     <span className="text-lg">{feature.icon}</span>
                   </div>
-                  <span className="text-sm font-medium text-twc-warm/80 uppercase tracking-wide">
+                  <span className="text-sm font-medium text-[#F5F3EE]/80 uppercase tracking-wide">
                     {feature.text}
                   </span>
                 </motion.div>
@@ -360,7 +360,7 @@ function HeroSection() {
             className="relative lg:scale-[2] lg:translate-x-20 lg:-translate-y-4"
           >
             {/* Glow effect behind image */}
-            <div className="absolute inset-0 bg-gradient-to-br from-twc-red/20 via-transparent to-twc-warm/10 blur-3xl scale-150" />
+            <div className="absolute inset-0 bg-gradient-to-br from-twc-red/20 via-transparent to-[#F5F3EE]/10 blur-3xl scale-150" />
             
             {/* Main image container - larger */}
             <div className="relative aspect-[4/3] min-h-[350px] lg:min-h-[450px]">
@@ -386,9 +386,9 @@ function HeroSection() {
         <motion.div 
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-twc-warm/30 rounded-full flex justify-center pt-2"
+          className="w-6 h-10 border-2 border-[#F5F3EE]/30 rounded-full flex justify-center pt-2"
         >
-          <div className="w-1.5 h-1.5 bg-twc-warm/50 rounded-full" />
+          <div className="w-1.5 h-1.5 bg-[#F5F3EE]/50 rounded-full" />
         </motion.div>
       </motion.div>
       

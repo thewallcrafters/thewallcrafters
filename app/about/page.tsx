@@ -204,7 +204,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative aspect-[4/5] bg-twc-charcoal overflow-hidden"
+              className="relative aspect-[4/5] bg-[#2C2824] overflow-hidden"
             >
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
