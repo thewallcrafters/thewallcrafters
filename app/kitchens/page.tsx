@@ -106,7 +106,7 @@ export default function KitchensPage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-twc-charcoal/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2C2824]/60 via-transparent to-transparent" />
         </div>
       </section>
 

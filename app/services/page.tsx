@@ -221,7 +221,7 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] bg-twc-charcoal flex items-center">
+      <section className="relative min-h-[90vh] bg-twc-dark flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -232,7 +232,7 @@ export default function ServicesPage() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-twc-charcoal via-twc-charcoal/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2C2824] via-[#2C2824]/80 to-transparent" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-32">

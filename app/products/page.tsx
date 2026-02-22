@@ -168,7 +168,7 @@ function InterestModal({
             className="fixed inset-0 z-[100] flex items-center justify-center p-4"
           >
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden relative w-full max-w-md">
-              <div className="bg-twc-charcoal p-6 text-center">
+              <div className="bg-[#2C2824] p-6 text-center">
                 <h3 className="text-xl font-bold text-white">I&apos;m Interested</h3>
                 <p className="text-twc-warm/80 text-sm mt-1">{productName}</p>
               </div>
@@ -263,7 +263,7 @@ function HeroSection() {
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);
   
   return (
-    <section className="min-h-[90vh] bg-gradient-to-br from-twc-charcoal via-twc-charcoal to-neutral-900 flex items-center relative overflow-hidden">
+    <section className="min-h-[90vh] bg-gradient-to-br from-[#2C2824] via-[#2C2824] to-neutral-900 flex items-center relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Subtle grid pattern */}
@@ -615,7 +615,7 @@ function ProductsGridSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setSelectedProduct(product.name)}
-                  className="mt-4 w-full bg-twc-charcoal hover:bg-twc-charcoal/90 text-white py-3 rounded-lg font-semibold transition-all"
+                  className="mt-4 w-full bg-[#2C2824] hover:bg-[#2C2824]/90 text-white py-3 rounded-lg font-semibold transition-all"
                 >
                   I&apos;m Interested
                 </motion.button>
@@ -717,7 +717,7 @@ function ReviewsSection() {
               className="bg-white rounded-2xl p-6 shadow-md"
             >
               {/* Avatar */}
-              <div className="w-16 h-16 bg-twc-charcoal rounded-full flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-[#2C2824] rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl font-bold text-white">
                   {review.name.charAt(0)}
                 </span>

@@ -13,7 +13,7 @@ export default function ProjectHero({ title, location, type, image }: ProjectHer
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-twc-charcoal via-twc-charcoal/60 to-twc-charcoal/80 z-10 noise-texture"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-[#2C2824] via-[#2C2824]/60 to-[#2C2824]/80 z-10 noise-texture"></div>
 
       {/* Background image with parallax effect */}
       <motion.div
@@ -41,7 +41,7 @@ export default function ProjectHero({ title, location, type, image }: ProjectHer
           </div>
 
           {/* Project title */}
-          <h1 className="font-serif-display text-hero text-twc-warm">
+          <h1 className="font-serif-display text-hero text-[#F5F3EE]">
             {title}
           </h1>
 

@@ -82,7 +82,7 @@ export default function AboutPage() {
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-twc-charcoal/50 lg:hidden" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#2C2824]/50 lg:hidden" />
           </div>
 
           {/* Right - Content */}

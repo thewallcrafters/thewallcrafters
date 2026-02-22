@@ -137,7 +137,7 @@ function CategoryCard({
       transition={{ duration: 0.6, delay: index * 0.1 }}
     >
       <Link href={category.href} className="group block">
-        <div className={`relative overflow-hidden bg-twc-charcoal ${
+        <div className={`relative overflow-hidden bg-twc-dark ${
           size === 'large' ? 'aspect-[4/3]' : 'aspect-[3/4]'
         }`}>
           <Image
@@ -296,7 +296,7 @@ export default function InteriorsPage() {
             className="mb-6"
           >
             <Link href={residentialCategories[0].href} className="group block">
-              <div className="relative overflow-hidden bg-twc-charcoal aspect-[21/9]">
+              <div className="relative overflow-hidden bg-twc-dark aspect-[21/9]">
                 <Image
                   src={residentialCategories[0].image}
                   alt={residentialCategories[0].title}

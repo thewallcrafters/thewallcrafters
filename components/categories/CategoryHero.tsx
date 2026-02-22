@@ -13,7 +13,7 @@ export default function CategoryHero({ title, description, image }: CategoryHero
     <section className={`relative ${image ? 'h-[70vh]' : 'h-auto py-32'} w-full overflow-hidden`}>
       {image && (
         <>
-          <div className="absolute inset-0 bg-twc-charcoal/80 z-10"></div>
+          <div className="absolute inset-0 bg-[#2C2824]/80 z-10"></div>
           <motion.div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url('${image}')` }}
@@ -38,11 +38,11 @@ export default function CategoryHero({ title, description, image }: CategoryHero
             </p>
           </div>
 
-          <h1 className="font-serif-display text-display text-twc-warm">
+          <h1 className="font-serif-display text-display text-[#F5F3EE]">
             {title}
           </h1>
 
-          <p className="text-lg md:text-xl leading-relaxed text-twc-warm/80 font-light max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl leading-relaxed text-[#F5F3EE]/80 font-light max-w-2xl mx-auto">
             {description}
           </p>
         </motion.div>

@@ -51,17 +51,17 @@ export default function Navbar() {
     <>
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? 'bg-twc-charcoal/95 backdrop-blur-md border-b border-twc-warm/5' : 'bg-transparent'
+          scrolled ? 'bg-[#2C2824]/95 backdrop-blur-md border-b border-twc-warm/5' : 'bg-transparent'
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        <div className="container-wide py-6">
+        <div className="container-wide py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-baseline gap-0 group relative z-10" aria-label="TWC Fit-Outs Home">
-              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight transition-transform duration-300 group-hover:scale-105">twc</span>
-              <span className="w-2 sm:w-2.5 md:w-3 h-2 sm:h-2.5 md:h-3 bg-twc-red rounded-full ml-0.5 sm:ml-1 logo-dot transition-transform duration-300 group-hover:scale-110" />
+              <span className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-bold tracking-tight transition-transform duration-300 group-hover:scale-105">twc</span>
+              <span className="w-2 sm:w-2.5 md:w-2.5 h-2 sm:h-2.5 md:h-2.5 bg-twc-red rounded-full ml-0.5 logo-dot transition-transform duration-300 group-hover:scale-110" />
             </Link>
 
             <div className="hidden lg:flex items-center gap-10">
@@ -134,7 +134,7 @@ export default function Navbar() {
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
-            className="fixed inset-0 z-40 bg-twc-charcoal flex items-center justify-center"
+            className="fixed inset-0 z-40 bg-[#2C2824] flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

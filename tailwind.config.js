@@ -9,11 +9,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'twc-charcoal': '#050509',
-        'twc-dark': '#111111',
-        'twc-warm': '#F5F3EE',
-        'twc-grey': '#999999',
-        'twc-red': '#FF2B2B',
+        'twc-charcoal': '#E8E0D5',
+        'twc-dark': '#1A1A1A',
+        'twc-warm': '#2C2824',
+        'twc-grey': '#8A837A',
+        'twc-red': '#8B4513',
       },
       fontFamily: {
         'serif-display': ['Playfair Display', 'Cormorant Garamond', 'serif'],

@@ -122,7 +122,7 @@ export default function ProcessSection() {
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               >
                 {/* Icon container */}
-                <div className="w-20 h-20 rounded-2xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-8 text-twc-charcoal relative z-10" aria-hidden="true">
+                <div className="w-20 h-20 rounded-2xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-8 text-[#2C2824] relative z-10" aria-hidden="true">
                   {step.icon}
                 </div>
                 
@@ -151,7 +151,7 @@ export default function ProcessSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 + index * 0.08 }}
             >
-              <div className="w-16 h-16 rounded-xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-4 text-twc-charcoal">
+              <div className="w-16 h-16 rounded-xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-4 text-[#2C2824]">
                 {step.icon}
               </div>
               <span className="text-[10px] tracking-widest text-twc-charcoal/40 uppercase mb-1">Step {step.number}</span>
@@ -173,7 +173,7 @@ export default function ProcessSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
             >
-              <div className="w-14 h-14 rounded-xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-3 text-twc-charcoal" aria-hidden="true">
+              <div className="w-14 h-14 rounded-xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-3 text-[#2C2824]" aria-hidden="true">
                 {step.icon}
               </div>
               <span className="text-[9px] tracking-widest text-twc-charcoal/40 uppercase mb-1">{step.number}</span>

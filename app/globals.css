@@ -56,3 +56,160 @@
     display: none;
   }
 }
+
+/* ===== Beige & Charcoal Theme: Global Overrides ===== */
+
+/* Logo dot always stays red */
+.logo-dot { background-color: #FF2B2B !important; }
+
+/* --- Headings default to dark brown --- */
+h1, h2, h3, h4, h5, h6 { color: #2C2824; }
+
+/* --- On bg-twc-charcoal (beige) sections: text-white → dark brown --- */
+.bg-twc-charcoal .text-white { color: #2C2824 !important; }
+.bg-twc-charcoal .text-white\/20 { color: rgba(44, 40, 36, 0.2) !important; }
+.bg-twc-charcoal .text-white\/30 { color: rgba(44, 40, 36, 0.3) !important; }
+.bg-twc-charcoal .text-white\/40 { color: rgba(44, 40, 36, 0.4) !important; }
+.bg-twc-charcoal .text-white\/50 { color: rgba(44, 40, 36, 0.5) !important; }
+.bg-twc-charcoal .text-white\/60 { color: rgba(44, 40, 36, 0.6) !important; }
+.bg-twc-charcoal .text-white\/70 { color: rgba(44, 40, 36, 0.7) !important; }
+.bg-twc-charcoal .text-white\/80 { color: rgba(44, 40, 36, 0.8) !important; }
+
+/* --- On bg-twc-charcoal: remap white bg/border variants --- */
+.bg-twc-charcoal .bg-white\/10 { background-color: rgba(44, 40, 36, 0.1) !important; }
+.bg-twc-charcoal .bg-white\/20 { background-color: rgba(44, 40, 36, 0.2) !important; }
+.bg-twc-charcoal .border-white\/20 { border-color: rgba(44, 40, 36, 0.2) !important; }
+.bg-twc-charcoal .border-white\/30 { border-color: rgba(44, 40, 36, 0.3) !important; }
+
+/* --- On bg-white: text-twc-charcoal → dark brown for readability --- */
+.bg-white .text-twc-charcoal { color: #2C2824 !important; }
+.bg-white .text-twc-charcoal\/40 { color: rgba(44, 40, 36, 0.4) !important; }
+.bg-white .text-twc-charcoal\/50 { color: rgba(44, 40, 36, 0.5) !important; }
+.bg-white .text-twc-charcoal\/60 { color: rgba(44, 40, 36, 0.6) !important; }
+.bg-white .text-twc-charcoal\/70 { color: rgba(44, 40, 36, 0.7) !important; }
+.bg-white .text-twc-charcoal\/80 { color: rgba(44, 40, 36, 0.8) !important; }
+.bg-white h1, .bg-white h2, .bg-white h3,
+.bg-white h4, .bg-white h5, .bg-white h6 { color: #2C2824 !important; }
+.bg-white .bg-twc-charcoal\/5 { background-color: rgba(44, 40, 36, 0.05) !important; }
+.bg-white .bg-twc-charcoal\/10 { background-color: rgba(44, 40, 36, 0.1) !important; }
+.bg-white .bg-twc-charcoal\/20 { background-color: rgba(44, 40, 36, 0.2) !important; }
+.bg-white .border-twc-charcoal\/5 { border-color: rgba(44, 40, 36, 0.05) !important; }
+.bg-white .border-twc-charcoal\/10 { border-color: rgba(44, 40, 36, 0.1) !important; }
+.bg-white .border-twc-charcoal\/20 { border-color: rgba(44, 40, 36, 0.2) !important; }
+.bg-white .border-twc-charcoal\/30 { border-color: rgba(44, 40, 36, 0.3) !important; }
+.bg-white input.text-twc-charcoal,
+.bg-white textarea.text-twc-charcoal,
+.bg-white select.text-twc-charcoal { color: #2C2824 !important; }
+
+/* --- On bg-twc-warm (dark brown) sections: headings & text-twc-charcoal → light --- */
+.bg-twc-warm h1, .bg-twc-warm h2, .bg-twc-warm h3,
+.bg-twc-warm h4, .bg-twc-warm h5, .bg-twc-warm h6 { color: #E8E0D5 !important; }
+.bg-twc-warm .text-twc-charcoal { color: #E8E0D5 !important; }
+.bg-twc-warm .text-twc-charcoal\/40 { color: rgba(232, 224, 213, 0.4) !important; }
+.bg-twc-warm .text-twc-charcoal\/50 { color: rgba(232, 224, 213, 0.5) !important; }
+.bg-twc-warm .text-twc-charcoal\/60 { color: rgba(232, 224, 213, 0.6) !important; }
+.bg-twc-warm .text-twc-charcoal\/70 { color: rgba(232, 224, 213, 0.7) !important; }
+.bg-twc-warm .text-twc-charcoal\/15 { color: rgba(232, 224, 213, 0.15) !important; }
+.bg-twc-warm .border-twc-charcoal\/5 { border-color: rgba(232, 224, 213, 0.05) !important; }
+.bg-twc-warm .border-twc-charcoal\/10 { border-color: rgba(232, 224, 213, 0.1) !important; }
+.bg-twc-warm .border-twc-charcoal\/30 { border-color: rgba(232, 224, 213, 0.3) !important; }
+.bg-twc-warm .bg-twc-charcoal\/5 { background-color: rgba(232, 224, 213, 0.05) !important; }
+.bg-twc-warm .bg-twc-charcoal\/10 { background-color: rgba(232, 224, 213, 0.1) !important; }
+
+/* White cards INSIDE dark bg-twc-warm: restore dark text */
+.bg-twc-warm .bg-white .text-twc-charcoal { color: #2C2824 !important; }
+.bg-twc-warm .bg-white .text-twc-charcoal\/40 { color: rgba(44, 40, 36, 0.4) !important; }
+.bg-twc-warm .bg-white .text-twc-charcoal\/50 { color: rgba(44, 40, 36, 0.5) !important; }
+.bg-twc-warm .bg-white .text-twc-charcoal\/60 { color: rgba(44, 40, 36, 0.6) !important; }
+.bg-twc-warm .bg-white .text-twc-charcoal\/70 { color: rgba(44, 40, 36, 0.7) !important; }
+.bg-twc-warm .bg-white h1, .bg-twc-warm .bg-white h2, .bg-twc-warm .bg-white h3,
+.bg-twc-warm .bg-white h4, .bg-twc-warm .bg-white h5, .bg-twc-warm .bg-white h6 {
+  color: #2C2824 !important;
+}
+
+/* --- On bg-twc-dark (near-black) sections: headings & text → light --- */
+.bg-twc-dark h1, .bg-twc-dark h2, .bg-twc-dark h3,
+.bg-twc-dark h4, .bg-twc-dark h5, .bg-twc-dark h6 { color: #F5F3EE !important; }
+.bg-twc-dark .text-twc-charcoal { color: #F5F3EE !important; }
+.bg-twc-dark .text-twc-charcoal\/40 { color: rgba(245, 243, 238, 0.4) !important; }
+.bg-twc-dark .text-twc-charcoal\/50 { color: rgba(245, 243, 238, 0.5) !important; }
+.bg-twc-dark .text-twc-charcoal\/60 { color: rgba(245, 243, 238, 0.6) !important; }
+.bg-twc-dark .text-twc-charcoal\/70 { color: rgba(245, 243, 238, 0.7) !important; }
+.bg-twc-dark svg { color: #F5F3EE !important; }
+
+/* --- On bg-twc-dark: text-twc-warm (now dark brown) → light for readability --- */
+.bg-twc-dark .text-twc-warm { color: #F5F3EE !important; }
+.bg-twc-dark .text-twc-warm\/40 { color: rgba(245, 243, 238, 0.4) !important; }
+.bg-twc-dark .text-twc-warm\/50 { color: rgba(245, 243, 238, 0.5) !important; }
+.bg-twc-dark .text-twc-warm\/60 { color: rgba(245, 243, 238, 0.6) !important; }
+.bg-twc-dark .text-twc-warm\/70 { color: rgba(245, 243, 238, 0.7) !important; }
+.bg-twc-dark .text-twc-warm\/80 { color: rgba(245, 243, 238, 0.8) !important; }
+.bg-twc-dark .border-twc-warm\/10 { border-color: rgba(245, 243, 238, 0.1) !important; }
+
+/* --- On bg-twc-charcoal: border-white/10 → dark border for beige sections --- */
+.bg-twc-charcoal .border-white\/10 { border-color: rgba(44, 40, 36, 0.1) !important; }
+.bg-twc-charcoal .bg-white\/5 { background-color: rgba(44, 40, 36, 0.05) !important; }
+
+/* --- Accent color on dark backgrounds: lighten for contrast --- */
+.bg-twc-warm .text-twc-red { color: #C4813A !important; }
+.bg-twc-dark .text-twc-red { color: #C4813A !important; }
+.bg-twc-red .text-twc-warm { color: #F5F3EE !important; }
+.bg-twc-red .text-twc-warm\/50 { color: rgba(245, 243, 238, 0.5) !important; }
+
+/* --- Buttons: bg-twc-charcoal + text-white → dark bg + light text --- */
+button.bg-twc-charcoal,
+a.bg-twc-charcoal,
+.bg-twc-charcoal.inline-flex { 
+  background-color: #2C2824 !important; 
+  color: #F5F3EE !important; 
+}
+
+/* --- Image overlays: bg-twc-charcoal opacity → dark overlay --- */
+.bg-twc-charcoal\/80 { background-color: rgba(44, 40, 36, 0.8) !important; }
+.bg-twc-charcoal\/85 { background-color: rgba(44, 40, 36, 0.85) !important; }
+.bg-twc-charcoal\/90 { background-color: rgba(44, 40, 36, 0.9) !important; }
+.bg-twc-charcoal\/95 { background-color: rgba(44, 40, 36, 0.95) !important; }
+
+/* --- Hero gradients: from-twc-charcoal → dark gradient for image readability --- */
+.from-twc-charcoal { --tw-gradient-from: #2C2824 !important; }
+
+/* --- Nav: dark background with light text --- */
+nav {
+  background-color: #2C2824 !important;
+}
+nav * {
+  color: #F5F3EE !important;
+}
+nav .text-twc-warm\/70 { color: #F5F3EEB3 !important; }
+nav .hover\:text-twc-warm:hover { color: #F5F3EE !important; }
+nav .border-twc-warm\/5 { border-color: #F5F3EE0D !important; }
+
+/* Mobile menu overlay: dark */
+nav + div[role="dialog"].bg-twc-charcoal,
+div[role="dialog"].bg-twc-charcoal {
+  background-color: #2C2824 !important;
+}
+
+/* --- Footer: dark background with light text --- */
+#site-footer,
+#site-footer.bg-twc-charcoal,
+#site-footer > div,
+#site-footer > div > div {
+  background-color: #2C2824 !important;
+}
+#site-footer *,
+#site-footer *::before,
+#site-footer *::after {
+  color: #F5F3EE !important;
+}
+#site-footer .text-twc-warm { color: #F5F3EE !important; }
+#site-footer .text-twc-warm\/40 { color: #F5F3EE66 !important; }
+#site-footer .text-twc-warm\/50 { color: #F5F3EE80 !important; }
+#site-footer .text-twc-warm\/60 { color: #F5F3EE99 !important; }
+#site-footer .border-twc-warm\/10 { border-color: #F5F3EE1A !important; }
+#site-footer .border-twc-warm\/30 { border-color: #F5F3EE4D !important; }
+#site-footer h1, #site-footer h2, #site-footer h3,
+#site-footer h4, #site-footer h5, #site-footer h6 { color: #F5F3EE !important; }
+#site-footer a { color: #F5F3EE !important; }
+#site-footer .hover\:bg-twc-warm:hover { background-color: #F5F3EE !important; }
+#site-footer .hover\:text-twc-charcoal:hover { color: #2C2824 !important; }

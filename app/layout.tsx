@@ -3,7 +3,7 @@ import './globals.css';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import ThemeSelector from '@/components/ThemeSelector';
+
 
 export const metadata: Metadata = {
   title: 'TWC Fit-Outs | Luxury Interior Design & Carpentry',
@@ -30,7 +30,6 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
-          <ThemeSelector />
         </SmoothScrollProvider>
       </body>
     </html>

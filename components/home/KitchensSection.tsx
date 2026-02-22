@@ -54,10 +54,10 @@ export default function KitchensSection() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-twc-charcoal/85 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div className="absolute inset-0 bg-[#2C2824]/85 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     <div className="text-center space-y-3">
                       <div className="w-2 h-2 bg-twc-red rounded-full mx-auto" aria-hidden="true" />
-                      <p className="text-sm tracking-wider text-twc-warm">{kitchen.label}</p>
+                      <p className="text-sm tracking-wider text-[#F5F3EE]">{kitchen.label}</p>
                       <p className="text-xs text-twc-grey tracking-widest-plus">TWC FIT-OUTS</p>
                     </div>
                   </div>

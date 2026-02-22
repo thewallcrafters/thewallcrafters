@@ -26,7 +26,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden" id="home">
-      <div className="absolute inset-0 bg-gradient-to-r from-twc-charcoal via-twc-charcoal/80 to-transparent z-10 noise-texture"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#2C2824] via-[#2C2824]/80 to-transparent z-10 noise-texture"></div>
 
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
@@ -38,7 +38,7 @@ export default function HeroSection() {
         transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
       ></motion.div>
 
-      <div className="relative z-20 h-full container-wide flex items-center">
+      <div className="relative z-20 h-full container-wide flex items-center pt-20">
         <motion.div
           className="max-w-3xl space-y-8"
           initial={{ opacity: 0, y: 40 }}
@@ -50,7 +50,7 @@ export default function HeroSection() {
             <AnimatePresence mode="wait">
               <motion.h1
                 key={currentIndex}
-                className="font-serif-display text-hero text-twc-warm text-balance"
+                className="font-serif-display text-hero text-[#F5F3EE] text-balance"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
@@ -66,7 +66,7 @@ export default function HeroSection() {
             <AnimatePresence mode="wait">
               <motion.p
                 key={currentIndex}
-                className="text-lg md:text-xl leading-relaxed text-twc-warm/80 font-light"
+                className="text-lg md:text-xl leading-relaxed text-[#F5F3EE]/80 font-light"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
@@ -84,16 +84,16 @@ export default function HeroSection() {
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="mailto:main@thewallcrafters.com?subject=Cabinetry%20Estimate%20Request"
-              className="border border-twc-warm px-8 py-4 text-sm tracking-wider hover:bg-twc-warm hover:text-twc-charcoal transition-all duration-500 hover:scale-[1.02] active:scale-[0.98]"
+              className="border border-[#F5F3EE] px-8 py-4 text-sm tracking-wider text-[#F5F3EE] hover:bg-[#F5F3EE] hover:text-[#2C2824] transition-all duration-500 hover:scale-[1.02] active:scale-[0.98]"
             >
               Get Cabinetry Estimate
             </a>
             <a
               href="tel:9952217602"
-              className="text-sm tracking-wider px-8 py-4 text-twc-warm/70 hover:text-twc-warm relative group"
+              className="text-sm tracking-wider px-8 py-4 text-[#F5F3EE]/70 hover:text-[#F5F3EE] relative group"
             >
               Talk to Our Designer
-              <span className="absolute bottom-2 left-8 right-8 h-px bg-twc-warm scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <span className="absolute bottom-2 left-8 right-8 h-px bg-[#F5F3EE] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </a>
           </div>
         </motion.div>

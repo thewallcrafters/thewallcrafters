@@ -304,7 +304,7 @@ export default function ContactPage() {
               </div>
 
               {/* Office Details */}
-              <div className="bg-twc-charcoal p-8">
+              <div className="bg-[#2C2824] p-8">
                 <h3 className="text-xl font-light text-white mb-6">{officeInfo.title}</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
