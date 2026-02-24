@@ -1,39 +1,57 @@
-'use client';
-
-import CategoryHero from '@/components/categories/CategoryHero';
+﻿import CategoryHero from '@/components/categories/CategoryHero';
 import CategoryGrid from '@/components/categories/CategoryGrid';
 
 export default function StoragePage() {
   const storageItems = [
     {
-      title: 'Floor-to-Ceiling Wardrobes',
-      description: 'Full-height cabinetry with sliding/hinged doors, internal organizers and soft-close mechanisms.',
-      image: 'https://images.pexels.com/photos/2062431/pexels-photo-2062431.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Bookshelf',
+      description: 'Open-backed bookshelf with adjustable shelves in premium laminate or veneer finish.',
+      image: '/images/storage/bookshelf 1.jpg',
     },
     {
-      title: 'Loft Storage Solutions',
-      description: 'Overhead storage accessed via pull-down ladders or integrated steps, maximizing vertical space.',
-      image: 'https://images.pexels.com/photos/1648768/pexels-photo-1648768.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Floor-to-Ceiling Bookcase',
+      description: 'Full-height bookcase with ladder access, display niches, and closed base cabinets.',
+      image: '/images/storage/bookshelf 2.jpg',
     },
     {
-      title: 'Living Room Wall Cabinets',
-      description: 'Seamless wall-mounted units with push-to-open doors, display niches and media integration.',
-      image: 'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Wall Shelving Unit',
+      description: 'Floating wall-mounted shelving in a staggered pattern for books, décor, and plants.',
+      image: '/images/storage/bookshelf 3.jpg',
     },
     {
-      title: 'Utility & Service Storage',
-      description: 'Dedicated spaces for cleaning supplies, appliances and household equipment with ventilation.',
-      image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Library Unit',
+      description: 'Built-in library wall with deep shelves, reading niche, and integrated lighting.',
+      image: '/images/storage/bookshelf 4.jpg',
     },
     {
-      title: 'Walk-In Closet Systems',
-      description: 'Modular wardrobe systems with hanging rods, drawers, shoe racks and accessory trays.',
-      image: 'https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Large Bookshelf',
+      description: 'Wide modular bookshelf system combining open and closed sections for flexible storage.',
+      image: '/images/storage/book Shelf 4.jpg',
     },
     {
-      title: 'Bedroom Storage Beds',
-      description: 'Beds with hydraulic lift mechanisms revealing deep storage compartments beneath.',
-      image: 'https://images.pexels.com/photos/2029667/pexels-photo-2029667.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Shoe Rack',
+      description: 'Slim shoe rack with angled shelves for efficient footwear storage near entryways.',
+      image: '/images/storage/Shoe rack 1.jpg',
+    },
+    {
+      title: 'Shoe Cabinet',
+      description: 'Enclosed shoe cabinet with flip-up doors and concealed storage for a clean foyer look.',
+      image: '/images/storage/Shoe rack 2.jpg',
+    },
+    {
+      title: 'Tall Shoe Unit',
+      description: 'Floor-to-ceiling shoe unit with multiple rows and a bench seat at the base.',
+      image: '/images/storage/shoe rack 3.jpg',
+    },
+    {
+      title: 'Open Shoe Shelf',
+      description: 'Open-frame shoe shelf in powder-coated steel with wooden shelf inserts.',
+      image: '/images/storage/shoe rack 4.jpg',
+    },
+    {
+      title: 'Entryway Shoe Storage',
+      description: 'Combined entryway unit with shoe storage below, coat hooks above, and a mirror.',
+      image: '/images/storage/shoe rack 5.jpg',
     },
   ];
 
@@ -43,7 +61,7 @@ export default function StoragePage() {
         <CategoryHero
           title="Storage Systems"
           description="Wall-to-wall storage, wardrobes and cabinetry that disappear into architecture while keeping everything in reach."
-          image="https://images.pexels.com/photos/2062431/pexels-photo-2062431.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          image="/images/storage/bookshelf 1.jpg"
         />
       </div>
 

@@ -1,6 +1,4 @@
-'use client';
-
-import CategoryHero from '@/components/categories/CategoryHero';
+﻿import CategoryHero from '@/components/categories/CategoryHero';
 import CategoryGrid from '@/components/categories/CategoryGrid';
 
 export default function ConferenceTablesPage() {

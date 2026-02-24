@@ -4,9 +4,10 @@ import ProjectMeta from '@/components/projects/ProjectMeta';
 import ProjectBody from '@/components/projects/ProjectBody';
 import ImageGallery from '@/components/projects/ImageGallery';
 import ProjectGalleryTitle from '@/components/projects/ProjectGalleryTitle';
+import type { Project } from '@/types/project';
 
 // Kitchen data
-const kitchens: Record<string, any> = {
+const kitchens: Record<string, Project> = {
   'premium-island-kitchen': {
     name: 'Premium Island Kitchen',
     location: 'Contemporary Living',

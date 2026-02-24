@@ -1,8 +1,6 @@
 import HeroSection from '@/components/home/HeroSection';
 import WhatWeDoSection from '@/components/home/WhatWeDoSection';
 import KeyDifferentiatorsSection from '@/components/home/KeyDifferentiatorsSection';
-// import KitchensSection from '@/components/home/KitchensSection';
-// import SpecialtiesSection from '@/components/home/SpecialtiesSection';
 import HardwareSection from '@/components/home/HardwareSection';
 import ScaleSection from '@/components/home/ScaleSection';
 import WhyPartnerSection from '@/components/home/WhyPartnerSection';
@@ -18,8 +16,6 @@ export default function HomePage() {
       <WhatWeDoSection />
       <KeyDifferentiatorsSection />
       <ProcessSection />
-      {/* <KitchensSection /> */}
-      {/* <SpecialtiesSection /> */}
       <HardwareSection />
       <ScaleSection />
       <WhyPartnerSection />

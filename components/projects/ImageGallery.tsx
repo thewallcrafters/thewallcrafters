@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -30,13 +31,15 @@ export default function ImageGallery({ images, layout = 'grid' }: ImageGalleryPr
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <motion.img
-                src={image}
-                alt={`Gallery image ${index + 1}`}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                whileHover={{ scale: 1.03 }}
-                transition={{ duration: 0.6 }}
-              />
+              <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03]">
+                <Image
+                  src={image}
+                  alt={`Gallery image ${index + 1}`}
+                  fill
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  sizes="(max-width: 768px) 80vw, (max-width: 1024px) 60vw, 50vw"
+                />
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -56,13 +59,15 @@ export default function ImageGallery({ images, layout = 'grid' }: ImageGalleryPr
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: index * 0.1 }}
         >
-          <motion.img
-            src={image}
-            alt={`Gallery image ${index + 1}`}
-            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-            whileHover={{ scale: 1.03 }}
-            transition={{ duration: 0.6 }}
-          />
+          <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-[1.03]">
+            <Image
+              src={image}
+              alt={`Gallery image ${index + 1}`}
+              fill
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         </motion.div>
       ))}
     </div>

@@ -47,10 +47,10 @@ export default function KeyDifferentiatorsSection() {
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center gap-3 text-sm tracking-wider text-twc-warm/70 hover:text-twc-red transition-colors duration-300 group pt-2"
+                className="inline-flex items-center gap-3 border border-twc-warm/30 hover:border-twc-red hover:bg-twc-red/5 px-6 py-3.5 text-sm tracking-wider transition-all duration-300 group mt-2"
               >
                 <span>Talk to our designer</span>
-                <span className="w-6 h-px bg-current group-hover:w-10 transition-all duration-300" />
+                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </a>
             </div>
             <div className="lg:col-span-5 lg:col-start-8 space-y-3 lg:pt-6">

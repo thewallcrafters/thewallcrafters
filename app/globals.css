@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -115,6 +114,20 @@ h1, h2, h3, h4, h5, h6 { color: #2C2824; }
 .bg-twc-warm .border-twc-charcoal\/30 { border-color: rgba(232, 224, 213, 0.3) !important; }
 .bg-twc-warm .bg-twc-charcoal\/5 { background-color: rgba(232, 224, 213, 0.05) !important; }
 .bg-twc-warm .bg-twc-charcoal\/10 { background-color: rgba(232, 224, 213, 0.1) !important; }
+/* Force all text elements on dark bg-twc-warm to be light */
+.bg-twc-warm p,
+.bg-twc-warm span,
+.bg-twc-warm li { color: #E8E0D5 !important; }
+/* Allow spans inside links/buttons to inherit so hover color changes work */
+.bg-twc-warm a span,
+.bg-twc-warm button span { color: inherit !important; }
+/* But restore dark text inside white/light cards within bg-twc-warm */
+.bg-twc-warm .bg-white p,
+.bg-twc-warm .bg-white span,
+.bg-twc-warm .bg-white li,
+.bg-twc-warm [class*="bg-twc-charcoal"] p,
+.bg-twc-warm [class*="bg-twc-charcoal"] span,
+.bg-twc-warm [class*="bg-twc-charcoal"] li { color: #2C2824 !important; }
 
 /* White cards INSIDE dark bg-twc-warm: restore dark text */
 .bg-twc-warm .bg-white .text-twc-charcoal { color: #2C2824 !important; }
@@ -130,6 +143,7 @@ h1, h2, h3, h4, h5, h6 { color: #2C2824; }
 /* --- On bg-twc-dark (near-black) sections: headings & text → light --- */
 .bg-twc-dark h1, .bg-twc-dark h2, .bg-twc-dark h3,
 .bg-twc-dark h4, .bg-twc-dark h5, .bg-twc-dark h6 { color: #F5F3EE !important; }
+.bg-twc-dark p, .bg-twc-dark span, .bg-twc-dark li { color: #F5F3EE !important; }
 .bg-twc-dark .text-twc-charcoal { color: #F5F3EE !important; }
 .bg-twc-dark .text-twc-charcoal\/40 { color: rgba(245, 243, 238, 0.4) !important; }
 .bg-twc-dark .text-twc-charcoal\/50 { color: rgba(245, 243, 238, 0.5) !important; }

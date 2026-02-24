@@ -5,9 +5,10 @@ import ProjectBody from '@/components/projects/ProjectBody';
 import ImageGallery from '@/components/projects/ImageGallery';
 import ProjectNavigation from '@/components/projects/ProjectNavigation';
 import ProjectGalleryTitle from '@/components/projects/ProjectGalleryTitle';
+import type { Project } from '@/types/project';
 
 // Project data
-const projects: Record<string, any> = {
+const projects: Record<string, Project> = {
   'jp-residence': {
     name: 'JP Residence',
     location: 'Kochadai, Madurai',
@@ -246,7 +247,7 @@ export default async function ProjectPage({
       </section>
 
       {/* Navigation footer */}
-      <ProjectNavigation nextSlug={project.nextSlug} />
+      <ProjectNavigation nextSlug={project.nextSlug ?? ''} />
     </div>
   );
 }

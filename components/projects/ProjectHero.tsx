@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 interface ProjectHeroProps {
   title: string;
@@ -15,14 +16,23 @@ export default function ProjectHero({ title, location, type, image }: ProjectHer
       {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#2C2824] via-[#2C2824]/60 to-[#2C2824]/80 z-10 noise-texture"></div>
 
-      {/* Background image with parallax effect */}
+      {/* Background image with scale-in effect */}
       <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${image}')` }}
+        className="absolute inset-0"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-      ></motion.div>
+      >
+        <Image
+          src={image}
+          alt={title}
+          fill
+          priority
+          quality={85}
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </motion.div>
 
       {/* Content overlay - bottom left positioning */}
       <div className="relative z-20 h-full container-wide flex items-end pb-20">

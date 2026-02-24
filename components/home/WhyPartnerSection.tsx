@@ -5,8 +5,8 @@ import { useRef } from 'react';
 
 const reasons = [
   {
-    title: 'In-house manufacturing',
-    description: 'Complete control over quality, timelines, and costs — no outsourcing, no surprises.',
+    title: 'Dedicated project manager',
+    description: 'A single point of contact guides you from design brief to final handover — no passing the buck.',
   },
   {
     title: 'Factory finish quality',

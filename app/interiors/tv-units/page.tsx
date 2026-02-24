@@ -1,39 +1,32 @@
-'use client';
-
-import CategoryHero from '@/components/categories/CategoryHero';
+﻿import CategoryHero from '@/components/categories/CategoryHero';
 import CategoryGrid from '@/components/categories/CategoryGrid';
 
 export default function TVUnitsPage() {
   const tvUnits = [
     {
-      title: 'Floating Media Console',
-      description: 'Wall-mounted unit with concealed brackets, cable management and ambient LED strip lighting.',
-      image: 'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'TV Unit',
+      description: 'Wall-mounted media unit with concealed brackets, cable management and ambient LED strip lighting.',
+      image: '/images/tv-units/tv unit 1.jpg',
     },
     {
       title: 'Full-Wall Entertainment Unit',
       description: 'Floor-to-ceiling integrated system with TV panel, shelving, storage and display niches.',
-      image: 'https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      image: '/images/tv-units/Tv unit 2.jpg',
     },
     {
-      title: 'Minimal Low-Profile Stand',
+      title: 'Floating TV Console',
       description: 'Simple horizontal cabinet with clean lines, drawers for media devices and minimal visual weight.',
-      image: 'https://images.pexels.com/photos/2029667/pexels-photo-2029667.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      image: '/images/tv-units/Tv unit 3.jpg',
     },
     {
-      title: 'Stone & Wood Feature Wall',
-      description: 'Textured stone backdrop with integrated wood shelving, recessed panel and indirect lighting.',
-      image: 'https://images.pexels.com/photos/1648768/pexels-photo-1648768.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Feature Wall TV Unit',
+      description: 'Textured backdrop with integrated wood shelving, recessed TV panel and indirect lighting.',
+      image: '/images/tv-units/Tv unit 4.jpg',
     },
     {
-      title: 'Swivel Panel TV Mount',
-      description: 'Rotating wall mount allowing flexible viewing angles with hidden wiring and cable routing.',
-      image: 'https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    },
-    {
-      title: 'Built-In Alcove Unit',
-      description: 'Recessed TV niche with surrounding shelving, cupboards and acoustic fabric backing.',
-      image: 'https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      title: 'Built-In Media Wall',
+      description: 'Recessed TV niche with surrounding shelving, cupboards and storage below.',
+      image: '/images/tv-units/Tv unit 5.jpg',
     },
   ];
 
@@ -43,7 +36,7 @@ export default function TVUnitsPage() {
         <CategoryHero
           title="TV & Media Units"
           description="Minimal media walls with hidden wiring, integrated lighting and details tuned to your living room."
-          image="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          image="/images/tv-units/tv unit 1.jpg"
         />
       </div>
 

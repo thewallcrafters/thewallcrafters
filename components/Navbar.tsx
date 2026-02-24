@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="container-wide py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-baseline gap-0 group relative z-10" aria-label="TWC Fit-Outs Home">
-              <span className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-bold tracking-tight transition-transform duration-300 group-hover:scale-105">twc</span>
+              <span className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-bold tracking-tight text-[#F5F3EE] transition-transform duration-300 group-hover:scale-105">twc</span>
               <span className="w-2 sm:w-2.5 md:w-2.5 h-2 sm:h-2.5 md:h-2.5 bg-twc-red rounded-full ml-0.5 logo-dot transition-transform duration-300 group-hover:scale-110" />
             </Link>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="text-[11px] tracking-widest-plus text-twc-warm/70 hover:text-twc-warm transition-colors duration-300"
+                    className="text-[11px] tracking-widest-plus text-[#F5F3EE]/70 hover:text-[#F5F3EE] transition-colors duration-300"
                   >
                     {item.label}
                   </Link>
@@ -107,17 +107,17 @@ export default function Navbar() {
                 aria-controls="mobile-menu"
               >
                 <motion.span
-                  className="w-6 h-0.5 bg-twc-warm"
+                  className="w-6 h-0.5 bg-[#F5F3EE]"
                   animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 4 : 0 }}
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  className="w-6 h-0.5 bg-twc-warm"
+                  className="w-6 h-0.5 bg-[#F5F3EE]"
                   animate={{ opacity: menuOpen ? 0 : 1 }}
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  className="w-6 h-0.5 bg-twc-warm"
+                  className="w-6 h-0.5 bg-[#F5F3EE]"
                   animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -4 : 0 }}
                   transition={{ duration: 0.3 }}
                 />

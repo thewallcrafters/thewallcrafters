@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const taglines = [
   'Premium Cabinetry & Interior Fit-out Firm — driven by Precision, Logical Design & Craftsmanship.',
@@ -29,14 +30,21 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#2C2824] via-[#2C2824]/80 to-transparent z-10 noise-texture"></div>
 
       <motion.div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-        }}
+        className="absolute inset-0"
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
-      ></motion.div>
+      >
+        <Image
+          src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="TWC Fit-Outs premium modular kitchen interior"
+          fill
+          priority
+          quality={85}
+          className="object-cover object-center"
+          sizes="100vw"
+        />
+      </motion.div>
 
       <div className="relative z-20 h-full container-wide flex items-center pt-20">
         <motion.div

@@ -16,8 +16,8 @@ export default {
         'twc-red': '#8B4513',
       },
       fontFamily: {
-        'serif-display': ['Playfair Display', 'Cormorant Garamond', 'serif'],
-        'sans-body': ['Inter', 'IBM Plex Sans', 'sans-serif'],
+        'serif-display': ['var(--font-playfair)', 'Georgia', 'serif'],
+        'sans-body': ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         'widest-plus': '0.15em',

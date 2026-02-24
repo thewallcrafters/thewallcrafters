@@ -29,5 +29,10 @@ next-env.d.ts
 *.sw?
 .env
 
+# Archives / large binary files
+*.zip
+*.rar
+*.tar.gz
+
 # Bolt specific
 .bolt/

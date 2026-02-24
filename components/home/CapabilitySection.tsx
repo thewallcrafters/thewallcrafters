@@ -72,7 +72,7 @@ export default function CapabilitySection() {
               <div className="pt-2">
                 <a
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-sm tracking-wider text-twc-warm/70 hover:text-twc-red transition-colors duration-300 group"
+                  className="inline-flex items-center gap-3 border border-twc-warm/30 hover:border-twc-red hover:bg-twc-red/5 px-6 py-3.5 text-sm tracking-wider transition-all duration-300 group mt-2"
                 >
                   <span>Talk to our designer</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>

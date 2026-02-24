@@ -194,12 +194,12 @@ export default function ProcessSection() {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <div>
-              <p className="text-twc-charcoal/60 text-sm tracking-wider mb-1">Ready to begin?</p>
-              <p className="text-twc-charcoal text-xl md:text-2xl font-serif-display">Let&apos;s discuss your project.</p>
+              <p className="text-[#F5F3EE]/60 text-sm tracking-wider mb-1">Ready to begin?</p>
+              <p className="text-[#F5F3EE] text-xl md:text-2xl font-serif-display">Let&apos;s discuss your project.</p>
             </div>
             <a
               href="/contact"
-              className="inline-flex items-center gap-3 border border-twc-charcoal/30 text-twc-charcoal hover:bg-twc-charcoal hover:text-twc-warm px-8 py-4 text-sm tracking-wider transition-all duration-300 group"
+              className="inline-flex items-center gap-3 border border-[#F5F3EE]/40 text-[#F5F3EE] hover:bg-[#F5F3EE] hover:text-[#2C2824] px-8 py-4 text-sm tracking-wider transition-all duration-300 group"
             >
               <span>Start a conversation</span>
               <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>

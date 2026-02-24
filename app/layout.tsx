@@ -1,13 +1,59 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
 
 export const metadata: Metadata = {
-  title: 'TWC Fit-Outs | Luxury Interior Design & Carpentry',
-  description: 'Premium interior fit-outs, custom carpentry, and architectural woodwork. Specializing in residential and commercial spaces.',
+  title: {
+    default: 'TWC Fit-Outs | Modular Kitchens & Interior Design',
+    template: '%s | TWC Fit-Outs',
+  },
+  description: 'Factory-finished modular kitchens, wardrobes, and complete interior fit-outs for homes and businesses. Design, fabricate, and install — one team, one standard.',
+  keywords: ['modular kitchen', 'wardrobes', 'interior fit-outs', 'TWC', 'The Wall Crafters', 'Madurai', 'Tamil Nadu', 'carpentry', 'office interior'],
+  authors: [{ name: 'TWC Fit-Outs' }],
+  creator: 'TWC Fit-Outs',
+  metadataBase: new URL('https://thewallcrafters.com'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://thewallcrafters.com',
+    siteName: 'TWC Fit-Outs',
+    title: 'TWC Fit-Outs | Modular Kitchens & Interior Design',
+    description: 'Factory-finished interiors for Indian homes and businesses. 500+ spaces delivered.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TWC Fit-Outs | Modular Kitchens & Interior Design',
+    description: 'Factory-finished interiors for Indian homes and businesses.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#2C2824',
 };
 
 export default function RootLayout({
@@ -16,7 +62,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://images.pexels.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://images.pexels.com" />
+      </head>
       <body>
         <a
           href="#main-content"

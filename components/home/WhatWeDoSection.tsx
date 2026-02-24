@@ -35,10 +35,10 @@ export default function WhatWeDoSection() {
           
           <div className="max-w-4xl">
             <h2 className="font-serif-display text-section-title tracking-tight text-twc-charcoal mb-4">
-              In-house manufacturing.<br />Factory-finished quality.
+              Designed for your space.<br />Built to last.
             </h2>
             <p className="text-twc-charcoal text-lg md:text-xl font-light leading-relaxed max-w-2xl">
-              We design, manufacture, and install cabinetry and fixed furniture — from kitchens to commercial interiors. One team handles everything.
+              We design, craft, and install cabinetry and fixed furniture — from kitchens to commercial interiors. One team handles everything.
             </p>
           </div>
         </motion.div>
@@ -48,7 +48,7 @@ export default function WhatWeDoSection() {
           {/* Services List - Left */}
           <div className="lg:col-span-7">
             <p className="text-[10px] tracking-widest-plus text-twc-charcoal/70 uppercase mb-4">
-              In-house manufacturing
+              What we craft
             </p>
             
             <div className="border-t border-twc-charcoal/10">
