@@ -46,12 +46,12 @@ const officeInfo = {
   title: 'Visit Our Studio',
   address: [
     'TWC Fit-Outs Pvt. Ltd.',
-    'Industrial Area, Kappalur',
-    'Madurai - 625008',
-    'Tamil Nadu, India',
+    'No 59/8, Near Fatima Michael College Of Engineering & Technology,',
+    'Senkottai Village, Sivagangai Main Road,',
+    'Madurai - 625001, Tamil Nadu, India',
   ],
   hours: 'Monday - Saturday: 10:00 AM - 7:00 PM',
-  mapUrl: 'https://maps.google.com/?q=Chennai',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=No+59%2F8%2C+Near+Fatima+Michael+College+Of+Engineering+%26+Technology%2C+Senkottai+Village%2C+Sivagangai+Main+Road%2C+Madurai%2C+Tamil+Nadu+625001',
 };
 
 export default function ContactPage() {

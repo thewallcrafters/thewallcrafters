@@ -136,8 +136,10 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-twc-warm/40 text-xs uppercase tracking-wider mb-1">Factory</p>
-                <p className="text-twc-warm/70 text-sm font-light">
-                  Madurai, Tamil Nadu
+                <p className="text-twc-warm/70 text-sm font-light leading-relaxed">
+                  No 59/8, Near Fatima Michael College Of Engineering & Technology,<br />
+                  Senkottai Village, Sivagangai Main Road,<br />
+                  Madurai - 625001, Tamil Nadu
                 </p>
               </div>
             </div>

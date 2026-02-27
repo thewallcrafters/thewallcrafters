@@ -64,7 +64,7 @@ export default function Navbar() {
               <span className="w-2 sm:w-2.5 md:w-2.5 h-2 sm:h-2.5 md:h-2.5 bg-twc-red rounded-full ml-0.5 logo-dot transition-transform duration-300 group-hover:scale-110" />
             </Link>
 
-            <div className="hidden lg:flex items-center gap-10">
+            <div className="hidden lg:flex items-center gap-6 xl:gap-10">
               {navItems.map((item) => (
                 <div
                   key={item.label}

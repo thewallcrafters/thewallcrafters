@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: 'https://thewallcrafters.com',
     siteName: 'TWC Fit-Outs',
     title: 'TWC Fit-Outs | Modular Kitchens & Interior Design',
-    description: 'Factory-finished interiors for Indian homes and businesses. 500+ spaces delivered.',
+    description: 'Factory-finished interiors for Indian homes and businesses. 50+ spaces delivered.',
   },
   twitter: {
     card: 'summary_large_image',

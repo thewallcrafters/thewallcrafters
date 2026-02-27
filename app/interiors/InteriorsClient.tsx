@@ -204,7 +204,7 @@ export default function InteriorsPage() {
       <section className="relative min-h-screen bg-twc-charcoal">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Left - Content */}
-          <div className="flex flex-col justify-center pl-6 md:pl-12 lg:pl-24 xl:pl-32 pr-8 md:pr-12 py-32 lg:py-20 order-2 lg:order-1">
+          <div className="flex flex-col justify-center pl-5 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-24 2xl:pl-32 pr-6 md:pr-12 py-28 lg:py-20 order-2 lg:order-1">
             <motion.div
               ref={heroRef}
               initial={{ opacity: 0, y: 40 }}
@@ -229,7 +229,7 @@ export default function InteriorsPage() {
               {/* Stats */}
               <div className="flex gap-12 pt-8 border-t border-white/10">
                 <div>
-                  <span className="text-3xl font-light text-white">500+</span>
+                  <span className="text-3xl font-light text-white">50+</span>
                   <p className="text-xs uppercase tracking-wider text-white/50 mt-1">Spaces Delivered</p>
                 </div>
                 <div>

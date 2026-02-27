@@ -86,7 +86,7 @@ export default function AboutPage() {
           </div>
 
           {/* Right - Content */}
-          <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-32 lg:py-20 order-1 lg:order-2 bg-twc-charcoal">
+          <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-20 py-28 lg:py-20 order-1 lg:order-2 bg-twc-charcoal">
             <motion.div
               ref={heroRef}
               initial={{ opacity: 0, y: 40 }}
@@ -138,9 +138,7 @@ export default function AboutPage() {
                   perfect, every finish flawless, every deadline met.
                 </p>
                 <p>
-                  Our 50,000 sq.ft factory in Chennai houses CNC machinery, edge-banding lines, 
-                  and finishing booths — all under one roof. When components leave our facility, 
-                  they are ready to install, not adjust.
+                  Our 10,000 sq.ft facility in Madurai brings design and manufacturing together under one roof, with in-house teams handling everything from detailed drawings to precision-built components. Every piece that leaves our factory is ready to install on site, not rework.
                 </p>
                 <p>
                   From villas and penthouses to corporate offices and hospitality venues, we 
@@ -197,31 +195,14 @@ export default function AboutPage() {
       {/* Founder Section - Preserved */}
       <section className="py-16 md:py-24 bg-twc-warm">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Image Placeholder */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative aspect-[4/5] bg-[#2C2824] overflow-hidden"
-            >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                    <span className="text-5xl font-light text-white/30">AS</span>
-                  </div>
-                  <p className="text-white/40 text-sm uppercase tracking-widest">Founder Portrait</p>
-                </div>
-              </div>
-            </motion.div>
+          <div className="max-w-3xl mx-auto">
 
             {/* Founder Content */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6 }}
             >
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 About the Founder

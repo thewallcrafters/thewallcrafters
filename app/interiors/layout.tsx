@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Explore 14 categories of interior fit-outs — kitchens, wardrobes, bedrooms, TV units, pooja rooms, office spaces, retail counters, and hospitality fit-outs.',
   openGraph: {
     title: 'Interiors & Fit-Outs | TWC',
-    description: 'Spaces that work and live. 500+ spaces delivered across residential and commercial categories.',
+    description: 'Spaces that work and live. 50+ spaces delivered across residential and commercial categories.',
     url: 'https://thewallcrafters.com/interiors',
   },
 };
