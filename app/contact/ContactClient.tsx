@@ -14,8 +14,8 @@ const contactMethods = [
     ),
     title: 'Email Us',
     description: 'For project inquiries and quotes',
-    value: 'main@thewallcrafters.com',
-    href: 'mailto:main@thewallcrafters.com',
+    value: 'contact@starajin.com',
+    href: 'mailto:contact@starajin.com',
   },
   {
     icon: (
@@ -25,8 +25,8 @@ const contactMethods = [
     ),
     title: 'Call Us',
     description: 'Mon-Sat, 10AM - 7PM IST',
-    value: '+91 99522 17602',
-    href: 'tel:+919952217602',
+    value: '+91 897 624 1508',
+    href: 'tel:+918976241508',
   },
   {
     icon: (
@@ -37,21 +37,21 @@ const contactMethods = [
     title: 'WhatsApp',
     description: 'Quick responses, share images',
     value: 'Chat with us',
-    href: 'https://wa.me/919043050410',
+    href: 'https://wa.me/918976241508',
   },
 ];
 
 // Office Location
 const officeInfo = {
-  title: 'Visit Our Studio',
+  title: 'Visit Our Office',
   address: [
-    'TWC Fit-Outs Pvt. Ltd.',
-    'No 59/8, Near Fatima Michael College Of Engineering & Technology,',
-    'Senkottai Village, Sivagangai Main Road,',
-    'Madurai - 625001, Tamil Nadu, India',
+    'STARAJIN India Pvt. Ltd.',
+    'Office No. 928, 9th Floor, The Summit Business Bay,',
+    'Andheri–Kurla Road, Andheri (East),',
+    'Mumbai – 400093',
   ],
   hours: 'Monday - Saturday: 10:00 AM - 7:00 PM',
-  mapUrl: 'https://www.google.com/maps/search/?api=1&query=No+59%2F8%2C+Near+Fatima+Michael+College+Of+Engineering+%26+Technology%2C+Senkottai+Village%2C+Sivagangai+Main+Road%2C+Madurai%2C+Tamil+Nadu+625001',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=The+Summit+Business+Bay+Andheri+Kurla+Road+Andheri+East+Mumbai+400093',
 };
 
 export default function ContactPage() {

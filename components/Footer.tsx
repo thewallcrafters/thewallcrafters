@@ -124,22 +124,23 @@ export default function Footer() {
             <div className="space-y-4">
               <div>
                 <p className="text-twc-warm/40 text-xs uppercase tracking-wider mb-1">Phone</p>
-                <a href="tel:+919876543210" className="text-twc-warm/70 text-sm font-light hover:text-twc-warm transition-colors">
-                  +91 98765 43210
+                <a href="tel:+918976241508" className="text-twc-warm/70 text-sm font-light hover:text-twc-warm transition-colors">
+                  +91 897 624 1508
                 </a>
               </div>
               <div>
                 <p className="text-twc-warm/40 text-xs uppercase tracking-wider mb-1">Email</p>
-                <a href="mailto:main@thewallcrafters.com" className="text-twc-warm/70 text-sm font-light hover:text-twc-warm transition-colors">
-                  main@thewallcrafters.com
+                <a href="mailto:contact@starajin.com" className="text-twc-warm/70 text-sm font-light hover:text-twc-warm transition-colors">
+                  contact@starajin.com
                 </a>
               </div>
               <div>
-                <p className="text-twc-warm/40 text-xs uppercase tracking-wider mb-1">Factory</p>
+                <p className="text-twc-warm/40 text-xs uppercase tracking-wider mb-1">Office</p>
                 <p className="text-twc-warm/70 text-sm font-light leading-relaxed">
-                  No 59/8, Near Fatima Michael College Of Engineering & Technology,<br />
-                  Senkottai Village, Sivagangai Main Road,<br />
-                  Madurai - 625001, Tamil Nadu
+                  STARAJIN India Pvt. Ltd.<br />
+                  Office No. 928, 9th Floor, The Summit Business Bay,<br />
+                  Andheri–Kurla Road, Andheri (East),<br />
+                  Mumbai – 400093
                 </p>
               </div>
             </div>
