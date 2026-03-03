@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -9,9 +9,9 @@ const kitchenLayouts = [
     subtitle: "The entertainer's choice",
     description: 'A central island creates the perfect stage for cooking, conversation, and gathering. Ideal for open-plan living with space to spare.',
     images: [
-      '/images/kitchens/island/island kitchen 1.jpg',
-      '/images/kitchens/island/island kitchen 2.jpg',
-      '/images/kitchens/island/island kitchen 3.jpg',
+      '/images/kitchens/island/island-kitchen-1.jpg',
+      '/images/kitchens/island/island-kitchen-2.jpg',
+      '/images/kitchens/island/island-kitchen-3.jpg',
     ],
     features: ['Central workspace', 'Social cooking', 'Open-plan friendly'],
     slug: 'island',
@@ -21,9 +21,9 @@ const kitchenLayouts = [
     subtitle: 'The versatile classic',
     description: 'Corner efficiency meets flexible design. The L-shape adapts to any space while maintaining an ergonomic work triangle.',
     images: [
-      '/images/kitchens/l-shaped/L kitchen 1.jpg',
-      '/images/kitchens/l-shaped/L kitchen 2.jpg',
-      '/images/kitchens/l-shaped/L kitchen 3.jpg',
+      '/images/kitchens/l-shaped/l-kitchen-1.jpg',
+      '/images/kitchens/l-shaped/l-kitchen-2.jpg',
+      '/images/kitchens/l-shaped/l-kitchen-3.jpg',
     ],
     features: ['Efficient corners', 'Work triangle', 'Flexible layout'],
     slug: 'l-shaped',
@@ -33,9 +33,9 @@ const kitchenLayouts = [
     subtitle: 'Maximum storage & counter',
     description: 'Three walls of cabinetry deliver unmatched storage and prep space. Perfect for serious home cooks who need room to work.',
     images: [
-      '/images/kitchens/u-shaped/U kitchen 1.jpg',
-      '/images/kitchens/u-shaped/U kitchen 2.jpg',
-      '/images/kitchens/u-shaped/U kitchen 3.jpg',
+      '/images/kitchens/u-shaped/u-kitchen-1.jpg',
+      '/images/kitchens/u-shaped/u-kitchen-2.jpg',
+      '/images/kitchens/u-shaped/u-kitchen-3.jpg',
     ],
     features: ['Maximum storage', 'Ample counter', 'Enclosed feel'],
     slug: 'u-shaped',
@@ -45,9 +45,9 @@ const kitchenLayouts = [
     subtitle: 'The galley-style efficiency',
     description: "Two facing runs create a streamlined workflow. Compact yet capable — everything within arm's reach.",
     images: [
-      '/images/kitchens/parallel/parallel kitchen 1.jpg',
-      '/images/kitchens/parallel/parallel kitchen 2.jpg',
-      '/images/kitchens/parallel/parallel kitchen 3.jpg',
+      '/images/kitchens/parallel/parallel-kitchen-1.jpg',
+      '/images/kitchens/parallel/parallel-kitchen-2.jpg',
+      '/images/kitchens/parallel/parallel-kitchen-3.jpg',
     ],
     features: ['Space efficient', 'Linear workflow', 'Easy access'],
     slug: 'parallel',
@@ -57,9 +57,9 @@ const kitchenLayouts = [
     subtitle: 'Simple & compact',
     description: 'A single-wall solution that delivers functionality without footprint. Ideal for apartments and studio spaces.',
     images: [
-      '/images/kitchens/straight/straight kitchen 1.jpg',
-      '/images/kitchens/straight/straight kitchen 2.jpg',
-      '/images/kitchens/straight/straight kitchen 3.jpeg',
+      '/images/kitchens/straight/straight-kitchen-1.jpg',
+      '/images/kitchens/straight/straight-kitchen-2.jpg',
+      '/images/kitchens/straight/straight-kitchen-3.jpeg',
     ],
     features: ['Minimal footprint', 'Budget friendly', 'Easy to plan'],
     slug: 'straight',
@@ -74,7 +74,7 @@ export default function KitchensPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/kitchens/island/island kitchen 2.jpg"
+            src="/images/kitchens/island/island-kitchen-2.jpg"
             alt="TWC Kitchens"
             fill
             className="object-cover opacity-50"
@@ -113,14 +113,14 @@ export default function KitchensPage() {
         <div className="container-wide">
           <div className="max-w-4xl mx-auto text-center">
             <motion.p
-              className="text-2xl md:text-3xl text-twc-charcoal font-light leading-relaxed"
+              className="text-2xl md:text-3xl text-[#F5F3EE] font-light leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
               Every kitchen we build is designed around your space, your workflow, and your daily rituals. 
-              <span className="text-twc-charcoal/50"> Choose from five proven layouts, each engineered for different lifestyles and footprints.</span>
+              <span className="text-[#F5F3EE]/50"> Choose from five proven layouts, each engineered for different lifestyles and footprints.</span>
             </motion.p>
           </div>
         </div>
@@ -141,22 +141,22 @@ export default function KitchensPage() {
               {/* Header */}
               <div className="grid lg:grid-cols-12 gap-8 mb-10">
                 <div className="lg:col-span-4">
-                  <p className="text-[10px] tracking-widest text-twc-charcoal/40 uppercase mb-3">
+                  <p className="text-[10px] tracking-widest text-[#F5F3EE]/40 uppercase mb-3">
                     {kitchen.subtitle}
                   </p>
-                  <h2 className="font-serif-display text-4xl md:text-5xl text-twc-charcoal">
+                  <h2 className="font-serif-display text-4xl md:text-5xl text-[#F5F3EE]">
                     {kitchen.title}
                   </h2>
                 </div>
                 <div className="lg:col-span-6 lg:col-start-6">
-                  <p className="text-twc-charcoal/60 font-light leading-relaxed text-lg mb-6">
+                  <p className="text-[#F5F3EE]/60 font-light leading-relaxed text-lg mb-6">
                     {kitchen.description}
                   </p>
                   <div className="flex flex-wrap gap-3">
                     {kitchen.features.map((feature) => (
                       <span
                         key={feature}
-                        className="px-4 py-2 text-xs tracking-wide text-twc-charcoal/60 border border-twc-charcoal/10"
+                        className="px-4 py-2 text-xs tracking-wide text-[#F5F3EE]/60 border border-[#F5F3EE]/10"
                       >
                         {feature}
                       </span>
@@ -232,7 +232,7 @@ export default function KitchensPage() {
               <div className="flex gap-4 pt-8">
                 <a
                   href="/contact"
-                  className="px-8 py-4 bg-twc-red text-twc-charcoal text-sm tracking-wider uppercase hover:bg-twc-red/90 transition-colors duration-300"
+                  className="px-8 py-4 bg-twc-red text-[#F5F3EE] text-sm tracking-wider uppercase hover:bg-twc-red/90 transition-colors duration-300"
                 >
                   Get your estimate
                 </a>
@@ -247,7 +247,7 @@ export default function KitchensPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Image
-                src="/images/kitchens/l-shaped/L kitchen 2.jpg"
+                src="/images/kitchens/l-shaped/l-kitchen-2.jpg"
                 alt="Kitchen manufacturing process"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 export default function KeyDifferentiatorsSection() {
   const ref = useRef(null);
@@ -45,13 +46,13 @@ export default function KeyDifferentiatorsSection() {
               <p className="text-twc-grey text-lg font-light leading-relaxed">
                 Many customers don't have a designer or architect. Our in-house design team works directly with you — understanding your needs, your space, and your lifestyle.
               </p>
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-3 border border-twc-warm/30 hover:border-twc-red hover:bg-twc-red/5 px-6 py-3.5 text-sm tracking-wider transition-all duration-300 group mt-2"
               >
                 <span>Talk to our designer</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </a>
+              </Link>
             </div>
             <div className="lg:col-span-5 lg:col-start-8 space-y-3 lg:pt-6">
               {['Space planning', 'Practical usage', 'Material & finish guidance', 'Indian lifestyle focused'].map((item) => (

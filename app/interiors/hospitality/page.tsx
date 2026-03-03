@@ -1,5 +1,12 @@
 ﻿import CategoryHero from '@/components/categories/CategoryHero';
 import CategoryGrid from '@/components/categories/CategoryGrid';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hospitality',
+  description: 'Hotel and hospitality interior fit-outs — reception desks, room furniture, and restaurant interiors.',
+  alternates: { canonical: '/interiors/hospitality' },
+};
 
 export default function HospitalityPage() {
   const hospitalityItems = [

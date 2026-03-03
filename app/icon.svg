@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#2C2824"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#C8102E" font-family="Georgia,serif" font-size="13" font-weight="700" letter-spacing="-0.5">TW</text>
+  <rect width="32" height="32" rx="6" fill="#2C2824"/>
+  <text x="14" y="20" dominant-baseline="middle" text-anchor="middle" fill="#F5F3EE" font-family="Georgia,serif" font-size="14" font-weight="700" letter-spacing="-0.5">twc</text>
+  <circle cx="25.5" cy="20" r="2" fill="#FF2B2B"/>
 </svg>

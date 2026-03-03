@@ -14,7 +14,7 @@ const products = [
     discount: '30% Off',
     rating: 5,
     reviews: 11,
-    image: '/images/products/Poker Table.png',
+    image: '/images/products/poker-table.png',
     description: 'Handcrafted poker table designed for serious players. Solid hardwood frame, professional-grade felt, and integrated cup holders.',
   },
   {
@@ -26,7 +26,7 @@ const products = [
     discount: '30% Off',
     rating: 5,
     reviews: 25,
-    image: '/images/products/Untitled.png',
+    image: '/images/products/untitled.png',
     description: 'Innovative foldable design delivers authentic casino gameplay with effortless storage — perfect for any home.',
   },
 ];
@@ -37,21 +37,21 @@ const features = [
     label: 'Quick Assembly',
     title: 'Set up in under 30 seconds',
     description: 'Designed to get you straight to the action. All required tooling is included — no fuss, no waiting.',
-    image: '/images/products/Poker Table.png',
+    image: '/images/products/poker-table.png',
   },
   {
     number: '02',
     label: 'Casino-Grade Play',
     title: '8 & 10 player casino-style positions',
     description: 'Glossy playing surface, padded PU leather armrests, and professional proportions bring Vegas into your home.',
-    image: '/images/products/Untitled.png',
+    image: '/images/products/untitled.png',
   },
   {
     number: '03',
     label: 'Built to Last',
     title: 'Premium materials, exceptional finish',
     description: 'Sourced from the finest materials worldwide — extraordinary build quality that eclipses the competition.',
-    image: '/images/products/Poker Table.png',
+    image: '/images/products/poker-table.png',
   },
 ];
 
@@ -284,7 +284,7 @@ function HeroSection() {
           >
             <div className="relative aspect-[4/3]">
               <Image
-                src="/images/products/Poker Table.png"
+                src="/images/products/poker-table.png"
                 alt="Premium Poker Table"
                 fill
                 className="object-contain drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
@@ -366,7 +366,7 @@ function ProductsSection() {
             <div className="w-12 h-px bg-twc-red" />
             <span className="text-xs tracking-widest text-[#2C2824]/50 uppercase">TWC Edition</span>
           </div>
-          <h2 className="font-serif-display text-4xl md:text-5xl text-[#2C2824] font-light">
+          <h2 className="font-serif-display text-4xl md:text-5xl text-[#2C2824]">
             Our Products
           </h2>
         </motion.div>
@@ -393,7 +393,7 @@ function ProductsSection() {
               </div>
 
               <div className="p-6 md:p-8">
-                <h3 className="font-serif-display text-2xl text-[#2C2824] font-light mb-1">
+                <h3 className="font-serif-display text-2xl text-[#2C2824] mb-1">
                   {product.name}
                 </h3>
                 <p className="text-xs tracking-widest text-[#2C2824]/50 uppercase mb-4">
@@ -458,7 +458,7 @@ function FeaturesSection() {
               <div className="w-12 h-px bg-twc-red" />
               <span className="text-xs tracking-widest text-[#F5F3EE]/40 uppercase">Craftsmanship</span>
             </div>
-            <h2 className="font-serif-display text-3xl text-[#F5F3EE] font-light">
+            <h2 className="font-serif-display text-3xl text-[#F5F3EE]">
               Designed with you in mind
             </h2>
           </motion.div>
@@ -470,7 +470,7 @@ function FeaturesSection() {
             className="relative aspect-[16/7] bg-[#F5F3EE]/5 overflow-hidden"
           >
             <Image
-              src="/images/products/Poker Table.png"
+              src="/images/products/poker-table.png"
               alt="Poker Table craftsmanship"
               fill
               className="object-contain p-4"
@@ -491,7 +491,7 @@ function FeaturesSection() {
                 {feature.number}
               </span>
               <span className="text-xs tracking-widest text-twc-red uppercase block">{feature.label}</span>
-              <h3 className="font-serif-display text-lg text-[#F5F3EE] font-light leading-snug">
+              <h3 className="font-serif-display text-lg text-[#F5F3EE] leading-snug">
                 {feature.title}
               </h3>
               <p className="text-[#F5F3EE]/45 font-light leading-relaxed text-sm">
@@ -522,7 +522,7 @@ function ReviewsSection() {
             <div className="w-12 h-px bg-twc-red" />
             <span className="text-xs tracking-widest text-[#2C2824]/50 uppercase">What customers say</span>
           </div>
-          <h2 className="font-serif-display text-4xl md:text-5xl text-[#2C2824] font-light">
+          <h2 className="font-serif-display text-4xl md:text-5xl text-[#2C2824]">
             Real reviews, real homes
           </h2>
         </motion.div>
@@ -576,7 +576,7 @@ function CTASection() {
         >
           <div>
             <p className="text-xs tracking-widest text-[#F5F3EE]/40 uppercase mb-2">Ready to order?</p>
-            <h2 className="font-serif-display text-3xl md:text-4xl text-[#F5F3EE] font-light">
+            <h2 className="font-serif-display text-3xl md:text-4xl text-[#F5F3EE]">
               Elevate your game nights.
             </h2>
           </div>

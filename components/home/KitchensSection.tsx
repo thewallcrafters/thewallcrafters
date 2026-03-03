@@ -27,10 +27,10 @@ export default function KitchensSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="font-serif-display text-section-title text-twc-charcoal">
+          <h2 className="font-serif-display text-section-title text-[#F5F3EE]">
             Kitchens that work beautifully.
           </h2>
-          <p className="text-twc-charcoal/60 text-lg md:text-xl font-light max-w-3xl mx-auto">
+          <p className="text-[#F5F3EE]/60 text-lg md:text-xl font-light max-w-3xl mx-auto">
             Modular, made-to-measure kitchens engineered for daily life — with precise joinery, considered storage and enduring materials.
           </p>
         </motion.div>
@@ -40,7 +40,7 @@ export default function KitchensSection() {
             <li key={kitchen.href}>
               <Link href={kitchen.href} className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-twc-red focus-visible:outline-offset-4">
                 <motion.div
-                  className="relative aspect-[3/4] overflow-hidden group cursor-pointer bg-twc-charcoal/10"
+                  className="relative aspect-[3/4] overflow-hidden group cursor-pointer bg-[#F5F3EE]/10"
                   data-cursor-label="View Kitchen"
                   initial={{ opacity: 0, y: 40 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}

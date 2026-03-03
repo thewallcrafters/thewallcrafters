@@ -1,5 +1,12 @@
 ﻿import CategoryHero from '@/components/categories/CategoryHero';
 import CategoryGrid from '@/components/categories/CategoryGrid';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Lab & Utility Cabinets',
+  description: 'Laboratory and utility cabinets built to specification — chemical-resistant, durable, and functional.',
+  alternates: { canonical: '/interiors/lab-utility-cabinets' },
+};
 
 export default function LabUtilityCabinetsPage() {
   const cabinetItems = [

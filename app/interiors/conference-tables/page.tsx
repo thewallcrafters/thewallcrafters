@@ -1,5 +1,12 @@
 ﻿import CategoryHero from '@/components/categories/CategoryHero';
 import CategoryGrid from '@/components/categories/CategoryGrid';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Conference Tables',
+  description: 'Custom conference tables and meeting room furniture for professional business environments.',
+  alternates: { canonical: '/interiors/conference-tables' },
+};
 
 export default function ConferenceTablesPage() {
   const conferenceTables = [

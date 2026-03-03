@@ -2,6 +2,8 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface Project {
   name: string;
@@ -71,29 +73,35 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <h3 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight">{project.name}</h3>
         <p className="text-sm tracking-wider text-twc-grey uppercase">{project.location}</p>
         <p className="text-lg md:text-xl leading-relaxed text-twc-warm/80 font-light max-w-lg">{project.description}</p>
-        <a
+        <Link
           href={`/work/${project.slug}`}
           className="text-sm tracking-wider text-twc-warm/70 hover:text-twc-red transition-colors duration-300 group flex items-center gap-2"
         >
           <span>View Project</span>
           <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-        </a>
+        </Link>
       </motion.div>
 
-      <motion.a
+      <Link
         href={`/work/${project.slug}`}
         className={`relative aspect-[4/3] overflow-hidden group cursor-pointer ${project.imagePosition === 'right' ? 'lg:col-start-2' : ''}`}
         data-cursor-label="View Project"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 0.6, delay: 0.1 }}
       >
-        <img
-          src={project.image}
-          alt={project.name}
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-103 transition-all duration-700"
-        />
-      </motion.a>
+        <motion.div
+          className="relative w-full h-full"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <Image
+            src={project.image}
+            alt={project.name}
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700"
+          />
+        </motion.div>
+      </Link>
     </div>
   );
 }

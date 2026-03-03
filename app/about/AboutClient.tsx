@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useRef } from 'react';
 import Image from 'next/image';
@@ -68,14 +68,14 @@ export default function AboutPage() {
   const heroInView = useInView(heroRef, { once: true });
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative min-h-screen bg-twc-charcoal">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Left - Image */}
           <div className="relative order-2 lg:order-1 min-h-[50vh] lg:min-h-screen">
             <Image
-              src="/images/wardrobes/WARDROBE 8.jpg"
+              src="/images/wardrobes/wardrobe-8.jpg"
               alt="TWC Craftsmanship"
               fill
               className="object-cover"
@@ -89,20 +89,20 @@ export default function AboutPage() {
           <div className="flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-20 py-28 lg:py-20 order-1 lg:order-2 bg-twc-charcoal">
             <motion.div
               ref={heroRef}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 1, y: 20 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               className="max-w-xl"
             >
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 About TWC
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] mb-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#2C2824] leading-[1.1] mb-8">
                 Crafting Spaces
                 <br />
                 <span className="italic font-extralight">That Inspire</span>
               </h1>
-              <p className="text-lg text-white/70 font-light leading-relaxed">
+              <p className="text-lg text-[#2C2824]/70 font-light leading-relaxed">
                 The Wall Crafters is a design-build firm specializing in modular kitchens, 
                 wardrobes, and complete interior fit-outs. Factory precision meets on-site 
                 excellence — every piece engineered to last.
@@ -126,12 +126,12 @@ export default function AboutPage() {
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 Our Story
               </span>
-              <h2 className="text-3xl md:text-4xl font-light text-twc-charcoal leading-tight mb-8">
+              <h2 className="text-3xl md:text-4xl font-light text-[#2C2824] leading-tight mb-8">
                 Factory Precision Meets
                 <br />
                 <span className="italic font-extralight">On-Site Excellence</span>
               </h2>
-              <div className="space-y-6 text-base text-twc-charcoal/70 font-light leading-relaxed">
+              <div className="space-y-6 text-base text-[#2C2824]/70 font-light leading-relaxed">
                 <p>
                   The Wall Crafters began with a simple belief: interior fit-outs should be 
                   delivered with the same precision as aerospace manufacturing. Every joint 
@@ -159,7 +159,7 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="relative aspect-[3/4] overflow-hidden">
                   <Image
-                    src="/images/office/workstation 3.jpg"
+                    src="/images/office/workstation-3.jpg"
                     alt="TWC Workshop"
                     fill
                     className="object-cover"
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 </div>
                 <div className="relative aspect-square overflow-hidden">
                   <Image
-                    src="/images/tv-units/Tv unit 4.jpg"
+                    src="/images/tv-units/tv-unit-4.jpg"
                     alt="TWC Detail"
                     fill
                     className="object-cover"
@@ -179,7 +179,7 @@ export default function AboutPage() {
               <div className="pt-8">
                 <div className="relative aspect-[3/5] overflow-hidden">
                   <Image
-                    src="/images/pooja-room/pooja room 4.jpg"
+                    src="/images/pooja-room/pooja-room-4.jpg"
                     alt="TWC Craftsmanship"
                     fill
                     className="object-cover"
@@ -207,13 +207,13 @@ export default function AboutPage() {
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 About the Founder
               </span>
-              <h2 className="text-3xl md:text-4xl font-light text-twc-charcoal leading-tight mb-4">
+              <h2 className="text-3xl md:text-4xl font-light text-[#F5F3EE] leading-tight mb-4">
                 Anikate Singhal
               </h2>
-              <p className="text-sm uppercase tracking-widest text-twc-charcoal/50 mb-8">
+              <p className="text-sm uppercase tracking-widest text-[#F5F3EE]/50 mb-8">
                 Founder & Managing Director
               </p>
-              <div className="space-y-6 text-base text-twc-charcoal/70 font-light leading-relaxed">
+              <div className="space-y-6 text-base text-[#F5F3EE]/70 font-light leading-relaxed">
                 <p>
                   I'm the tenth generation of a Madurai business family with roots in the grain 
                   trade. I grew up seeing my family build trust through quality and keeping their 
@@ -239,19 +239,19 @@ export default function AboutPage() {
               </div>
 
               {/* Philosophy */}
-              <div className="mt-10 pt-8 border-t border-twc-charcoal/10">
-                <p className="text-xs uppercase tracking-widest text-twc-charcoal/50 mb-4">Our Values</p>
-                <p className="text-sm text-twc-charcoal/70 italic leading-relaxed">
+              <div className="mt-10 pt-8 border-t border-[#F5F3EE]/10">
+                <p className="text-xs uppercase tracking-widest text-[#F5F3EE]/50 mb-4">Our Values</p>
+                <p className="text-sm text-[#F5F3EE]/70 italic leading-relaxed">
                   "We are a young company built on old values: exceptional quality, accountability, 
                   and keeping our word."
                 </p>
               </div>
 
               {/* Education */}
-              <div className="mt-8 pt-8 border-t border-twc-charcoal/10">
-                <p className="text-xs uppercase tracking-widest text-twc-charcoal/50 mb-4">Education</p>
+              <div className="mt-8 pt-8 border-t border-[#F5F3EE]/10">
+                <p className="text-xs uppercase tracking-widest text-[#F5F3EE]/50 mb-4">Education</p>
                 <div className="space-y-3">
-                  <p className="text-sm text-twc-charcoal/70">BBA in Entrepreneurship — Swiss Business School, 2020</p>
+                  <p className="text-sm text-[#F5F3EE]/70">BBA in Entrepreneurship — Swiss Business School, 2020</p>
                 </div>
               </div>
             </motion.div>
@@ -272,7 +272,7 @@ export default function AboutPage() {
             <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-4 block">
               Our Values
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#2C2824] leading-tight">
               What Guides Us
             </h2>
           </motion.div>
@@ -287,11 +287,11 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-white/20 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-[#2C2824]/20 flex items-center justify-center">
                   <span className="text-2xl font-light text-twc-red">{String(index + 1).padStart(2, '0')}</span>
                 </div>
-                <h3 className="text-xl font-light text-white mb-3">{value.title}</h3>
-                <p className="text-sm text-white/50 font-light leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-light text-[#2C2824] mb-3">{value.title}</h3>
+                <p className="text-sm text-[#2C2824]/50 font-light leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -312,12 +312,12 @@ export default function AboutPage() {
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 Capabilities
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight mb-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#2C2824] leading-tight mb-8">
                 Everything Under
                 <br />
                 <span className="italic font-extralight">One Roof</span>
               </h2>
-              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed">
+              <p className="text-base text-[#2C2824]/60 font-light leading-relaxed">
                 From initial design concept to final installation, every discipline operates 
                 under one management structure. No handoffs, no finger-pointing — just 
                 seamless execution.
@@ -333,11 +333,11 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="p-6 border border-twc-charcoal/10 hover:border-twc-red/30 transition-colors duration-300"
+                  className="p-6 border border-[#2C2824]/10 hover:border-twc-red/30 transition-colors duration-300"
                 >
                   <div className="text-twc-red mb-4">{cap.icon}</div>
-                  <h3 className="text-lg font-light text-twc-charcoal mb-2">{cap.title}</h3>
-                  <p className="text-sm text-twc-charcoal/60 font-light leading-relaxed">{cap.description}</p>
+                  <h3 className="text-lg font-light text-[#2C2824] mb-2">{cap.title}</h3>
+                  <p className="text-sm text-[#2C2824]/60 font-light leading-relaxed">{cap.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -358,7 +358,7 @@ export default function AboutPage() {
             <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-4 block">
               Our Process
             </span>
-            <h2 className="text-3xl md:text-4xl font-light text-twc-charcoal">
+            <h2 className="text-3xl md:text-4xl font-light text-[#F5F3EE]">
               From Concept to Completion
             </h2>
           </motion.div>
@@ -374,8 +374,8 @@ export default function AboutPage() {
                 className="relative bg-white p-8"
               >
                 <span className="text-5xl font-light text-twc-red/20">{step.number}</span>
-                <h3 className="text-xl font-light text-twc-charcoal mt-4 mb-3">{step.title}</h3>
-                <p className="text-sm text-twc-charcoal/60 font-light leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-light text-[#2C2824] mt-4 mb-3">{step.title}</h3>
+                <p className="text-sm text-[#2C2824]/60 font-light leading-relaxed">{step.description}</p>
                 
                 {/* Connector line */}
                 {index < process.length - 1 && (
@@ -387,6 +387,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-    </main>
+    </div>
   );
 }

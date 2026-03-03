@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const pillars = [
   {
@@ -48,7 +49,7 @@ export default function CapabilitySection() {
           {pillars.map((pillar, index) => (
             <motion.div
               key={index}
-              className="space-y-6 border border-twc-warm/10 rounded-3xl p-8 bg-white/5 backdrop-blur"
+              className="space-y-6 border border-[#F5F3EE]/10 rounded-3xl p-8 bg-white/5 backdrop-blur"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.12 }}
@@ -58,25 +59,25 @@ export default function CapabilitySection() {
                 <h3 className="text-2xl font-serif-display">{pillar.title}</h3>
               </div>
 
-              <p className="text-twc-warm/80 leading-relaxed">{pillar.description}</p>
+              <p className="text-[#F5F3EE]/80 leading-relaxed">{pillar.description}</p>
 
               <ul className="space-y-3">
                 {pillar.points.map((point, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-twc-grey">
-                    <span className="w-1 h-1 mt-2 bg-twc-warm/40 rounded-full flex-shrink-0"></span>
+                    <span className="w-1 h-1 mt-2 bg-[#F5F3EE]/40 rounded-full flex-shrink-0"></span>
                     <span>{point}</span>
                   </li>
                 ))}
               </ul>
 
               <div className="pt-2">
-                <a
+                <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 border border-twc-warm/30 hover:border-twc-red hover:bg-twc-red/5 px-6 py-3.5 text-sm tracking-wider transition-all duration-300 group mt-2"
+                  className="inline-flex items-center gap-3 border border-[#F5F3EE]/30 hover:border-twc-red hover:bg-twc-red/5 px-6 py-3.5 text-sm tracking-wider transition-all duration-300 group mt-2"
                 >
                   <span>Talk to our designer</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}

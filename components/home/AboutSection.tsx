@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const values = [
   'Quality Craftsmanship',
@@ -50,13 +51,13 @@ export default function AboutSection() {
                 Today, we bring clarity to complexity, delivering turnkey solutions that balance aesthetics, function, and the needs of those who inhabit the spaces we create.
               </p>
             </div>
-            <a
+            <Link
               href="/about"
               className="inline-flex items-center gap-2 text-sm tracking-wider text-twc-warm/70 hover:text-twc-red transition-colors duration-300 group"
             >
               <span>Learn more about the studio</span>
               <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-            </a>
+            </Link>
           </motion.div>
 
           <motion.div

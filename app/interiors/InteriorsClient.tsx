@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useRef } from 'react';
 import Image from 'next/image';
@@ -10,43 +10,43 @@ const residentialCategories = [
   {
     title: 'Kitchens',
     description: 'Modular kitchens built for Indian cooking — L-shaped, U-shaped, parallel, and island layouts.',
-    image: '/images/kitchens/l-shaped/L kitchen 1.jpg',
+    image: '/images/kitchens/l-shaped/l-kitchen-1.jpg',
     href: '/kitchens',
   },
   {
     title: 'Wardrobes',
     description: 'Walk-in, sliding, or hinged — wardrobes engineered for space and style.',
-    image: '/images/wardrobes/WARDROBE 2.jpg',
+    image: '/images/wardrobes/wardrobe-2.jpg',
     href: '/interiors/wardrobes',
   },
   {
     title: 'Bedrooms',
     description: 'Complete bedroom solutions from beds to dressers and side units.',
-    image: '/images/bedroom/bed 1.jpg',
+    image: '/images/bedroom/bed-1.jpg',
     href: '/interiors/bedrooms',
   },
   {
     title: 'TV & Media Units',
     description: 'Minimal media walls with hidden wiring and integrated lighting.',
-    image: '/images/tv-units/tv unit 1.jpg',
+    image: '/images/tv-units/tv-unit-1.jpg',
     href: '/interiors/tv-units',
   },
   {
     title: 'Pooja Rooms',
     description: 'Sacred spaces crafted with wood, brass, proportion and light.',
-    image: '/images/pooja-room/Pooja room 1.jpg',
+    image: '/images/pooja-room/pooja-room-1.jpg',
     href: '/interiors/puja-room',
   },
   {
     title: 'Storage & Shelving',
     description: 'Bookshelves, shoe racks, and custom storage that blend into architecture.',
-    image: '/images/storage/bookshelf 1.jpg',
+    image: '/images/storage/bookshelf-1.jpg',
     href: '/interiors/storage',
   },
   {
     title: 'Dining & Bar',
     description: 'Bar tables, crockery units, and dining furniture for refined entertaining.',
-    image: '/images/dining/Bar table 1.jpg',
+    image: '/images/dining/bar-table-1.jpg',
     href: '/interiors/dining',
   },
 ];
@@ -56,25 +56,25 @@ const commercialCategories = [
   {
     title: 'Executive Desks',
     description: 'Statement desks for leadership spaces with integrated cable management.',
-    image: '/images/office/executive desk 2.jpg',
+    image: '/images/office/executive-desk-2.jpg',
     href: '/interiors/executive-desks',
   },
   {
     title: 'Workstations',
     description: 'Modular workstations designed for productivity and collaboration.',
-    image: '/images/office/workstation 2.jpg',
+    image: '/images/office/workstation-2.jpg',
     href: '/interiors/workstations',
   },
   {
     title: 'Office Storage',
     description: 'Filing systems, modular storage, and organizational solutions.',
-    image: '/images/office/storage unit 1.jpg',
+    image: '/images/office/storage-unit-1.jpg',
     href: '/interiors/office-storage',
   },
   {
     title: 'Display Units',
     description: 'Trophy displays, showcases, and exhibition furniture.',
-    image: '/images/office/display 1.jpg',
+    image: '/images/office/display-1.jpg',
     href: '/interiors/display-units',
   },
 ];
@@ -152,15 +152,15 @@ function CategoryCard({
           
           {/* Content */}
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
-            <h3 className="text-xl md:text-2xl font-light text-white mb-2 tracking-wide">
+            <h3 className="text-xl md:text-2xl font-light text-[#F5F3EE] mb-2 tracking-wide">
               {category.title}
             </h3>
-            <p className="text-sm text-white font-light leading-relaxed max-w-xs">
+            <p className="text-sm text-[#F5F3EE] font-light leading-relaxed max-w-xs">
               {category.description}
             </p>
-            
+
             {/* Arrow indicator */}
-              <div className="mt-4 flex items-center gap-2 text-white transition-colors duration-300">
+              <div className="mt-4 flex items-center gap-2 text-[#F5F3EE] transition-colors duration-300">
               <span className="text-xs uppercase tracking-widest">Explore</span>
               <svg 
                 className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" 
@@ -199,7 +199,7 @@ export default function InteriorsPage() {
   const heroInView = useInView(heroRef, { once: true });
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section - Split Layout */}
       <section className="relative min-h-screen bg-twc-charcoal">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
@@ -207,34 +207,34 @@ export default function InteriorsPage() {
           <div className="flex flex-col justify-center pl-5 sm:pl-8 md:pl-12 lg:pl-16 xl:pl-24 2xl:pl-32 pr-6 md:pr-12 py-28 lg:py-20 order-2 lg:order-1">
             <motion.div
               ref={heroRef}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 1, y: 20 }}
               animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               className="max-w-xl"
             >
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 Interiors & Fit-Outs
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] mb-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#2C2824] leading-[1.1] mb-8">
                 Spaces That
                 <br />
                 <span className="italic font-extralight">Work & Live</span>
               </h1>
-              <p className="text-lg text-white/70 font-light leading-relaxed mb-10">
-                From intimate pooja rooms to expansive office fit-outs, we craft interiors 
-                that balance beauty with function. Every piece is designed for the space 
+              <p className="text-lg text-[#2C2824]/70 font-light leading-relaxed mb-10">
+                From intimate pooja rooms to expansive office fit-outs, we craft interiors
+                that balance beauty with function. Every piece is designed for the space
                 it inhabits.
               </p>
-              
+
               {/* Stats */}
-              <div className="flex gap-12 pt-8 border-t border-white/10">
+              <div className="flex gap-12 pt-8 border-t border-[#2C2824]/10">
                 <div>
-                  <span className="text-3xl font-light text-white">50+</span>
-                  <p className="text-xs uppercase tracking-wider text-white/50 mt-1">Spaces Delivered</p>
+                  <span className="text-3xl font-light text-[#2C2824]">50+</span>
+                  <p className="text-xs uppercase tracking-wider text-[#2C2824]/50 mt-1">Spaces Delivered</p>
                 </div>
                 <div>
-                  <span className="text-3xl font-light text-white">14</span>
-                  <p className="text-xs uppercase tracking-wider text-white/50 mt-1">Categories</p>
+                  <span className="text-3xl font-light text-[#2C2824]">14</span>
+                  <p className="text-xs uppercase tracking-wider text-[#2C2824]/50 mt-1">Categories</p>
                 </div>
               </div>
             </motion.div>
@@ -244,17 +244,17 @@ export default function InteriorsPage() {
           <div className="relative order-1 lg:order-2 min-h-[50vh] lg:min-h-screen pt-20 lg:pt-24">
             <div className="absolute inset-0 top-20 lg:top-24 grid grid-cols-2 grid-rows-2 gap-2 p-2 lg:p-4">
               <FeaturedImage 
-                src="/images/wardrobes/WARDROBE 3.jpg" 
+                src="/images/wardrobes/wardrobe-3.jpg" 
                 alt="Wardrobe Design"
                 className="col-span-1 row-span-2"
               />
               <FeaturedImage 
-                src="/images/office/executive desk 3.jpg" 
+                src="/images/office/executive-desk-3.jpg" 
                 alt="Executive Office"
                 className="col-span-1 row-span-1"
               />
               <FeaturedImage 
-                src="/images/pooja-room/Pooja room2.jpg" 
+                src="/images/pooja-room/pooja-room2.jpg" 
                 alt="Pooja Room"
                 className="col-span-1 row-span-1"
               />
@@ -278,10 +278,10 @@ export default function InteriorsPage() {
               01 — Residential
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#2C2824] leading-tight">
                 Home Interiors
               </h2>
-              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
+              <p className="text-base text-[#2C2824]/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
                 Complete solutions for every room — kitchens, wardrobes, bedrooms, entertainment units, sacred spaces, and storage systems.
               </p>
             </div>
@@ -308,13 +308,13 @@ export default function InteriorsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 z-10">
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-3">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#F5F3EE] mb-3">
                     {residentialCategories[0].title}
                   </h3>
-                  <p className="text-white text-base md:text-lg font-light max-w-2xl mb-4">
+                  <p className="text-[#F5F3EE] text-base md:text-lg font-light max-w-2xl mb-4">
                     {residentialCategories[0].description}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white">
+                  <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#F5F3EE]">
                     Explore
                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -353,7 +353,7 @@ export default function InteriorsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed italic"
+            className="text-2xl md:text-3xl lg:text-4xl font-light text-[#2C2824] leading-relaxed italic"
           >
             "Furniture should serve space, not dominate it."
           </motion.blockquote>
@@ -362,7 +362,7 @@ export default function InteriorsPage() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-sm uppercase tracking-widest text-white/50"
+            className="mt-6 text-sm uppercase tracking-widest text-[#2C2824]/50"
           >
             — TWC Design Philosophy
           </motion.p>
@@ -384,10 +384,10 @@ export default function InteriorsPage() {
               02 — Commercial
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#F5F3EE] leading-tight">
                 Office & Workspace
               </h2>
-              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right">
+              <p className="text-base text-[#F5F3EE]/60 font-light leading-relaxed lg:text-right">
                 Professional environments that inspire productivity — executive suites, 
                 open workstations, and complete office fit-outs built for business.
               </p>
@@ -429,10 +429,10 @@ export default function InteriorsPage() {
               03 — Retail & Showrooms
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#2C2824] leading-tight">
                 Retail & Hospitality
               </h2>
-              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right">
+              <p className="text-base text-[#2C2824]/60 font-light leading-relaxed lg:text-right">
                 Showcase counters, utility cabinets, and vanity units designed for 
                 retail spaces, showrooms, and hospitality environments.
               </p>
@@ -472,7 +472,7 @@ export default function InteriorsPage() {
               className="relative aspect-[4/3] overflow-hidden"
             >
               <Image
-                src="/images/wardrobes/WARDROBE 6.jpg"
+                src="/images/wardrobes/wardrobe-6.jpg"
                 alt="TWC Craftsmanship"
                 fill
                 className="object-cover"
@@ -490,10 +490,10 @@ export default function InteriorsPage() {
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 Our Process
               </span>
-              <h2 className="text-3xl md:text-4xl font-light text-twc-charcoal leading-tight mb-6">
+              <h2 className="text-3xl md:text-4xl font-light text-[#2C2824] leading-tight mb-6">
                 From Concept to Installation
               </h2>
-              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed mb-8">
+              <p className="text-base text-[#2C2824]/60 font-light leading-relaxed mb-8">
                 Every interior project begins with understanding how you use your space. 
                 We measure, design, manufacture, and install — managing every detail so 
                 you receive a finished product, not a project to manage.
@@ -503,17 +503,17 @@ export default function InteriorsPage() {
               <div className="space-y-4 mb-10">
                 {['Site Survey & Brief', 'Design Development', 'Factory Production', 'Installation & Handover'].map((step, i) => (
                   <div key={step} className="flex items-center gap-4">
-                    <span className="w-8 h-8 rounded-full border border-twc-charcoal/20 flex items-center justify-center text-sm text-twc-charcoal/60">
+                    <span className="w-8 h-8 rounded-full border border-[#2C2824]/20 flex items-center justify-center text-sm text-[#2C2824]/60">
                       {i + 1}
                     </span>
-                    <span className="text-twc-charcoal font-light">{step}</span>
+                    <span className="text-[#2C2824] font-light">{step}</span>
                   </div>
                 ))}
               </div>
 
               <Link 
                 href="/services" 
-                className="inline-flex items-center gap-3 text-twc-charcoal hover:text-twc-red transition-colors duration-300"
+                className="inline-flex items-center gap-3 text-[#2C2824] hover:text-twc-red transition-colors duration-300"
               >
                 <span className="text-sm uppercase tracking-widest">Learn About Our Process</span>
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -524,6 +524,6 @@ export default function InteriorsPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

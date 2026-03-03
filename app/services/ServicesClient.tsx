@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useRef } from 'react';
 import Image from 'next/image';
@@ -12,7 +12,7 @@ const residentialServices = [
     title: 'Home Interior Design',
     subtitle: 'Complete Living Spaces',
     description: 'End-to-end interior design for homes — from concept to execution. We create cohesive spaces that reflect your lifestyle, preferences, and functional needs.',
-    image: '/images/bedroom/bed 1.jpg',
+    image: '/images/bedroom/bed-1.jpg',
     features: ['Full home interior planning & design', '3D visualization & material selection', 'Color schemes & lighting design'],
     href: '/interiors',
     linkLabel: 'View Projects',
@@ -22,7 +22,7 @@ const residentialServices = [
     title: 'Renovations & Remodeling',
     subtitle: 'Transform Your Space',
     description: 'Breathe new life into existing spaces. Whether it\'s a kitchen upgrade, bathroom renovation, or complete home makeover — we handle structural changes with minimal disruption.',
-    image: '/images/kitchens/u-shaped/U kitchen 1.jpg',
+    image: '/images/kitchens/u-shaped/u-kitchen-1.jpg',
     features: ['Kitchen & bathroom renovations', 'Structural modifications', 'Flooring, walls & ceiling upgrades'],
     href: '/work',
     linkLabel: 'View Projects',
@@ -32,7 +32,7 @@ const residentialServices = [
     title: 'Custom Furniture',
     subtitle: 'Made for Your Space',
     description: 'Bespoke furniture designed and crafted in our factory. From modular kitchens to wardrobes, TV units to puja rooms — built to exact specifications and site dimensions.',
-    image: '/images/wardrobes/WARDROBE 4.jpg',
+    image: '/images/wardrobes/wardrobe-4.jpg',
     features: ['Modular kitchens & wardrobes', 'TV units, beds & storage systems', 'Puja rooms with traditional detailing'],
     href: '/interiors',
     linkLabel: 'View Projects',
@@ -42,7 +42,7 @@ const residentialServices = [
     title: 'Space Planning',
     subtitle: 'Optimize Every Square Foot',
     description: 'Strategic layout planning that maximizes functionality without compromising aesthetics. We analyze traffic flow, storage needs, and lifestyle patterns to create efficient spaces.',
-    image: '/images/storage/bookshelf 2.jpg',
+    image: '/images/storage/bookshelf-2.jpg',
     features: ['Floor plan optimization', 'Storage & organization solutions', 'Furniture placement & flow'],
     href: '/contact',
     linkLabel: 'Get In Touch',
@@ -56,7 +56,7 @@ const commercialServices = [
     title: 'Office Interior Design',
     subtitle: 'Workspaces That Perform',
     description: 'Complete office interiors designed for productivity, collaboration, and brand identity. From executive suites to open workstations — spaces that inspire your team.',
-    image: '/images/office/executive desk 4.jpg',
+    image: '/images/office/executive-desk-4.jpg',
     features: ['Executive cabins & workstations', 'Conference rooms & meeting spaces', 'Reception areas & lobbies'],
     href: '/interiors/executive-desks',
     linkLabel: 'View Projects',
@@ -66,7 +66,7 @@ const commercialServices = [
     title: 'Retail Space Design',
     subtitle: 'Spaces That Sell',
     description: 'Retail environments that enhance customer experience and showcase your products. Display systems, counters, and layouts optimized for customer flow and engagement.',
-    image: '/images/office/display 1.jpg',
+    image: '/images/office/display-1.jpg',
     features: ['Showcase counters & display systems', 'Lab & utility cabinets for non-medical use', 'Branding integration & signage'],
     href: '/interiors/showcase-counters',
     linkLabel: 'View Projects',
@@ -76,7 +76,7 @@ const commercialServices = [
     title: 'Hospitality Design',
     subtitle: 'Memorable Experiences',
     description: 'Interiors for restaurants, hotels, and hospitality venues. We create atmospheres that leave lasting impressions — from intimate cafes to large banquet spaces.',
-    image: '/images/dining/Bar table 1.jpg',
+    image: '/images/dining/bar-table-1.jpg',
     features: ['Restaurant & cafe interiors', 'Hotel rooms & lobby design', 'Bar counters & vanity units'],
     href: '/interiors/hospitality',
     linkLabel: 'View Projects',
@@ -86,7 +86,7 @@ const commercialServices = [
     title: 'Corporate Branding',
     subtitle: 'Identity Through Interiors',
     description: 'Translate your brand values into physical spaces. We integrate brand colors, materials, and messaging into interior design for a cohesive corporate identity.',
-    image: '/images/office/workstation 2.jpg',
+    image: '/images/office/workstation-2.jpg',
     features: ['Brand-aligned color & material palettes', 'Logo integration & feature walls', 'Consistent design language across locations'],
     href: '/contact',
     linkLabel: 'Get In Touch',
@@ -179,7 +179,7 @@ function ServiceCard({ service, index }: { service: typeof residentialServices[0
         />
         {/* Service number overlay */}
         <div className="absolute top-6 left-6 w-12 h-12 bg-twc-red flex items-center justify-center">
-          <span className="text-white text-sm font-light">{service.id}</span>
+          <span className="text-[#F5F3EE] text-sm font-light">{service.id}</span>
         </div>
       </div>
 
@@ -189,19 +189,19 @@ function ServiceCard({ service, index }: { service: typeof residentialServices[0
           <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-2 block">
             {service.subtitle}
           </span>
-          <h3 className="text-3xl md:text-4xl font-light text-twc-charcoal leading-tight">
+          <h3 className="text-3xl md:text-4xl font-light text-[#2C2824] leading-tight">
             {service.title}
           </h3>
         </div>
 
-        <p className="text-base text-twc-charcoal/70 font-light leading-relaxed">
+        <p className="text-base text-[#2C2824]/70 font-light leading-relaxed">
           {service.description}
         </p>
 
         {/* Features */}
         <ul className="space-y-3 pt-2">
           {service.features.map((feature, i) => (
-            <li key={i} className="flex items-start gap-3 text-sm text-twc-charcoal/80">
+            <li key={i} className="flex items-start gap-3 text-sm text-[#2C2824]/80">
               <span className="w-1.5 h-1.5 mt-2 bg-twc-red rounded-full flex-shrink-0" />
               <span className="font-light">{feature}</span>
             </li>
@@ -210,7 +210,7 @@ function ServiceCard({ service, index }: { service: typeof residentialServices[0
 
         <Link
           href={service.href}
-          className="inline-flex items-center gap-3 text-twc-charcoal hover:text-twc-red transition-colors duration-300 pt-2"
+          className="inline-flex items-center gap-3 text-[#2C2824] hover:text-twc-red transition-colors duration-300 pt-2"
         >
           <span className="text-sm uppercase tracking-widest">{service.linkLabel}</span>
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -227,13 +227,13 @@ export default function ServicesPage() {
   const heroInView = useInView(heroRef, { once: true });
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] bg-twc-dark flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/wardrobes/WARDROBE 7.jpg"
+            src="/images/wardrobes/wardrobe-7.jpg"
             alt="TWC Services"
             fill
             className="object-cover opacity-40"
@@ -254,12 +254,12 @@ export default function ServicesPage() {
             <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
               Our Services
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#F5F3EE] leading-[1.1] mb-8">
               Design. Build.
               <br />
               <span className="italic font-extralight">Deliver.</span>
             </h1>
-            <p className="text-lg text-white/70 font-light leading-relaxed max-w-xl">
+            <p className="text-lg text-[#F5F3EE]/70 font-light leading-relaxed max-w-xl">
               From modular kitchens to complete office fit-outs, we handle every phase 
               in-house — design, fabrication, and installation. One team, one responsibility, 
               one standard of quality.
@@ -283,10 +283,10 @@ export default function ServicesPage() {
               01 — Residential Services
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#2C2824] leading-tight">
                 Homes That Reflect You
               </h2>
-              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
+              <p className="text-base text-[#2C2824]/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
                 Complete residential interior solutions — from initial design concepts to final installation. We create spaces that are functional, beautiful, and uniquely yours.
               </p>
             </div>
@@ -316,10 +316,10 @@ export default function ServicesPage() {
               02 — Commercial Services
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-twc-charcoal leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#F5F3EE] leading-tight">
                 Spaces That Mean Business
               </h2>
-              <p className="text-base text-twc-charcoal/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
+              <p className="text-base text-[#F5F3EE]/60 font-light leading-relaxed lg:text-right max-w-lg lg:ml-auto">
                 Professional environments designed for productivity, brand presence, and customer experience. From corporate offices to retail showrooms.
               </p>
             </div>
@@ -347,7 +347,7 @@ export default function ServicesPage() {
             <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-4 block">
               03 — Additional Services
             </span>
-            <h2 className="text-3xl md:text-4xl font-light text-twc-charcoal">
+            <h2 className="text-3xl md:text-4xl font-light text-[#2C2824]">
               Supporting Your Project
             </h2>
           </motion.div>
@@ -365,8 +365,8 @@ export default function ServicesPage() {
                 <div className="w-12 h-12 bg-twc-charcoal/5 flex items-center justify-center mb-6 text-twc-red">
                   {service.icon}
                 </div>
-                <h3 className="text-lg font-light text-twc-charcoal mb-3">{service.title}</h3>
-                <p className="text-sm text-twc-charcoal/60 font-light leading-relaxed">
+                <h3 className="text-lg font-light text-[#2C2824] mb-3">{service.title}</h3>
+                <p className="text-sm text-[#2C2824]/60 font-light leading-relaxed">
                   {service.description}
                 </p>
               </motion.div>
@@ -389,21 +389,21 @@ export default function ServicesPage() {
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 Our Process
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#2C2824] leading-tight mb-8">
                 From First Meeting
                 <br />
                 <span className="italic font-extralight">to Final Handover</span>
               </h2>
-              <p className="text-base text-white/60 font-light leading-relaxed mb-10">
-                A structured approach that keeps projects on track. Clear timelines, 
-                transparent communication, and quality checks at every stage ensure 
+              <p className="text-base text-[#2C2824]/60 font-light leading-relaxed mb-10">
+                A structured approach that keeps projects on track. Clear timelines,
+                transparent communication, and quality checks at every stage ensure
                 we deliver what we promise.
               </p>
 
               {/* Timeline visualization */}
-              <div className="flex items-center gap-4 text-white/40 text-sm">
+              <div className="flex items-center gap-4 text-[#2C2824]/40 text-sm">
                 <span>Typical Project</span>
-                <div className="flex-1 h-px bg-white/20" />
+                <div className="flex-1 h-px bg-[#2C2824]/20" />
                 <span>6-8 Weeks</span>
               </div>
             </motion.div>
@@ -424,13 +424,13 @@ export default function ServicesPage() {
                       {step.number}
                     </span>
                   </div>
-                  <div className="flex-1 pb-8 border-b border-white/10">
+                  <div className="flex-1 pb-8 border-b border-[#2C2824]/10">
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <h3 className="text-xl font-light text-white mb-2">{step.title}</h3>
-                        <p className="text-sm text-white/50 font-light">{step.description}</p>
+                        <h3 className="text-xl font-light text-[#2C2824] mb-2">{step.title}</h3>
+                        <p className="text-sm text-[#2C2824]/50 font-light">{step.description}</p>
                       </div>
-                      <span className="text-xs uppercase tracking-wider text-white/30 whitespace-nowrap">
+                      <span className="text-xs uppercase tracking-wider text-[#2C2824]/30 whitespace-nowrap">
                         {step.duration}
                       </span>
                     </div>
@@ -442,6 +442,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-    </main>
+    </div>
   );
 }

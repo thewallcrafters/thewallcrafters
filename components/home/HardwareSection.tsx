@@ -119,7 +119,7 @@ export default function HardwareSection() {
                 >
                   <div className="bg-twc-warm/5 border border-twc-warm/10 p-8 h-full transition-all duration-300 hover:bg-twc-warm/10 hover:border-twc-warm/20">
                     {/* Icon */}
-                    <div className="w-12 h-12 rounded-full bg-twc-red/10 flex items-center justify-center mb-6 text-twc-red group-hover:bg-twc-red group-hover:text-twc-warm transition-all duration-300" aria-hidden="true">
+                    <div className="w-12 h-12 rounded-full bg-twc-red/10 flex items-center justify-center mb-6 text-twc-red group-hover:bg-twc-red group-hover:text-[#F5F3EE] transition-all duration-300" aria-hidden="true">
                       {item.icon}
                     </div>
                     

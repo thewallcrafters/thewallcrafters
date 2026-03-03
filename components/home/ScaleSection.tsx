@@ -56,12 +56,12 @@ export default function ScaleSection() {
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-px bg-twc-red" />
-            <p className="text-[10px] tracking-widest-plus text-twc-charcoal/50 uppercase">Scale & Capacity</p>
+            <p className="text-[10px] tracking-widest-plus text-[#F5F3EE]/50 uppercase">Scale & Capacity</p>
           </div>
-          <h2 className="font-serif-display text-section-title tracking-tight text-twc-charcoal mb-6">
+          <h2 className="font-serif-display text-section-title tracking-tight text-[#F5F3EE] mb-6">
             Built to deliver at any scale
           </h2>
-          <p className="text-twc-charcoal/60 text-lg font-light">
+          <p className="text-[#F5F3EE]/60 text-lg font-light">
             From a single kitchen to a full commercial fit-out — we have the infrastructure to match.
           </p>
         </motion.div>
@@ -71,21 +71,21 @@ export default function ScaleSection() {
           {projectTypes.map((type, index) => (
             <motion.li
               key={type.label}
-              className="group relative bg-white border border-twc-charcoal/5 p-8 md:p-10 text-center hover:shadow-lg transition-all duration-500 list-none"
+              className="group relative bg-white border border-[#2C2824]/5 p-8 md:p-10 text-center hover:shadow-lg transition-all duration-500 list-none"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
             >
               {/* Icon */}
-              <div className="w-16 h-16 mx-auto rounded-full bg-twc-charcoal/5 flex items-center justify-center mb-6 text-twc-charcoal group-hover:bg-twc-red group-hover:text-twc-warm transition-all duration-300" aria-hidden="true">
+              <div className="w-16 h-16 mx-auto rounded-full bg-[#2C2824]/5 flex items-center justify-center mb-6 text-[#2C2824] group-hover:bg-twc-red group-hover:text-[#F5F3EE] transition-all duration-300" aria-hidden="true">
                 {type.icon}
               </div>
               
-              <h3 className="font-serif-display text-2xl text-twc-charcoal mb-3">{type.label}</h3>
-              <p className="text-twc-charcoal/60 text-sm font-light">{type.description}</p>
+              <h3 className="font-serif-display text-2xl text-[#2C2824] mb-3">{type.label}</h3>
+              <p className="text-[#2C2824]/60 text-sm font-light">{type.description}</p>
               
               {/* Decorative check */}
-              <div className="absolute top-4 right-4 w-6 h-6 rounded-full bg-twc-charcoal/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
+              <div className="absolute top-4 right-4 w-6 h-6 rounded-full bg-[#2C2824]/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true">
                 <svg className="w-3 h-3 text-twc-red" viewBox="0 0 12 12" fill="currentColor">
                   <path d="M10.28 2.72a.75.75 0 010 1.06l-5.5 5.5a.75.75 0 01-1.06 0l-2.5-2.5a.75.75 0 111.06-1.06L4.25 7.69l4.97-4.97a.75.75 0 011.06 0z" />
                 </svg>

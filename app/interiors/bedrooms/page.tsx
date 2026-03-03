@@ -1,12 +1,19 @@
 ﻿import CategoryHero from '@/components/categories/CategoryHero';
 import CategoryGrid from '@/components/categories/CategoryGrid';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Bedrooms',
+  description: 'Custom bedroom furniture — beds, dressers, and storage units crafted for comfort and elegance by TWC Fit-Outs, Madurai.',
+  alternates: { canonical: '/interiors/bedrooms' },
+};
 
 export default function BedroomsPage() {
   const items = [
     {
       title: 'King Bed with Storage',
       description: 'Upholstered headboard with hydraulic lift base providing deep under-bed storage.',
-      image: '/images/bedroom/bed 1.jpg',
+      image: '/images/bedroom/bed-1.jpg',
     },
     {
       title: 'Platform Bed',
@@ -16,12 +23,12 @@ export default function BedroomsPage() {
     {
       title: 'Fitted Bed Unit',
       description: 'Floor-to-ceiling fitted unit with bed frame, wardrobes, and overhead storage in one seamless design.',
-      image: '/images/bedroom/bed 3.jpg',
+      image: '/images/bedroom/bed-3.jpg',
     },
     {
       title: 'Dressing Unit',
       description: 'Full-length mirror with flanking drawers, built-in lighting, and jewellery compartments.',
-      image: '/images/bedroom/du 1.jpg',
+      image: '/images/bedroom/du-1.jpg',
     },
     {
       title: 'Vanity & Dresser',
@@ -56,7 +63,7 @@ export default function BedroomsPage() {
         <CategoryHero
           title="Bedrooms"
           description="Complete bedroom solutions — beds, dressers, and storage units crafted for rest, comfort, and quiet elegance."
-          image="/images/bedroom/bed 1.jpg"
+          image="/images/bedroom/bed-1.jpg"
         />
       </div>
 

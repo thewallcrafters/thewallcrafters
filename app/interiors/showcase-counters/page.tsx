@@ -1,5 +1,12 @@
 ﻿import CategoryHero from '@/components/categories/CategoryHero';
 import CategoryGrid from '@/components/categories/CategoryGrid';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Showcase Counters',
+  description: 'Custom showcase counters and retail display solutions for jewellery shops, showrooms, and boutiques.',
+  alternates: { canonical: '/interiors/showcase-counters' },
+};
 
 export default function ShowcaseCountersPage() {
   const showcaseItems = [

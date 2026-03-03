@@ -1,26 +1,24 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const taglines = [
+const rotatingLines = [
   'Premium Cabinetry & Interior Fit-out Firm — driven by Precision, Logical Design & Craftsmanship.',
   'Expertise in Modular Kitchens, Bespoke Kitchen Models, and Complete Interior Renovations.',
-];
-
-const subtitles = [
   'One accountable team — from design support to manufacturing to installation.',
   'Designed for Indian cooking habits, heavy usage, and easy maintenance.',
 ];
 
 export default function HeroSection() {
+  const prefersReducedMotion = useReducedMotion();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % taglines.length);
+      setCurrentIndex((prev) => (prev + 1) % rotatingLines.length);
     }, 4500);
     return () => clearInterval(interval);
   }, []);
@@ -53,23 +51,12 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
         >
-      {/* Rotating main headlines */}
-          <div className="min-h-[220px] md:min-h-[180px] lg:min-h-[160px] overflow-visible relative">
-            <AnimatePresence mode="wait">
-              <motion.h1
-                key={currentIndex}
-                className="font-serif-display text-hero text-[#F5F3EE] text-balance"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5 }}
-              >
-                {taglines[currentIndex]}
-              </motion.h1>
-            </AnimatePresence>
-          </div>
+            {/* Static H1 — primary SEO keyword */}
+          <h1 className="font-serif-display text-hero text-[#F5F3EE] text-balance">
+            Modular Kitchens &amp; Interior Fit-Outs in Madurai
+          </h1>
 
-          {/* Rotating subtitles */}
+          {/* Rotating descriptor line */}
           <div className="min-h-[60px] md:min-h-[32px] overflow-visible relative">
             <AnimatePresence mode="wait">
               <motion.p
@@ -80,7 +67,7 @@ export default function HeroSection() {
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
-                {subtitles[currentIndex]}
+                {rotatingLines[currentIndex]}
               </motion.p>
             </AnimatePresence>
           </div>
@@ -115,7 +102,7 @@ export default function HeroSection() {
       >
         <p className="text-[10px] tracking-widest text-twc-grey uppercase">Scroll</p>
         <motion.div
-          animate={{ y: [0, 8, 0] }}
+          animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
           transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <ChevronDown size={20} className="text-twc-red" />

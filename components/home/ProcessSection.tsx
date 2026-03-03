@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const steps = [
   {
@@ -79,12 +80,12 @@ export default function ProcessSection() {
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-px bg-twc-red" />
-            <p className="text-[10px] tracking-widest-plus text-twc-charcoal/50 uppercase">How We Work</p>
+            <p className="text-[10px] tracking-widest-plus text-[#F5F3EE]/50 uppercase">How We Work</p>
           </div>
-          <h2 className="font-serif-display text-section-title tracking-tight text-twc-charcoal mb-6">
+          <h2 className="font-serif-display text-section-title tracking-tight text-[#F5F3EE] mb-6">
             From brief to handover
           </h2>
-          <p className="text-twc-charcoal/60 text-lg font-light">
+          <p className="text-[#F5F3EE]/60 text-lg font-light">
             A predictable journey with no surprises along the way.
           </p>
         </motion.div>
@@ -106,7 +107,7 @@ export default function ProcessSection() {
               stroke="currentColor"
               strokeWidth="1.5"
               strokeDasharray="4 4"
-              className="text-twc-charcoal/15"
+              className="text-[#F5F3EE]/15"
               fill="none"
             />
           </svg>
@@ -122,18 +123,18 @@ export default function ProcessSection() {
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               >
                 {/* Icon container */}
-                <div className="w-20 h-20 rounded-2xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-8 text-[#2C2824] relative z-10" aria-hidden="true">
+                <div className="w-20 h-20 rounded-2xl bg-white shadow-sm border border-[#F5F3EE]/5 flex items-center justify-center mb-8 text-[#2C2824] relative z-10" aria-hidden="true">
                   {step.icon}
                 </div>
                 
                 {/* Step number */}
-                <span className="text-[10px] tracking-widest text-twc-charcoal/40 uppercase mb-2 bg-twc-warm relative z-10">Step {step.number}</span>
+                <span className="text-[10px] tracking-widest text-[#F5F3EE]/40 uppercase mb-2 bg-twc-warm relative z-10">Step {step.number}</span>
                 
                 {/* Title */}
-                <h3 className="font-serif-display text-xl text-twc-charcoal mb-3">{step.title}</h3>
+                <h3 className="font-serif-display text-xl text-[#F5F3EE] mb-3">{step.title}</h3>
                 
                 {/* Description */}
-                <p className="text-twc-charcoal/60 text-sm font-light leading-relaxed">{step.description}</p>
+                <p className="text-[#F5F3EE]/60 text-sm font-light leading-relaxed">{step.description}</p>
               </motion.li>
             ))}
           </ol>
@@ -151,12 +152,12 @@ export default function ProcessSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 + index * 0.08 }}
             >
-              <div className="w-16 h-16 rounded-xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-4 text-[#2C2824]">
+              <div className="w-16 h-16 rounded-xl bg-white shadow-sm border border-[#F5F3EE]/5 flex items-center justify-center mb-4 text-[#2C2824]">
                 {step.icon}
               </div>
-              <span className="text-[10px] tracking-widest text-twc-charcoal/40 uppercase mb-1">Step {step.number}</span>
-              <h3 className="font-serif-display text-lg text-twc-charcoal mb-2">{step.title}</h3>
-              <p className="text-twc-charcoal/60 text-xs font-light">{step.description}</p>
+              <span className="text-[10px] tracking-widest text-[#F5F3EE]/40 uppercase mb-1">Step {step.number}</span>
+              <h3 className="font-serif-display text-lg text-[#F5F3EE] mb-2">{step.title}</h3>
+              <p className="text-[#F5F3EE]/60 text-xs font-light">{step.description}</p>
             </motion.li>
           ))}
         </ol>
@@ -173,12 +174,12 @@ export default function ProcessSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 + index * 0.05 }}
             >
-              <div className="w-14 h-14 rounded-xl bg-white shadow-sm border border-twc-charcoal/5 flex items-center justify-center mb-3 text-[#2C2824]" aria-hidden="true">
+              <div className="w-14 h-14 rounded-xl bg-white shadow-sm border border-[#F5F3EE]/5 flex items-center justify-center mb-3 text-[#2C2824]" aria-hidden="true">
                 {step.icon}
               </div>
-              <span className="text-[9px] tracking-widest text-twc-charcoal/40 uppercase mb-1">{step.number}</span>
-              <h3 className="font-serif-display text-base text-twc-charcoal mb-1">{step.title}</h3>
-              <p className="text-twc-charcoal/60 text-xs font-light leading-relaxed">{step.description}</p>
+              <span className="text-[9px] tracking-widest text-[#F5F3EE]/40 uppercase mb-1">{step.number}</span>
+              <h3 className="font-serif-display text-base text-[#F5F3EE] mb-1">{step.title}</h3>
+              <p className="text-[#F5F3EE]/60 text-xs font-light leading-relaxed">{step.description}</p>
             </motion.li>
           ))}
         </ol>
@@ -197,13 +198,13 @@ export default function ProcessSection() {
               <p className="text-[#F5F3EE]/60 text-sm tracking-wider mb-1">Ready to begin?</p>
               <p className="text-[#F5F3EE] text-xl md:text-2xl font-serif-display">Let&apos;s discuss your project.</p>
             </div>
-            <a
+            <Link
               href="/contact"
               className="inline-flex items-center gap-3 border border-[#F5F3EE]/40 text-[#F5F3EE] hover:bg-[#F5F3EE] hover:text-[#2C2824] px-8 py-4 text-sm tracking-wider transition-all duration-300 group"
             >
               <span>Start a conversation</span>
               <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>

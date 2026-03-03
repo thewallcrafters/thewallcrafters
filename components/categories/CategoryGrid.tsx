@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface CategoryCard {
   title: string;
@@ -39,12 +40,12 @@ export default function CategoryGrid({ items, columns = 3 }: CategoryGridProps) 
         >
           {/* Image */}
           <div className="relative aspect-[4/3] overflow-hidden mb-6">
-            <motion.img
+            <Image
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-              whileHover={{ scale: 1.03 }}
-              transition={{ duration: 0.6 }}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-[1.03] transition-all duration-700"
             />
             {/* Red dot indicator on hover */}
             <div className="absolute top-4 right-4 w-2 h-2 bg-twc-red rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

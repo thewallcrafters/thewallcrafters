@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import ProjectHero from '@/components/projects/ProjectHero';
 import ProjectMeta from '@/components/projects/ProjectMeta';
 import ProjectBody from '@/components/projects/ProjectBody';
@@ -6,6 +7,7 @@ import ImageGallery from '@/components/projects/ImageGallery';
 import ProjectNavigation from '@/components/projects/ProjectNavigation';
 import ProjectGalleryTitle from '@/components/projects/ProjectGalleryTitle';
 import type { Project } from '@/types/project';
+import type { Metadata } from 'next';
 
 // Project data
 const projects: Record<string, Project> = {
@@ -167,6 +169,17 @@ const projects: Record<string, Project> = {
   },
 };
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects[slug];
+  if (!project) return { title: 'Project Not Found' };
+  return {
+    title: project.name,
+    description: project.sections[0]?.content as string || `${project.name} — ${project.type} by TWC Fit-Outs`,
+    alternates: { canonical: `/work/${slug}` },
+  };
+}
+
 export default async function ProjectPage({
   params,
 }: {
@@ -223,25 +236,25 @@ export default async function ProjectPage({
       <section className="section-padding bg-twc-warm">
         <div className="container-wide text-center space-y-6">
           <p className="text-sm tracking-[0.4em] uppercase text-twc-grey">Start your project</p>
-          <h2 className="font-serif-display text-[clamp(2.2rem,3.5vw,3.8rem)] leading-tight max-w-4xl mx-auto text-twc-charcoal">
+          <h2 className="font-serif-display text-[clamp(2.2rem,3.5vw,3.8rem)] leading-tight max-w-4xl mx-auto text-[#F5F3EE]">
             Ready to transform your space?
           </h2>
-          <p className="text-lg text-twc-charcoal/75 max-w-3xl mx-auto">
+          <p className="text-lg text-[#F5F3EE]/75 max-w-3xl mx-auto">
             Share your vision with us. Whether it's a complete fit-out or bespoke furniture, we'll walk you through our process and craft a solution tailored to your needs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center pt-4">
             <a
               href="mailto:main@thewallcrafters.com"
-              className="border border-twc-charcoal px-8 py-4 text-sm tracking-wider uppercase text-twc-charcoal hover:bg-twc-charcoal hover:text-twc-warm transition-colors duration-300"
+              className="border border-[#F5F3EE] px-8 py-4 text-sm tracking-wider uppercase text-[#F5F3EE] hover:bg-[#F5F3EE] hover:text-[#2C2824] transition-colors duration-300"
             >
               Email the studio
             </a>
-            <a
+            <Link
               href="/work"
-              className="px-8 py-4 text-sm tracking-wider uppercase text-twc-charcoal hover:text-twc-red transition-colors duration-300"
+              className="px-8 py-4 text-sm tracking-wider uppercase text-[#F5F3EE] hover:text-twc-red transition-colors duration-300"
             >
               View all projects
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -6,70 +6,29 @@ import Image from 'next/image';
 
 export default function WorkListingPage() {
   const projects = [
-    // Row 1
     {
-      title: 'Island Kitchen',
-      category: 'Kitchen',
-      slug: 'island-kitchen',
-      image: '/images/kitchens/island/island kitchen 1.jpg',
+      title: 'JP Residence',
+      category: 'Residential',
+      slug: 'jp-residence',
+      image: 'https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920',
     },
     {
-      title: 'Walk-in Wardrobe',
-      category: 'Wardrobe',
-      slug: 'walk-in-wardrobe',
-      image: '/images/wardrobes/WARDROBE 1.jpg',
-    },
-    // Row 2
-    {
-      title: 'Executive Office',
-      category: 'Commercial',
-      slug: 'executive-office',
-      image: '/images/office/executive desk 2.jpg',
+      title: 'Meiyyappan Residence',
+      category: 'Residential',
+      slug: 'meiyyappan-residence',
+      image: 'https://images.pexels.com/photos/1909791/pexels-photo-1909791.jpeg?auto=compress&cs=tinysrgb&w=1920',
     },
     {
-      title: 'L-Shaped Kitchen',
-      category: 'Kitchen',
-      slug: 'l-shaped-kitchen',
-      image: '/images/kitchens/l-shaped/L kitchen 1.jpg',
-    },
-    // Row 3
-    {
-      title: 'Entertainment Unit',
-      category: 'Living Room',
-      slug: 'entertainment-unit',
-      image: '/images/tv-units/Tv unit 2.jpg',
+      title: 'Villa16',
+      category: 'Residential',
+      slug: 'villa16',
+      image: 'https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=1920',
     },
     {
-      title: 'Pooja Room',
-      category: 'Living Room',
-      slug: 'pooja-room',
-      image: '/images/pooja-room/Pooja room 1.jpg',
-    },
-    // Row 4
-    {
-      title: 'U-Shaped Kitchen',
-      category: 'Kitchen',
-      slug: 'u-shaped-kitchen',
-      image: '/images/kitchens/u-shaped/U kitchen 1.jpg',
-    },
-    {
-      title: 'Hinged Wardrobe',
-      category: 'Wardrobe',
-      slug: 'hinged-wardrobe',
-      image: '/images/wardrobes/WARDROBE 5.jpg',
-    },
-    // Row 5
-    {
-      title: 'Parallel Kitchen',
-      category: 'Kitchen',
-      slug: 'parallel-kitchen',
-      image: '/images/kitchens/parallel/parallel kitchen 1.jpg',
-    },
-    {
-      title: 'Office Workstation',
-      category: 'Commercial',
-      slug: 'office-workstation',
-      image: '/images/office/workstation 1.jpg',
+      title: 'Vaishali Residence',
+      category: 'Residential',
+      slug: 'vaishali-residence',
+      image: 'https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1920',
     },
   ];
 
@@ -123,7 +82,7 @@ export default function WorkListingPage() {
                       priority={index < 2}
                     />
                   </div>
-                  <h2 className="font-serif-display text-xl md:text-2xl text-twc-charcoal mt-5 group-hover:text-twc-red transition-colors duration-300 uppercase tracking-wide">
+                  <h2 className="font-serif-display text-xl md:text-2xl text-[#F5F3EE] mt-5 group-hover:text-twc-red transition-colors duration-300 uppercase tracking-wide">
                     {project.title}
                   </h2>
                 </motion.article>

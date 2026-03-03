@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import Link from 'next/link';
 
 const quickLinks = [
   { label: 'Kitchens', href: '/kitchens' },
@@ -46,9 +47,9 @@ export default function Footer() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <footer id="site-footer" className="bg-[#F5F3EE] border-t-[3px] border-twc-red relative" ref={ref}>
+    <footer id="site-footer" className="bg-[#2C2824] border-t-[3px] border-twc-red relative" ref={ref}>
       {/* Final CTA Section */}
-      <div className="border-b border-twc-warm/10">
+      <div className="border-b border-[#F5F3EE]/10">
         <div className="container-wide py-20 md:py-28">
           <motion.div
             className="text-center max-w-3xl mx-auto"
@@ -56,29 +57,29 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-twc-warm mb-6">
+            <h2 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-[#F5F3EE] mb-6">
               Ready to build something beautiful?
             </h2>
-            <p className="text-twc-warm/60 text-lg font-light mb-10">
+            <p className="text-[#F5F3EE]/60 text-lg font-light mb-10">
               Let's start with a conversation about your space.
             </p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-3 bg-twc-red text-[#F5F3EE] px-8 py-4 text-sm tracking-wider font-medium hover:bg-twc-red/90 transition-colors duration-300 group"
               >
                 <span>Get Your Estimate</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 border border-[#2C2824]/30 text-[#2C2824] px-8 py-4 text-sm tracking-wider hover:bg-[#2C2824] hover:text-[#F5F3EE] transition-all duration-300 group"
+                className="inline-flex items-center gap-3 border border-[#F5F3EE]/30 text-[#F5F3EE] px-8 py-4 text-sm tracking-wider hover:bg-[#F5F3EE] hover:text-[#2C2824] transition-all duration-300 group"
               >
                 <span>Connect with Our Designer</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -90,29 +91,29 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-4">
             <div className="flex items-baseline gap-0 mb-4">
-              <span className="text-4xl sm:text-5xl font-bold tracking-tight text-twc-warm">twc</span>
-              <span className="w-2.5 sm:w-3 h-2.5 sm:h-3 bg-twc-red rounded-full ml-1 logo-dot" />
+              <span className="text-4xl sm:text-5xl font-bold tracking-tight text-[#F5F3EE]">twc</span>
+              <span className="w-2.5 sm:w-3 h-2.5 sm:h-3 bg-[#FF2B2B] rounded-full ml-1 logo-dot" />
             </div>
-            <p className="text-[10px] tracking-widest-plus text-twc-warm/40 uppercase mb-6">
+            <p className="text-[10px] tracking-widest-plus text-[#F5F3EE]/40 uppercase mb-6">
               FIT-OUTS
             </p>
-            <p className="text-twc-warm/50 text-sm font-light leading-relaxed max-w-xs">
+            <p className="text-[#F5F3EE]/50 text-sm font-light leading-relaxed max-w-xs">
               Factory-finished cabinetry and interiors, crafted for Indian homes and businesses.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="md:col-span-2 md:col-start-6">
-            <h4 className="text-twc-warm text-sm font-medium mb-6">Explore</h4>
+            <h4 className="text-[#F5F3EE] text-sm font-medium mb-6">Explore</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
-                    className="text-twc-warm/50 text-sm font-light hover:text-twc-warm transition-colors duration-300"
+                    className="text-[#F5F3EE]/50 text-sm font-light hover:text-[#F5F3EE] transition-colors duration-300"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -120,23 +121,23 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="md:col-span-3">
-            <h4 className="text-twc-warm text-sm font-medium mb-6">Get in Touch</h4>
+            <h4 className="text-[#F5F3EE] text-sm font-medium mb-6">Get in Touch</h4>
             <div className="space-y-4">
               <div>
-                <p className="text-twc-warm/40 text-xs uppercase tracking-wider mb-1">Phone</p>
-                <a href="tel:+919876543210" className="text-twc-warm/70 text-sm font-light hover:text-twc-warm transition-colors">
-                  +91 98765 43210
+                <p className="text-[#F5F3EE]/40 text-xs uppercase tracking-wider mb-1">Phone</p>
+                <a href="tel:+919952217602" className="text-[#F5F3EE]/70 text-sm font-light hover:text-[#F5F3EE] transition-colors">
+                  +91 99522 17602
                 </a>
               </div>
               <div>
-                <p className="text-twc-warm/40 text-xs uppercase tracking-wider mb-1">Email</p>
-                <a href="mailto:main@thewallcrafters.com" className="text-twc-warm/70 text-sm font-light hover:text-twc-warm transition-colors">
+                <p className="text-[#F5F3EE]/40 text-xs uppercase tracking-wider mb-1">Email</p>
+                <a href="mailto:main@thewallcrafters.com" className="text-[#F5F3EE]/70 text-sm font-light hover:text-[#F5F3EE] transition-colors">
                   main@thewallcrafters.com
                 </a>
               </div>
               <div>
-                <p className="text-twc-warm/40 text-xs uppercase tracking-wider mb-1">Factory</p>
-                <p className="text-twc-warm/70 text-sm font-light leading-relaxed">
+                <p className="text-[#F5F3EE]/40 text-xs uppercase tracking-wider mb-1">Factory</p>
+                <p className="text-[#F5F3EE]/70 text-sm font-light leading-relaxed">
                   No 59/8, Near Fatima Michael College Of Engineering & Technology,<br />
                   Senkottai Village, Sivagangai Main Road,<br />
                   Madurai - 625001, Tamil Nadu
@@ -147,7 +148,7 @@ export default function Footer() {
 
           {/* Social */}
           <div className="md:col-span-2">
-            <h4 className="text-twc-warm text-sm font-medium mb-6">Follow Us</h4>
+            <h4 className="text-[#F5F3EE] text-sm font-medium mb-6">Follow Us</h4>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
@@ -155,7 +156,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-twc-warm/5 flex items-center justify-center text-twc-warm/50 hover:bg-twc-red hover:text-twc-warm transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-[#F5F3EE]/5 flex items-center justify-center text-[#F5F3EE]/50 hover:bg-twc-red hover:text-[#F5F3EE] transition-all duration-300"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -167,20 +168,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-twc-warm/10">
+      <div className="border-t border-[#F5F3EE]/10">
         <div className="container-wide py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-            <p className="text-twc-warm/40 text-xs">
+            <p className="text-[#F5F3EE]/40 text-xs">
               © {new Date().getFullYear()} The WallCrafters. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <a href="/privacy" className="text-twc-warm/40 text-xs hover:text-twc-warm/60 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-twc-warm/40 text-xs hover:text-twc-warm/60 transition-colors">
-                Terms of Service
-              </a>
-            </div>
+            {/* Privacy Policy and Terms of Service links removed — pages do not exist yet */}
           </div>
         </div>
       </div>

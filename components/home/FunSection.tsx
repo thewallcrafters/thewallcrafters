@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
 import { useRef } from 'react';
 
 const confessions = [
@@ -31,6 +31,7 @@ const funFacts = [
 export default function FunSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <section className="bg-twc-warm relative overflow-hidden" id="fun" ref={ref}>
@@ -38,7 +39,7 @@ export default function FunSection() {
       <div className="bg-twc-red py-3 overflow-hidden">
         <motion.div
           className="flex whitespace-nowrap"
-          animate={{ x: ['0%', '-50%'] }}
+          animate={prefersReducedMotion ? {} : { x: ['0%', '-50%'] }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         >
           {[...Array(2)].map((_, i) => (
@@ -64,9 +65,9 @@ export default function FunSection() {
         >
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-px bg-twc-red" />
-            <p className="text-[10px] tracking-widest-plus text-twc-charcoal/50 uppercase">Honest Confessions</p>
+            <p className="text-[10px] tracking-widest-plus text-[#F5F3EE]/50 uppercase">Honest Confessions</p>
           </div>
-          <h2 className="font-serif-display text-section-title tracking-tight text-twc-charcoal text-left lg:whitespace-nowrap">
+          <h2 className="font-serif-display text-section-title tracking-tight text-[#F5F3EE] text-left lg:whitespace-nowrap">
             A few things we probably shouldn't admit publicly.
           </h2>
         </motion.div>
@@ -76,15 +77,15 @@ export default function FunSection() {
           {confessions.map((item, index) => (
             <motion.div
               key={index}
-              className="group bg-white border border-twc-charcoal/5 p-8 hover:shadow-md transition-all duration-300"
+              className="group bg-white border border-[#2C2824]/5 p-8 hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
             >
-              <p className="font-serif-display text-xl md:text-2xl text-twc-charcoal leading-snug mb-4 group-hover:text-twc-red transition-colors duration-300">
+              <p className="font-serif-display text-xl md:text-2xl text-[#2C2824] leading-snug mb-4 group-hover:text-twc-red transition-colors duration-300">
                 "{item.confession}"
               </p>
-              <p className="text-twc-charcoal/50 text-sm font-light italic">
+              <p className="text-[#2C2824]/50 text-sm font-light italic">
                 — {item.context}
               </p>
             </motion.div>
@@ -93,7 +94,7 @@ export default function FunSection() {
 
         {/* Fun Stats */}
         <motion.div
-          className="border-t border-b border-twc-charcoal/10 py-10"
+          className="border-t border-b border-[#F5F3EE]/10 py-10"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -107,7 +108,7 @@ export default function FunSection() {
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
               >
                 <span className="text-3xl md:text-4xl font-serif-display text-twc-red">{fact.number}</span>
-                <p className="text-twc-charcoal/60 text-xs md:text-sm font-light mt-2">{fact.label}</p>
+                <p className="text-[#F5F3EE]/60 text-xs md:text-sm font-light mt-2">{fact.label}</p>
               </motion.div>
             ))}
           </div>
@@ -115,7 +116,7 @@ export default function FunSection() {
 
         {/* Closing Quip */}
         <motion.p
-          className="text-center text-twc-charcoal/40 text-sm font-light mt-10"
+          className="text-center text-[#F5F3EE]/40 text-sm font-light mt-10"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}

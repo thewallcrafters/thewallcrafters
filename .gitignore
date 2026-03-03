@@ -28,6 +28,8 @@ next-env.d.ts
 *.sln
 *.sw?
 .env
+.env.local
+.env*.local
 
 # Archives / large binary files
 *.zip

@@ -49,19 +49,16 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
+      <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? 'bg-[#2C2824]/95 backdrop-blur-md border-b border-twc-warm/5' : 'bg-transparent'
+          scrolled ? 'bg-[#2C2824]/95 backdrop-blur-md border-b border-[#F5F3EE]/5' : 'bg-[#2C2824]'
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
       >
         <div className="container-wide py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-baseline gap-0 group relative z-10" aria-label="TWC Fit-Outs Home">
               <span className="text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-bold tracking-tight text-[#F5F3EE] transition-transform duration-300 group-hover:scale-105">twc</span>
-              <span className="w-2 sm:w-2.5 md:w-2.5 h-2 sm:h-2.5 md:h-2.5 bg-twc-red rounded-full ml-0.5 logo-dot transition-transform duration-300 group-hover:scale-110" />
+              <span className="w-2 sm:w-2.5 md:w-2.5 h-2 sm:h-2.5 md:h-2.5 bg-[#FF2B2B] rounded-full ml-0.5 logo-dot transition-transform duration-300 group-hover:scale-110" />
             </Link>
 
             <div className="hidden lg:flex items-center gap-6 xl:gap-10">
@@ -93,10 +90,11 @@ export default function Navbar() {
             </div>
 
             <div className="flex items-center gap-6">
-              <Link href="/contact">
-                <button className="hidden md:block border border-twc-red bg-twc-red text-white px-6 py-2.5 text-[11px] tracking-widest-plus hover:bg-twc-red/90 transition-colors duration-300">
-                  BOOK A VISIT
-                </button>
+              <Link
+                href="/contact"
+                className="hidden md:block border border-twc-red bg-twc-red text-white px-6 py-2.5 text-[11px] tracking-widest-plus hover:bg-twc-red/90 transition-colors duration-300"
+              >
+                BOOK A VISIT
               </Link>
 
               <button
@@ -125,7 +123,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       <AnimatePresence>
         {menuOpen && (
@@ -151,7 +149,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="text-4xl md:text-5xl font-serif-display tracking-tight hover:text-twc-red transition-colors duration-300"
+                    className="text-4xl md:text-5xl font-serif-display tracking-tight text-[#F5F3EE] hover:text-twc-red transition-colors duration-300"
                     onClick={() => setMenuOpen(false)}
                   >
                     {item.label}

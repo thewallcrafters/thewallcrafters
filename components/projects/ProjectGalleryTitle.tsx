@@ -11,7 +11,7 @@ export default function ProjectGalleryTitle() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <h3 className="text-2xl md:text-3xl font-serif-display">Project Gallery</h3>
+      <h3 className="text-2xl md:text-3xl font-serif-display text-[#F5F3EE]">Project Gallery</h3>
     </motion.div>
   );
 }

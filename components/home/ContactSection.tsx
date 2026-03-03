@@ -30,10 +30,10 @@ export default function ContactSection() {
             transition={{ duration: 0.8 }}
           >
             <div className="w-2 h-2 bg-twc-red rounded-full"></div>
-            <h2 className="font-serif-display text-section-title text-twc-charcoal">
+            <h2 className="font-serif-display text-section-title text-[#F5F3EE]">
               Let's talk about<br />your space.
             </h2>
-            <p className="text-twc-charcoal/60 text-lg leading-relaxed font-light max-w-lg">
+            <p className="text-[#F5F3EE]/60 text-lg leading-relaxed font-light max-w-lg">
               Share a few details about your home or project. We'll get back with a call and a site visit slot.
             </p>
 
@@ -48,8 +48,8 @@ export default function ContactSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-serif-display text-2xl text-twc-charcoal">Thank you!</h3>
-                <p className="text-twc-charcoal/60 font-light">We've received your enquiry and will get back to you within 24 hours.</p>
+                <h3 className="font-serif-display text-2xl text-[#F5F3EE]">Thank you!</h3>
+                <p className="text-[#F5F3EE]/60 font-light">We've received your enquiry and will get back to you within 24 hours.</p>
               </motion.div>
             ) : (
               <form className="space-y-6 pt-8" onSubmit={handleSubmit}>
@@ -62,7 +62,7 @@ export default function ContactSection() {
                     required
                     aria-required="true"
                     placeholder="Your Name"
-                    className="w-full bg-transparent border-b border-twc-charcoal/20 py-4 text-twc-charcoal placeholder-twc-charcoal/40 focus:border-twc-red focus:outline-none focus-visible:ring-2 focus-visible:ring-twc-red/20 transition-colors duration-300"
+                    className="w-full bg-transparent border-b border-[#F5F3EE]/20 py-4 text-[#F5F3EE] placeholder-[#F5F3EE]/40 focus:border-twc-red focus:outline-none focus-visible:ring-2 focus-visible:ring-twc-red/20 transition-colors duration-300"
                   />
                 </div>
                 <div>
@@ -75,7 +75,7 @@ export default function ContactSection() {
                     aria-required="true"
                     placeholder="Contact Number"
                     pattern="[0-9]{10}"
-                    className="w-full bg-transparent border-b border-twc-charcoal/20 py-4 text-twc-charcoal placeholder-twc-charcoal/40 focus:border-twc-red focus:outline-none focus-visible:ring-2 focus-visible:ring-twc-red/20 transition-colors duration-300"
+                    className="w-full bg-transparent border-b border-[#F5F3EE]/20 py-4 text-[#F5F3EE] placeholder-[#F5F3EE]/40 focus:border-twc-red focus:outline-none focus-visible:ring-2 focus-visible:ring-twc-red/20 transition-colors duration-300"
                   />
                 </div>
                 <div>
@@ -87,13 +87,13 @@ export default function ContactSection() {
                     aria-required="true"
                     placeholder="Project Location & Brief"
                     rows={4}
-                    className="w-full bg-transparent border-b border-twc-charcoal/20 py-4 text-twc-charcoal placeholder-twc-charcoal/40 focus:border-twc-red focus:outline-none focus-visible:ring-2 focus-visible:ring-twc-red/20 transition-colors duration-300 resize-none"
+                    className="w-full bg-transparent border-b border-[#F5F3EE]/20 py-4 text-[#F5F3EE] placeholder-[#F5F3EE]/40 focus:border-twc-red focus:outline-none focus-visible:ring-2 focus-visible:ring-twc-red/20 transition-colors duration-300 resize-none"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="border border-twc-charcoal text-twc-charcoal px-8 py-4 text-sm tracking-wider hover:bg-twc-charcoal hover:text-twc-warm transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className="border border-[#F5F3EE] text-[#F5F3EE] px-8 py-4 text-sm tracking-wider hover:bg-[#F5F3EE] hover:text-[#2C2824] transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {isSubmitting ? 'SUBMITTING...' : 'SUBMIT ENQUIRY'}
                 </button>
@@ -102,7 +102,7 @@ export default function ContactSection() {
           </motion.div>
 
           <motion.div
-            className="space-y-12 lg:pl-12 lg:border-l border-twc-charcoal/10"
+            className="space-y-12 lg:pl-12 lg:border-l border-[#F5F3EE]/10"
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -111,12 +111,12 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Phone size={20} className="text-twc-red" />
-                  <h3 className="text-[11px] tracking-widest-plus text-twc-charcoal/50 uppercase">Call us</h3>
+                  <h3 className="text-[11px] tracking-widest-plus text-[#F5F3EE]/50 uppercase">Call us</h3>
                 </div>
                 <div className="space-y-2 pl-8">
                   <a
                     href="tel:9952217602"
-                    className="block text-xl text-twc-charcoal hover:text-twc-red transition-colors duration-300"
+                    className="block text-xl text-[#F5F3EE] hover:text-twc-red transition-colors duration-300"
                   >
                     +91 99522 17602
                   </a>
@@ -126,12 +126,12 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail size={20} className="text-twc-red" />
-                  <h3 className="text-[11px] tracking-widest-plus text-twc-charcoal/50 uppercase">Write to us</h3>
+                  <h3 className="text-[11px] tracking-widest-plus text-[#F5F3EE]/50 uppercase">Write to us</h3>
                 </div>
                 <div className="space-y-2 pl-8">
                   <a
                     href="mailto:main@thewallcrafters.com"
-                    className="block text-xl text-twc-charcoal hover:text-twc-red transition-colors duration-300 break-all"
+                    className="block text-xl text-[#F5F3EE] hover:text-twc-red transition-colors duration-300 break-all"
                   >
                     main@thewallcrafters.com
                   </a>
@@ -141,14 +141,14 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Instagram size={20} className="text-twc-red" />
-                  <h3 className="text-[11px] tracking-widest-plus text-twc-charcoal/50 uppercase">Follow</h3>
+                  <h3 className="text-[11px] tracking-widest-plus text-[#F5F3EE]/50 uppercase">Follow</h3>
                 </div>
                 <div className="pl-8">
                   <a
                     href="https://instagram.com/thewallcrafters"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-xl text-twc-charcoal hover:text-twc-red transition-colors duration-300"
+                    className="block text-xl text-[#F5F3EE] hover:text-twc-red transition-colors duration-300"
                   >
                     @thewallcrafters
                   </a>
@@ -156,9 +156,9 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="pt-12 space-y-4 border-t border-twc-charcoal/10">
-              <p className="text-twc-charcoal/50 text-sm tracking-wider">VISIT US</p>
-              <p className="text-lg leading-relaxed text-twc-charcoal/70 font-light">
+            <div className="pt-12 space-y-4 border-t border-[#F5F3EE]/10">
+              <p className="text-[#F5F3EE]/50 text-sm tracking-wider">VISIT US</p>
+              <p className="text-lg leading-relaxed text-[#F5F3EE]/70 font-light">
                 Schedule a consultation at our studio to discuss your project in detail.
               </p>
             </div>

@@ -1,8 +1,9 @@
-'use client';
+﻿'use client';
 
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 // Contact Methods
 const contactMethods = [
@@ -57,37 +58,48 @@ const officeInfo = {
 export default function ContactPage() {
   const heroRef = useRef(null);
   const heroInView = useInView(heroRef, { once: true });
-  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+  const formRef = useRef<HTMLFormElement>(null);
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!formRef.current) return;
     setFormStatus('sending');
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setFormStatus('sent');
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+
+    try {
+      await emailjs.sendForm(serviceId, templateId, formRef.current, { publicKey });
+      setFormStatus('sent');
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setFormStatus('error');
+    }
   };
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-twc-charcoal pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container-wide">
           <motion.div
             ref={heroRef}
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
             <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
               Contact Us
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#2C2824] leading-[1.1] mb-6">
               Let's Start a
               <br />
               <span className="italic font-extralight">Conversation</span>
             </h1>
-            <p className="text-lg text-white/70 font-light leading-relaxed max-w-xl">
+            <p className="text-lg text-[#2C2824]/70 font-light leading-relaxed max-w-xl">
               Whether you have a project in mind or just want to explore possibilities, 
               we're here to help. Reach out and let's discuss how we can transform your space.
             </p>
@@ -109,14 +121,14 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group p-8 border border-twc-charcoal/10 hover:border-twc-red/30 hover:bg-twc-warm/30 transition-all duration-300"
+                className="group p-8 border border-[#2C2824]/10 hover:border-twc-red/30 hover:bg-twc-warm/30 transition-all duration-300"
               >
                 <div className="text-twc-red mb-4 group-hover:scale-110 transition-transform duration-300">
                   {method.icon}
                 </div>
-                <h3 className="text-lg font-light text-twc-charcoal mb-1">{method.title}</h3>
-                <p className="text-sm text-twc-charcoal/50 mb-4">{method.description}</p>
-                <p className="text-base text-twc-charcoal font-medium group-hover:text-twc-red transition-colors duration-300">
+                <h3 className="text-lg font-light text-[#2C2824] mb-1">{method.title}</h3>
+                <p className="text-sm text-[#2C2824]/50 mb-4">{method.description}</p>
+                <p className="text-base text-[#2C2824] font-medium group-hover:text-twc-red transition-colors duration-300">
                   {method.value}
                 </p>
               </motion.a>
@@ -139,7 +151,7 @@ export default function ContactPage() {
               <span className="text-xs uppercase tracking-[0.3em] text-twc-red mb-6 block">
                 Send a Message
               </span>
-              <h2 className="text-3xl md:text-4xl font-light text-twc-charcoal leading-tight mb-8">
+              <h2 className="text-3xl md:text-4xl font-light text-[#F5F3EE] leading-tight mb-8">
                 Tell Us About
                 <br />
                 <span className="italic font-extralight">Your Project</span>
@@ -156,16 +168,38 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-light text-twc-charcoal mb-3">Message Sent!</h3>
-                  <p className="text-twc-charcoal/60 font-light">
+                  <h3 className="text-2xl font-light text-[#2C2824] mb-3">Message Sent!</h3>
+                  <p className="text-[#2C2824]/60 font-light">
                     Thank you for reaching out. We'll get back to you within 24 hours.
                   </p>
                 </motion.div>
+              ) : formStatus === 'error' ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="bg-white p-12 text-center"
+                >
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-red-100 flex items-center justify-center">
+                    <svg className="w-8 h-8 text-twc-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-light text-[#2C2824] mb-3">Something Went Wrong</h3>
+                  <p className="text-[#2C2824]/60 font-light mb-6">
+                    We couldn't send your message. Please try again or reach out directly via phone or WhatsApp.
+                  </p>
+                  <button
+                    onClick={() => setFormStatus('idle')}
+                    className="inline-flex items-center gap-2 text-twc-red hover:text-[#2C2824] transition-colors duration-300 text-sm uppercase tracking-widest"
+                  >
+                    Try Again
+                  </button>
+                </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm text-twc-charcoal/70 mb-2">
+                      <label htmlFor="name" className="block text-sm text-[#F5F3EE]/70 mb-2">
                         Your Name *
                       </label>
                       <input
@@ -173,12 +207,12 @@ export default function ContactPage() {
                         id="name"
                         name="name"
                         required
-                        className="w-full px-4 py-3 bg-white border border-twc-charcoal/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-twc-charcoal"
+                        className="w-full px-4 py-3 bg-white border border-[#2C2824]/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-[#2C2824]"
                         placeholder="John Doe"
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm text-twc-charcoal/70 mb-2">
+                      <label htmlFor="phone" className="block text-sm text-[#F5F3EE]/70 mb-2">
                         Phone Number *
                       </label>
                       <input
@@ -186,14 +220,14 @@ export default function ContactPage() {
                         id="phone"
                         name="phone"
                         required
-                        className="w-full px-4 py-3 bg-white border border-twc-charcoal/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-twc-charcoal"
+                        className="w-full px-4 py-3 bg-white border border-[#2C2824]/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-[#2C2824]"
                         placeholder="+91 99522 17602"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm text-twc-charcoal/70 mb-2">
+                    <label htmlFor="email" className="block text-sm text-[#F5F3EE]/70 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -201,19 +235,19 @@ export default function ContactPage() {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-white border border-twc-charcoal/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-twc-charcoal"
+                      className="w-full px-4 py-3 bg-white border border-[#2C2824]/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-[#2C2824]"
                       placeholder="john@example.com"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="project" className="block text-sm text-twc-charcoal/70 mb-2">
+                    <label htmlFor="project" className="block text-sm text-[#F5F3EE]/70 mb-2">
                       Project Type
                     </label>
                     <select
                       id="project"
                       name="project"
-                      className="w-full px-4 py-3 bg-white border border-twc-charcoal/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-twc-charcoal"
+                      className="w-full px-4 py-3 bg-white border border-[#2C2824]/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-[#2C2824]"
                     >
                       <option value="">Select a project type</option>
                       <option value="kitchen">Modular Kitchen</option>
@@ -225,13 +259,13 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="city" className="block text-sm text-twc-charcoal/70 mb-2">
+                    <label htmlFor="city" className="block text-sm text-[#F5F3EE]/70 mb-2">
                       City
                     </label>
                     <select
                       id="city"
                       name="city"
-                      className="w-full px-4 py-3 bg-white border border-twc-charcoal/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-twc-charcoal"
+                      className="w-full px-4 py-3 bg-white border border-[#2C2824]/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-[#2C2824]"
                     >
                       <option value="">Select your city</option>
                       <option value="chennai">Chennai</option>
@@ -246,14 +280,14 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm text-twc-charcoal/70 mb-2">
+                    <label htmlFor="message" className="block text-sm text-[#F5F3EE]/70 mb-2">
                       Tell Us More
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={4}
-                      className="w-full px-4 py-3 bg-white border border-twc-charcoal/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-twc-charcoal resize-none"
+                      className="w-full px-4 py-3 bg-white border border-[#2C2824]/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-[#2C2824] resize-none"
                       placeholder="Describe your project, space size, timeline, or any specific requirements..."
                     />
                   </div>
@@ -261,7 +295,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={formStatus === 'sending'}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-twc-charcoal text-white px-8 py-4 text-sm uppercase tracking-widest hover:bg-twc-red transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#2C2824] text-[#F5F3EE] px-8 py-4 text-sm uppercase tracking-widest hover:bg-twc-red transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {formStatus === 'sending' ? (
                       <>
@@ -295,7 +329,7 @@ export default function ContactPage() {
               {/* Office Image */}
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/images/wardrobes/WARDROBE 9.jpg"
+                  src="/images/wardrobes/wardrobe-9.jpg"
                   alt="TWC Studio"
                   fill
                   className="object-cover"
@@ -305,14 +339,14 @@ export default function ContactPage() {
 
               {/* Office Details */}
               <div className="bg-[#2C2824] p-8">
-                <h3 className="text-xl font-light text-white mb-6">{officeInfo.title}</h3>
+                <h3 className="text-xl font-light text-[#F5F3EE] mb-6">{officeInfo.title}</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <svg className="w-5 h-5 text-twc-red mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    <div className="text-white/70 font-light text-sm leading-relaxed">
+                    <div className="text-[#F5F3EE]/70 font-light text-sm leading-relaxed">
                       {officeInfo.address.map((line, i) => (
                         <p key={i}>{line}</p>
                       ))}
@@ -322,7 +356,7 @@ export default function ContactPage() {
                     <svg className="w-5 h-5 text-twc-red flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <p className="text-white/70 font-light text-sm">{officeInfo.hours}</p>
+                    <p className="text-[#F5F3EE]/70 font-light text-sm">{officeInfo.hours}</p>
                   </div>
                 </div>
 
@@ -330,7 +364,7 @@ export default function ContactPage() {
                   href={officeInfo.mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-twc-red hover:text-white transition-colors duration-300 mt-6 text-sm uppercase tracking-widest"
+                  className="inline-flex items-center gap-2 text-twc-red hover:text-[#F5F3EE] transition-colors duration-300 mt-6 text-sm uppercase tracking-widest"
                 >
                   Get Directions
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -342,6 +376,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
