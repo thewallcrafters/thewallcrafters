@@ -1,12 +1,18 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Services | TWC Fit-Outs',
-  description: 'Full-service interior fit-outs — modular kitchens, wardrobes, office fit-outs, retail spaces, and hospitality design. Design, fabrication, and installation under one roof.',
+  title: 'Interior Design Services in Madurai | Design, Build & Install',
+  description: 'Full-service interior design company in Madurai. Modular kitchens, wardrobes, office fit-outs, retail & hospitality interiors. Design, factory fabrication & on-site installation — one team.',
+  keywords: [
+    'interior design services Madurai', 'modular furniture Madurai', 'office fit-out services',
+    'kitchen design and installation', 'commercial interior Madurai',
+    'residential interior designer', 'factory-finished interiors Tamil Nadu',
+    'interior renovation Madurai', 'turnkey interior solutions',
+  ],
   alternates: { canonical: '/services' },
   openGraph: {
-    title: 'Services | TWC Fit-Outs',
-    description: 'Design. Build. Deliver. One team, one responsibility, one standard of quality.',
+    title: 'Interior Design Services in Madurai | TWC Fit-Outs',
+    description: 'Design, build & deliver. Modular kitchens, wardrobes, office & commercial fit-outs under one roof. Factory precision, site excellence.',
     url: 'https://thewallcrafters.com/services',
   },
 };

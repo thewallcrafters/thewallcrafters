@@ -274,10 +274,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const kitchen = kitchens[slug];
   if (!kitchen) return { title: 'Kitchen Not Found' };
+  const desc = kitchen.sections[0]?.content as string || '';
   return {
-    title: kitchen.name,
-    description: kitchen.sections[0]?.content as string || `${kitchen.name} — ${kitchen.type} by TWC Fit-Outs`,
+    title: `${kitchen.name} | ${kitchen.type} Kitchen Design Madurai`,
+    description: desc ? `${desc.slice(0, 140)}... Factory-built by TWC Fit-Outs Madurai.` : `${kitchen.name} — ${kitchen.type} modular kitchen by TWC Fit-Outs, Madurai. Factory-finished, site-installed.`,
     alternates: { canonical: `/kitchens/${slug}` },
+    openGraph: {
+      title: `${kitchen.name} | TWC Fit-Outs Madurai`,
+      description: `${kitchen.type} modular kitchen design by TWC Fit-Outs. Factory precision, premium finishes.`,
+      url: `https://thewallcrafters.com/kitchens/${slug}`,
+    },
   };
 }
 

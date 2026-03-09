@@ -173,10 +173,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const project = projects[slug];
   if (!project) return { title: 'Project Not Found' };
+  const desc = project.sections[0]?.content as string || '';
   return {
-    title: project.name,
-    description: project.sections[0]?.content as string || `${project.name} — ${project.type} by TWC Fit-Outs`,
+    title: `${project.name} | ${project.type} Interior Project Madurai`,
+    description: desc ? `${desc.slice(0, 140)}... Completed by TWC Fit-Outs Madurai.` : `${project.name} — ${project.type} interior project by TWC Fit-Outs, Madurai. See the full project gallery.`,
     alternates: { canonical: `/work/${slug}` },
+    openGraph: {
+      title: `${project.name} | TWC Fit-Outs Project`,
+      description: `${project.type} interior fit-out by TWC Fit-Outs Madurai. View the complete project.`,
+      url: `https://thewallcrafters.com/work/${slug}`,
+    },
   };
 }
 
