@@ -28,7 +28,6 @@ export default function ProjectHero({ title, location, type, image }: ProjectHer
           alt={title}
           fill
           priority
-          quality={85}
           className="object-cover object-center"
           sizes="100vw"
         />

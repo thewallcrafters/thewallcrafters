@@ -38,7 +38,6 @@ export default function HeroSection() {
           alt="TWC Fit-Outs premium modular kitchen interior"
           fill
           priority
-          quality={85}
           className="object-cover object-center"
           sizes="100vw"
         />

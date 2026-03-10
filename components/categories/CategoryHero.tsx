@@ -26,7 +26,6 @@ export default function CategoryHero({ title, description, image }: CategoryHero
               alt={title}
               fill
               priority
-              quality={85}
               className="object-cover object-center"
               sizes="100vw"
             />
