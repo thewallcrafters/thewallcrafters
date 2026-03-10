@@ -145,12 +145,12 @@ export default function ContactSection() {
                 </div>
                 <div className="pl-8">
                   <a
-                    href="https://instagram.com/thewallcrafters"
+                    href="https://www.instagram.com/twc_interior_fitouts?igsh=MWRrZzlhZzNtZWM5cQ%3D%3D&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-xl text-[#F5F3EE] hover:text-twc-red transition-colors duration-300"
                   >
-                    @thewallcrafters
+                    @twc_interior_fitouts
                   </a>
                 </div>
               </div>
