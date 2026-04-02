@@ -221,7 +221,7 @@ export default function ContactPage() {
                         name="phone"
                         required
                         className="w-full px-4 py-3 bg-white border border-[#2C2824]/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-[#2C2824]"
-                        placeholder="+91 99522 17602"
+                        placeholder="+91 90430 50410"
                       />
                     </div>
                   </div>
