@@ -268,13 +268,17 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 bg-white border border-[#2C2824]/10 focus:border-twc-red focus:outline-none transition-colors duration-300 text-[#2C2824]"
                     >
                       <option value="">Select your city</option>
-                      <option value="chennai">Chennai</option>
-                      <option value="bangalore">Bangalore</option>
-                      <option value="hyderabad">Hyderabad</option>
-                      <option value="mumbai">Mumbai</option>
-                      <option value="delhi">Delhi NCR</option>
-                      <option value="pune">Pune</option>
-                      <option value="kolkata">Kolkata</option>
+                      <option value="madurai">Madurai</option>
+                      <option value="tiruchirappalli">Tiruchirappalli</option>
+                      <option value="dindigul">Dindigul</option>
+                      <option value="theni">Theni</option>
+                      <option value="virudhunagar">Virudhunagar</option>
+                      <option value="sivagangai">Sivagangai</option>
+                      <option value="karaikudi">Karaikudi</option>
+                      <option value="palani">Palani</option>
+                      <option value="kodaikanal">Kodaikanal</option>
+                      <option value="melur">Melur</option>
+                      <option value="ramanathapuram">Ramanathapuram</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
